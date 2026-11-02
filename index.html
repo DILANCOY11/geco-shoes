@@ -85,6 +85,7 @@
   --oro:#B8894C;
   --papel:#FFF9F8;
   --tono:#8E1F2B;
+  --tono-txt:var(--tono); /* el tono como texto; en modo oscuro se aclara para que se lea */
   --wa:#1F7A4D;
   --rosa:#F2B8C6;
   --sombra:rgba(43,25,28,.18);
@@ -99,8 +100,8 @@
   --gr:max(16px, env(safe-area-inset-right, 0px));
 }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --marmol:#1C1214; --marmol-2:#261A1C; --tinta:#F6E6E3; --tinta-suave:#C4A9AC; --bronce:#D4A56E; --oro:#D4A56E; --papel:#241719; --wa:#2FA56A; --sombra:rgba(0,0,0,.5); color-scheme:dark }}
-:root[data-theme="dark"]{ --marmol:#1C1214; --marmol-2:#261A1C; --tinta:#F6E6E3; --tinta-suave:#C4A9AC; --bronce:#D4A56E; --oro:#D4A56E; --papel:#241719; --wa:#2FA56A; --sombra:rgba(0,0,0,.5); color-scheme:dark }
+  --marmol:#1C1214; --marmol-2:#261A1C; --tinta:#F6E6E3; --tinta-suave:#C4A9AC; --bronce:#D4A56E; --oro:#D4A56E; --papel:#241719; --wa:#2FA56A; --sombra:rgba(0,0,0,.5); --tono-txt:color-mix(in oklab, var(--tono) 40%, #F6E6E3); color-scheme:dark }}
+:root[data-theme="dark"]{ --marmol:#1C1214; --marmol-2:#261A1C; --tinta:#F6E6E3; --tinta-suave:#C4A9AC; --bronce:#D4A56E; --oro:#D4A56E; --papel:#241719; --wa:#2FA56A; --sombra:rgba(0,0,0,.5); --tono-txt:color-mix(in oklab, var(--tono) 40%, #F6E6E3); color-scheme:dark }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -152,6 +153,7 @@ img{display:block;-webkit-user-drag:none;user-select:none}
 .bolsa-btn{position:relative;display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;background:var(--tinta);color:var(--marmol);padding:9px 14px;font-weight:700;font-size:14px;cursor:pointer;text-decoration:none}
 .bolsa-btn svg{width:18px;height:18px}
 .bolsa-btn .n{min-width:20px;height:20px;border-radius:10px;background:var(--tono);color:#fff;font-size:12px;display:grid;place-items:center;padding-inline:5px;font-variant-numeric:tabular-nums;transition:background-color .6s}
+.bolsa-btn .n[hidden]{display:none}
 .bolsa-btn.salta{animation:salta .5s var(--ease-out)}
 @keyframes salta{30%{transform:scale(1.14)}60%{transform:scale(.96)}}
 .btn-wa{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;background:var(--wa);color:#fff;padding:12px 18px;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer}
@@ -172,7 +174,7 @@ img{display:block;-webkit-user-drag:none;user-select:none}
 .escena{position:relative;z-index:1;max-width:480px;width:100%;margin-inline:auto;aspect-ratio:4/5;margin-top:clamp(40px, 11vw, 90px)}
 .nombre-gigante{position:absolute;left:0;right:0;top:0;transform:translateY(-54%);z-index:2;text-align:center;pointer-events:none;
   font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(84px, 28vw, 200px);line-height:.8;letter-spacing:-.04em;
-  color:var(--tono);text-shadow:0 2px 24px color-mix(in oklab, var(--marmol) 70%, transparent);transition:color .6s}
+  color:var(--tono-txt);text-shadow:0 2px 24px color-mix(in oklab, var(--marmol) 70%, transparent);transition:color .6s}
 .nombre-gigante span{display:inline-block;transition:transform .5s var(--ease-out), opacity .5s var(--ease-out), filter .5s}
 .nombre-gigante.cambia span{transform:translateY(14%);opacity:0;filter:blur(6px)}
 .foto{position:absolute;inset:0;z-index:1;border-radius:240px 240px 22px 22px;cursor:grab;touch-action:pan-y;user-select:none;
@@ -192,7 +194,7 @@ img{display:block;-webkit-user-drag:none;user-select:none}
 .desliza.fuera{opacity:0}
 .ficha{position:relative;z-index:1;display:grid;gap:14px;max-width:560px;margin-inline:auto;text-align:center;justify-items:center}
 .ficha h1{font-size:clamp(34px, 8vw, 58px)}
-.ficha h1 em{color:var(--tono);transition:color .6s}
+.ficha h1 em{color:var(--tono-txt);transition:color .6s}
 .datos{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .datos span{font-family:var(--mono);font-size:12px;letter-spacing:.04em;border:1px solid var(--linea);border-radius:999px;padding:6px 12px;background:color-mix(in oklab, var(--papel) 60%, transparent)}
 .precio{font-size:15px;color:var(--tinta-suave)}
@@ -211,6 +213,7 @@ section{padding-block:64px 0}
 .titulo p{color:var(--tinta-suave);max-width:60ch}
 .aparece{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease-out), transform .6s var(--ease-out);transition-delay:var(--d, 0ms)}
 .aparece.visto{opacity:1;transform:none}
+.tarjeta.aparece{transform:translateY(8px);transition-duration:.35s}
 
 /* ===== vitrina giratoria ===== */
 .vitrina-sec{margin-inline:calc(-1 * var(--gl)) calc(-1 * var(--gr))}
@@ -460,7 +463,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   </nav>
   <a class="bolsa-btn presionable" id="bolsa-btn" href="#pedido" aria-label="Ver mi pedido">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-    Pedido <span class="n" id="bolsa-n">0</span>
+    Pedido <span class="n" id="bolsa-n" hidden>0</span>
   </a>
 </header>
 
@@ -714,7 +717,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   const guardar = () => { try { localStorage.setItem("geco-bolsa", JSON.stringify(bolsa)); } catch(e){} };
 
   /* ---------- aparece al bajar ---------- */
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("visto"); io.unobserve(e.target); } }), {rootMargin: "0px 0px -8% 0px"});
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("visto"); io.unobserve(e.target); } }), {rootMargin: "0px 0px 12% 0px"}); // arranca un poco antes de entrar, para que al bajar rápido no se vea vacío
   const observar = root => (root || document).querySelectorAll(".aparece:not(.visto)").forEach(el => io.observe(el));
   observar();
 
@@ -1109,6 +1112,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   let pago = "contra";
   function pintarBolsa(){
     $("#bolsa-n").textContent = bolsa.length;
+    $("#bolsa-n").hidden = !bolsa.length; // con el pedido vacío no se muestra el 0
     $("#items-n").textContent = bolsa.length ? bolsa.length + (bolsa.length === 1 ? " bota" : " botas") : "";
     $("#items").innerHTML = bolsa.length ? bolsa.map((b,i) => `
       <li class="item"><span class="${est(b.src)}"><img src="${esc(b.src)}" alt=""></span><span><b>${esc(b.nombre)}</b><small>${esc(b.ref)} · ${esc(b.color)} · Talla ${esc(b.talla)}</small></span><button type="button" data-i="${i}">Quitar</button></li>`).join("")
