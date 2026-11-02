@@ -75,7 +75,7 @@
 </script>
 
 <style>
-/* Layout: pasarela vertical. Arriba la Sakura se tiñe de su color; después la colección (con precios), el buscador, la vitrina que gira, el video, el pedido, el envío y el pie con GECO en pétalos. Todas las botas viven en el mismo "estudio" (fondo crema con aro dorado). */
+/* Layout: pasarela vertical. Arriba, historias con 5 botas distintas (HISTORIAS en el script), cada una tiñe la página de su tono; después la colección (con precios), el buscador, la vitrina que gira, el video, el pedido, el envío y el pie con GECO en pétalos. Todas las botas viven en el mismo "estudio" (fondo crema con aro dorado). */
 :root{
   --marmol:#F3E4E1;
   --marmol-2:#EAD3CF;
@@ -200,7 +200,6 @@ img{display:block;-webkit-user-drag:none;user-select:none}
 .muestras{display:grid;grid-template-columns:repeat(5, minmax(0,1fr));gap:8px;max-width:520px;width:100%}
 .muestra{border:0;background:none;padding:0;cursor:pointer;display:grid;gap:7px;justify-items:center}
 .chip{width:100%;aspect-ratio:3/4;border-radius:12px 12px 40px 40px;position:relative;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);transition:transform .3s var(--ease-out), box-shadow .3s}
-.chip::after{content:"";position:absolute;inset:0;border-radius:inherit;background:repeating-linear-gradient(115deg, rgba(255,255,255,.12) 0 2px, transparent 2px 7px);mix-blend-mode:soft-light}
 .muestra[aria-pressed="true"] .chip{transform:translateY(-6px);box-shadow:0 0 0 2px var(--marmol), 0 0 0 4px var(--tinta)}
 .muestra span{font-size:12.5px;font-weight:600}
 @media (hover:hover) and (pointer:fine){ .muestra:hover .chip{transform:translateY(-4px)} }
@@ -486,13 +485,11 @@ footer img{width:64px;height:64px;border-radius:50%}
       </div>
     </div>
     <div class="ficha">
-      <p class="eyebrow">Nuevo · Modelo Sakura · 5 colores</p>
-      <h1>Sakura, la bota sobre la rodilla, en <em id="h1-color">vino</em></h1>
-      <div class="datos"><span>Caña arrugada</span><span>Tacón cuadrado</span><span>Tallas 34 a 40</span><span>Pagas al recibir</span></div>
-      <p class="precio"><b>$170.000</b> · pagas al recibir</p>
-      <p class="eyebrow">Elige tu color</p>
-      <div class="muestras" id="muestras" role="group" aria-label="Colores de la Sakura"></div>
-      <button class="btn presionable" type="button" id="dest-agregar">Elegir talla y agregar</button>
+      <h1 id="d-titulo">Sakura, <em>sobre la rodilla</em></h1>
+      <div class="datos" id="d-datos"></div>
+      <p class="precio" id="d-precio"></p>
+      <div class="muestras" id="muestras" role="group" aria-label="Botas destacadas"></div>
+      <button class="btn presionable" type="button" id="dest-agregar">Ver esta bota</button>
     </div>
   </div>
 
@@ -691,7 +688,10 @@ footer img{width:64px;height:64px;border-radius:50%}
 
 <div class="fija" id="fija">
   <span id="fija-txt">Elige tus botas</span>
-  <a class="btn-wa presionable" href="#coleccion" id="fija-btn">Ver colección</a>
+  <a class="btn-wa presionable" href="https://wa.me/573150608939" id="fija-btn" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+    <span id="fija-btn-txt">WhatsApp</span>
+  </a>
 </div>
 <div class="toast" id="toast" role="status"></div>
 
@@ -700,7 +700,6 @@ footer img{width:64px;height:64px;border-radius:50%}
   const NUM = "573150608939";
   let CAT = [];
   try { CAT = JSON.parse(document.getElementById("catalogo").textContent); } catch(e){ CAT = []; }
-  const DEST = CAT[0];
   const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
   const esc = s => String(s).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -719,28 +718,37 @@ footer img{width:64px;height:64px;border-radius:50%}
   const observar = root => (root || document).querySelectorAll(".aparece:not(.visto)").forEach(el => io.observe(el));
   observar();
 
-  /* ---------- pasarela de la Sakura ---------- */
+  /* ---------- historias del inicio: una bota distinta en cada una ---------- */
+  // ref y c (color) salen del catálogo; corto es el nombre gigante; nombre (opcional) cambia el del título; foto es la imagen completa (con fondo) que llena el arco
+  const HISTORIAS = [
+    {ref: "S01", c: 0, corto: "Sakura", lema: "sobre la rodilla", tono: "#8E1F2B", foto: "img/vino.jpg"},
+    {ref: "M09", c: 0, corto: "Texana", lema: "la vaquera bordada", tono: "#4E74A6", foto: "img/texana-jean.jpg"},
+    {ref: "M10", c: 3, corto: "Moka", lema: "caña alta lisa", tono: "#5A3F38", foto: "img/moka-cafe.jpg"},
+    {ref: "M01", c: 0, corto: "Karol", nombre: "Karol", lema: "doble plataforma", tono: "#2A2426", foto: "img/m3n.jpg"},
+    {ref: "N04", c: 0, corto: "Niñas", nombre: "Para ellas", lema: "caña alta en charol", tono: "#2A2426", foto: "img/n4.jpg", pos: "50% 88%"}
+  ].filter(h => porRef(h.ref));
   const foto = $("#foto"), hist = $("#historia");
-  DEST.colores.forEach((c,i) => {
-    const im = document.createElement("img"); im.src = c.src; im.alt = ""; im.draggable = false; if (i === 0) im.className = "on"; foto.insertBefore(im, hist);
+  HISTORIAS.forEach((h,i) => {
+    const im = document.createElement("img"); im.src = h.foto; im.alt = ""; im.draggable = false; if (h.pos) im.style.objectPosition = h.pos; if (i === 0) im.className = "on"; foto.insertBefore(im, hist);
     hist.insertAdjacentHTML("beforeend", "<span><i></i></span>");
-    $("#muestras").insertAdjacentHTML("beforeend", `<button class="muestra" type="button" data-i="${i}" aria-pressed="${i===0}"><span class="chip" style="background:${c.c}"></span><span>${esc(c.n)}</span></button>`);
+    $("#muestras").insertAdjacentHTML("beforeend", `<button class="muestra" type="button" data-i="${i}" aria-pressed="${i===0}"><span class="chip" style="background:url('${h.foto}') ${h.pos || "50% 60%"}/cover"></span><span>${esc(h.corto)}</span></button>`);
   });
   let idx = 0, t0 = performance.now(), pausado = reduce;
   const DUR = 4200, barras = $$("#historia i"), imgsDest = $$("#foto img"), gigante = $("#nombre-gigante");
   function pintar(i){
-    const cambio = i !== idx; idx = i; const c = DEST.colores[i];
-    document.documentElement.style.setProperty("--tono", c.tono);
+    const cambio = i !== idx; idx = i; const h = HISTORIAS[i], p = porRef(h.ref), c = p.colores[h.c];
+    document.documentElement.style.setProperty("--tono", h.tono);
     imgsDest.forEach((im,k) => im.classList.toggle("on", k === i));
     if (cambio && !reduce){
       gigante.classList.add("cambia");
-      setTimeout(() => { gigante.firstChild.textContent = c.n; gigante.classList.remove("cambia"); }, 220);
-    } else gigante.firstChild.textContent = c.n;
-    $("#h1-color").textContent = c.n.toLowerCase();
-    $("#etq").textContent = c.n + " · " + c.mat;
-    foto.setAttribute("aria-label", "Bota Sakura color " + c.n.toLowerCase());
+      setTimeout(() => { gigante.firstChild.textContent = h.corto; gigante.classList.remove("cambia"); }, 220);
+    } else gigante.firstChild.textContent = h.corto;
+    $("#d-titulo").innerHTML = esc(h.nombre || p.nombre) + ", <em>" + esc(h.lema) + "</em>";
+    $("#d-datos").innerHTML = [p.nuevo ? "Nueva" : "", p.g === "ninas" ? "Para niña" : "", p.tallas ? "Tallas " + p.tallas : "", p.colores.length > 1 ? p.colores.length + " colores" : "", "Pagas al recibir"].filter(Boolean).map(t => `<span>${esc(t)}</span>`).join("");
+    $("#d-precio").innerHTML = p.precio ? "<b>" + pesos(p.precio) + "</b> · envío gratis pagando por adelantado" : "<b>Precio por WhatsApp</b>";
+    $("#etq").textContent = c.n + (p.precio ? " · " + pesos(p.precio) : "");
+    foto.setAttribute("aria-label", p.nombre + " color " + c.n.toLowerCase());
     $$("#muestras .muestra").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i === i));
-    $$("#detalles img").forEach(im => im.src = c.foto);
   }
   function marcar(){ barras.forEach((b,k) => b.style.width = k < idx ? "100%" : k > idx ? "0" : b.style.width); }
   function tick(now){
@@ -748,7 +756,7 @@ footer img{width:64px;height:64px;border-radius:50%}
       const p = Math.min(1, (now - t0) / DUR);
       barras.forEach((b,k) => b.style.width = k < idx ? "100%" : k === idx ? (p*100)+"%" : "0");
       // da una sola vuelta por los colores y se queda en el primero
-      if (p >= 1){ const n = (idx + 1) % DEST.colores.length; t0 = now; if (n === 0){ barras.forEach(b => b.style.width = "0"); ponerPausa(true); } pintar(n); }
+      if (p >= 1){ const n = (idx + 1) % HISTORIAS.length; t0 = now; if (n === 0){ barras.forEach(b => b.style.width = "0"); ponerPausa(true); } pintar(n); }
     } else if (document.hidden) t0 = now - 0;
     requestAnimationFrame(tick);
   }
@@ -758,7 +766,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     $("#ico-pausa").innerHTML = v ? '<path d="M4 2.5v11l9-5.5z"/>' : '<rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/>';
     if (!v) t0 = performance.now();
   }
-  const ir = d => { t0 = performance.now(); pintar((idx + d + DEST.colores.length) % DEST.colores.length); marcar(); };
+  const ir = d => { t0 = performance.now(); pintar((idx + d + HISTORIAS.length) % HISTORIAS.length); marcar(); };
   $("#pausa").addEventListener("click", e => { e.stopPropagation(); ponerPausa(!pausado); });
   $("#pausa").addEventListener("pointerdown", e => e.stopPropagation());
   // deslizar con el dedo: un toque rápido o un arrastre largo cambia de color
@@ -782,7 +790,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     foto.addEventListener("pointerup", fin); foto.addEventListener("pointercancel", fin);
   })();
   $$("#muestras .muestra").forEach(b => b.addEventListener("click", () => { pintar(+b.dataset.i); marcar(); ponerPausa(true); }));
-  $("#dest-agregar").addEventListener("click", () => abrir(DEST, idx));
+  $("#dest-agregar").addEventListener("click", () => abrir(porRef(HISTORIAS[idx].ref), HISTORIAS[idx].c));
   pintar(0); requestAnimationFrame(tick); if (reduce) ponerPausa(true);
   setTimeout(() => $("#desliza").classList.add("fuera"), 6000);
 
@@ -1106,9 +1114,8 @@ footer img{width:64px;height:64px;border-radius:50%}
       <li class="item"><span class="${est(b.src)}"><img src="${esc(b.src)}" alt=""></span><span><b>${esc(b.nombre)}</b><small>${esc(b.ref)} · ${esc(b.color)} · Talla ${esc(b.talla)}</small></span><button type="button" data-i="${i}">Quitar</button></li>`).join("")
       : '<li class="vacio">Aún no has elegido botas. Toca una en la colección y agrégala.</li>';
     $$("#items button").forEach(b => b.addEventListener("click", () => { bolsa.splice(+b.dataset.i, 1); guardar(); pintarBolsa(); }));
-    $("#fija-txt").textContent = bolsa.length ? "Tu pedido: " + bolsa.length + (bolsa.length === 1 ? " bota" : " botas") : "Elige tus botas";
-    $("#fija-btn").textContent = bolsa.length ? "Enviar pedido" : "Ver colección";
-    $("#fija-btn").href = bolsa.length ? "#pedido" : "#coleccion";
+    $("#fija-txt").textContent = bolsa.length ? "Tu pedido: " + bolsa.length + (bolsa.length === 1 ? " bota" : " botas") : "¿Dudas? Escríbenos";
+    $("#fija-btn-txt").textContent = bolsa.length ? "Enviar por WhatsApp" : "WhatsApp";
     mensaje();
   }
   function mensaje(){
@@ -1129,6 +1136,8 @@ footer img{width:64px;height:64px;border-radius:50%}
     const txt = l.join("\n");
     $("#mensaje").textContent = txt;
     $("#wa-enviar").href = "https://wa.me/" + NUM + "?text=" + encodeURIComponent(txt);
+    // la barra de abajo abre WhatsApp directo: con el pedido armado, o con un saludo si la bolsa está vacía
+    $("#fija-btn").href = bolsa.length ? $("#wa-enviar").href : "https://wa.me/" + NUM + "?text=" + encodeURIComponent("Hola Geco Shoes, quiero información de las botas.");
     return txt;
   }
   ["#f-nombre","#f-ciudad","#f-cm"].forEach(s => $(s).addEventListener("input", mensaje));
