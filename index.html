@@ -19,11 +19,12 @@
   CATÁLOGO. Para sumar una bota se copia un bloque y se cambian los datos.
   g: "mujer" o "ninas" · tipo: crea los filtros de estilo solo · tacon: "si"/"no" · cana: "tobillo"/"media"/"alta" (para el buscador)
   vitrina: true la pone en la vitrina que se desliza · nuevo: true le pone la etiqueta "Nuevo"
+  precio: en pesos, sin puntos (170000). Si no tiene precio, la página dice "Precio por WhatsApp" (hoy las vaqueras, sin confirmar)
   colores: n (nombre), c (color del punto), fam (familia para el filtro), src (foto en estudio, sin fondo), foto (foto original)
 -->
 <script type="application/json" id="catalogo">
 [
-  {"ref":"S01","g":"mujer","tipo":"Sobre la rodilla","nombre":"Sakura","nuevo":true,"vitrina":true,"tallas":"34 a 40","tacon":"si","cana":"alta",
+  {"ref":"S01","precio":170000,"g":"mujer","tipo":"Sobre la rodilla","nombre":"Sakura","nuevo":true,"vitrina":true,"tallas":"34 a 40","tacon":"si","cana":"alta",
    "d":"Caña arrugada que cae sobre la rodilla, tacón cuadrado y punta fina.",
    "colores":[
     {"n":"Vino","c":"#8E1F2B","tono":"#8E1F2B","fam":"Vino","src":"img/vino.jpg","foto":"img/vino.jpg","mat":"base cuero"},
@@ -31,16 +32,16 @@
     {"n":"Beige","c":"#CDB497","tono":"#A57E55","fam":"Beige","src":"img/beige.jpg","foto":"img/beige.jpg","mat":"base cuero"},
     {"n":"Blanco","c":"#F6F2EC","tono":"#A8968A","fam":"Blanco","src":"img/blanco.jpg","foto":"img/blanco.jpg","mat":"base cuero"},
     {"n":"Jean","c":"#668BBB","tono":"#4E74A6","fam":"Jean","src":"img/jean.jpg","foto":"img/jean.jpg","mat":"en jean"}]},
-  {"ref":"M01","g":"mujer","tipo":"Plataforma","nombre":"Karol doble plataforma","vitrina":true,"tallas":"34 a 40","tacon":"si","cana":"tobillo",
+  {"ref":"M01","precio":140000,"g":"mujer","tipo":"Plataforma","nombre":"Karol doble plataforma","vitrina":true,"tallas":"34 a 40","tacon":"si","cana":"tobillo",
    "d":"Botín de doble plataforma con tacón alto en bloque, cremallera y elástico al lado. Base cuero, forro textil, suela TR.",
    "colores":[{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/estudio/m3n.webp","foto":"img/m3n.jpg"},{"n":"Blanco","c":"#f4f3f1","fam":"Blanco","src":"img/estudio/m3b.webp","foto":"img/m3b.jpg"},{"n":"Charol negro","c":"linear-gradient(135deg,#000 40%,#6b6b6b 50%,#000 60%)","fam":"Negro","src":"img/estudio/m3c.webp","foto":"img/m3c.jpg"}]},
-  {"ref":"M02","g":"mujer","tipo":"Sobre la rodilla","nombre":"Sobre la rodilla con tacón","vitrina":true,"tacon":"si","cana":"alta",
+  {"ref":"M02","precio":170000,"g":"mujer","tipo":"Sobre la rodilla","nombre":"Sobre la rodilla con tacón","vitrina":true,"tacon":"si","cana":"alta",
    "d":"Caña larga elástica con cordón arriba, cremallera, tacón en bloque y suela de tacos.",
    "colores":[{"n":"Blanco","c":"#f4f3f1","fam":"Blanco","src":"img/estudio/m4b.webp","foto":"img/m4b.jpg"},{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/estudio/m4n.webp","foto":"img/m4n.jpg"}]},
-  {"ref":"M03","g":"mujer","tipo":"Sobre la rodilla","nombre":"Sobre la rodilla tractor","tacon":"no","cana":"alta",
+  {"ref":"M03","precio":170000,"g":"mujer","tipo":"Sobre la rodilla","nombre":"Sobre la rodilla tractor","tacon":"no","cana":"alta",
    "d":"Caña larga elástica sobre plataforma de tacos gruesos, sin tacón alto.",
    "colores":[{"n":"Blanco","c":"#f4f3f1","fam":"Blanco","src":"img/estudio/m8b.webp","foto":"img/m8b.jpg"},{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/estudio/m8n.webp","foto":"img/m8n.jpg"}]},
-  {"ref":"M04","g":"mujer","tipo":"Sobre la rodilla","nombre":"Sobre la rodilla beige","tacon":"no","cana":"alta",
+  {"ref":"M04","precio":170000,"g":"mujer","tipo":"Sobre la rodilla","nombre":"Sobre la rodilla beige","tacon":"no","cana":"alta",
    "d":"Caña larga sobre suela de plataforma tipo tenis.",
    "colores":[{"n":"Beige","c":"#CDB497","fam":"Beige","src":"img/estudio/m5.webp","foto":"img/m5.jpg"}]},
   {"ref":"M05","g":"mujer","tipo":"Vaqueras","nombre":"Vaquera bordado café","vitrina":true,"tacon":"si","cana":"media",
@@ -52,26 +53,26 @@
   {"ref":"M07","g":"mujer","tipo":"Vaqueras","nombre":"Vaquera negra bordada","vitrina":true,"tacon":"si","cana":"media",
    "d":"Bordado claro en llamas, cremallera lateral y tacón cuadrado.",
    "colores":[{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/estudio/m2.webp","foto":"img/m2.jpg"}]},
-  {"ref":"M08","g":"mujer","tipo":"Caña alta","nombre":"Caña alta arrugada","tacon":"si","cana":"alta",
+  {"ref":"M08","precio":170000,"g":"mujer","tipo":"Caña alta","nombre":"Caña alta arrugada","tacon":"si","cana":"alta",
    "d":"Negra, caña con pliegues, punta fina y tacón redondo.",
    "colores":[{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/estudio/m6.webp","foto":"img/m6.jpg"}]},
-  {"ref":"N01","g":"ninas","tipo":"Combat","nombre":"Combat blanca","vitrina":true,"tacon":"no","cana":"media",
+  {"ref":"N01","precio":140000,"g":"ninas","tipo":"Combat","nombre":"Combat blanca","vitrina":true,"tacon":"no","cana":"media",
    "d":"Cordones, cremallera lateral, hebilla y suela de tacos.",
    "colores":[{"n":"Blanco","c":"#f4f3f1","fam":"Blanco","src":"img/estudio/n1.webp","foto":"img/n1.jpg"}]},
-  {"ref":"N02","g":"ninas","tipo":"Caña alta","nombre":"Caña alta con moño","tacon":"no","cana":"alta",
+  {"ref":"N02","precio":170000,"g":"ninas","tipo":"Caña alta","nombre":"Caña alta con moño","tacon":"no","cana":"alta",
    "d":"Negra, con moño atrás y suela de tacos.",
    "colores":[{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/estudio/n2.webp","foto":"img/n2.jpg"}]},
-  {"ref":"N03","g":"ninas","tipo":"Combat","nombre":"Combat negra","tacon":"no","cana":"media",
+  {"ref":"N03","precio":140000,"g":"ninas","tipo":"Combat","nombre":"Combat negra","tacon":"no","cana":"media",
    "d":"Cordones, cremallera y hebilla dorada.",
    "colores":[{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/estudio/n3.webp","foto":"img/n3.jpg"}]},
-  {"ref":"N04","g":"ninas","tipo":"Caña alta","nombre":"Caña alta charol","vitrina":true,"tacon":"no","cana":"alta",
+  {"ref":"N04","precio":170000,"g":"ninas","tipo":"Caña alta","nombre":"Caña alta charol","vitrina":true,"tacon":"no","cana":"alta",
    "d":"Pie en charol brillante, caña lisa y moño atrás.",
    "colores":[{"n":"Charol negro","c":"linear-gradient(135deg,#000 40%,#6b6b6b 50%,#000 60%)","fam":"Negro","src":"img/estudio/n4.webp","foto":"img/n4.jpg"}]}
 ]
 </script>
 
 <style>
-/* Layout: pasarela vertical. Arriba la Sakura se tiñe de su color; después la vitrina que gira, el video, el buscador, la colección, el pedido, el envío y el pie con GECO en pétalos. Todas las botas viven en el mismo "estudio" (fondo crema con aro dorado). */
+/* Layout: pasarela vertical. Arriba la Sakura se tiñe de su color; después la colección (con precios), el buscador, la vitrina que gira, el video, el pedido, el envío y el pie con GECO en pétalos. Todas las botas viven en el mismo "estudio" (fondo crema con aro dorado). */
 :root{
   --marmol:#F3E4E1;
   --marmol-2:#EAD3CF;
@@ -111,6 +112,7 @@ p{margin:0}
 button{font:inherit;color:inherit;touch-action:manipulation}
 :focus-visible{outline:2px solid var(--bronce);outline-offset:3px;border-radius:6px}
 img{display:block;-webkit-user-drag:none;user-select:none}
+[hidden]{display:none!important}
 .oculto{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .presionable{transition:transform 160ms var(--ease-out)}
 .presionable:active{transform:scale(.97)}
@@ -151,17 +153,15 @@ img{display:block;-webkit-user-drag:none;user-select:none}
 @keyframes salta{30%{transform:scale(1.14)}60%{transform:scale(.96)}}
 .btn-wa{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;background:var(--wa);color:#fff;padding:12px 18px;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer}
 .btn-wa svg{width:18px;height:18px;flex:none}
-.btn-wa::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg, transparent 35%, rgba(255,255,255,.35) 50%, transparent 65%);transform:translateX(-120%);animation:brillo 4.5s ease-in-out infinite 1.5s}
-@keyframes brillo{0%,70%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;background:var(--tinta);color:var(--marmol);padding:13px 22px;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none}
 .btn-sec{border:1px solid var(--linea);background:transparent;border-radius:999px;padding:10px 16px;font-weight:600;font-size:14px;cursor:pointer}
 
 /* franja de confianza */
-.franja{margin-inline:calc(-1 * var(--gl)) calc(-1 * var(--gr));overflow:hidden;background:var(--tinta);color:var(--marmol);font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.franja .cinta{display:flex;gap:28px;width:max-content;padding-block:9px;animation:cinta 32s linear infinite}
+.franja{margin-inline:calc(-1 * var(--gl)) calc(-1 * var(--gr));overflow-x:auto;scrollbar-width:none;background:var(--tinta);color:var(--marmol);font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.franja::-webkit-scrollbar{display:none}
+.franja .cinta{display:flex;gap:28px;width:max-content;margin-inline:auto;padding:9px var(--gr) 9px var(--gl)}
 .franja span{white-space:nowrap;display:flex;align-items:center;gap:28px}
-.franja span::after{content:"✿";color:var(--rosa)}
-@keyframes cinta{to{transform:translateX(-50%)}}
+.franja span:not(:last-child)::after{content:"✿";color:var(--rosa)}
 
 /* ===== pasarela destacada ===== */
 .pasarela{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:18px;padding-block:14px 8px}
@@ -236,11 +236,10 @@ section{padding-block:64px 0}
 .sonido{position:absolute;right:12px;bottom:12px;border:0;border-radius:999px;background:rgba(43,25,28,.6);color:#fff;padding:8px 12px;font-size:13px;font-weight:600;cursor:pointer}
 .detalles{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:10px;align-content:center}
 .clip{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;background:var(--marmol-2);margin:0}
-.clip img{position:absolute;width:100%;height:100%;object-fit:cover;animation:paneo 9s ease-in-out infinite alternate}
+.clip img{position:absolute;width:100%;height:100%;object-fit:cover;transform:scale(var(--z))}
 .clip:nth-child(1) img{object-position:40% 18%;transform-origin:40% 20%;--z:2.1}
-.clip:nth-child(2) img{object-position:90% 70%;transform-origin:92% 72%;--z:2.4;animation-delay:-3s}
-.clip:nth-child(3) img{object-position:10% 85%;transform-origin:8% 86%;--z:2.6;animation-delay:-6s}
-@keyframes paneo{from{transform:scale(var(--z)) translateY(0)}to{transform:scale(calc(var(--z) + .25)) translateY(-3%)}}
+.clip:nth-child(2) img{object-position:90% 70%;transform-origin:92% 72%;--z:2.4}
+.clip:nth-child(3) img{object-position:10% 85%;transform-origin:8% 86%;--z:2.6}
 .clip figcaption{position:absolute;inset:auto 0 0 0;padding:28px 12px 12px;background:linear-gradient(transparent, rgba(30,15,18,.78));color:#fff}
 .clip figcaption b{display:block;font-family:var(--display);font-style:italic;font-size:clamp(17px, 4vw, 24px);font-weight:500;line-height:1.05}
 .clip figcaption small{font-size:12px;opacity:.85}
@@ -292,7 +291,10 @@ section{padding-block:64px 0}
 .tarjeta .fila{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .puntos{display:flex;gap:4px}
 .puntos i{width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
-.tarjeta .ver{font-size:13px;font-weight:700;color:var(--tono)}
+.tarjeta .valor{font-size:15px;font-weight:700;color:var(--tinta);font-variant-numeric:tabular-nums}
+.tarjeta .valor.consulta{font-size:13px;font-weight:600;color:var(--tinta-suave)}
+.hoja-precio{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.hoja-precio small{display:block;font-size:13px;font-weight:500;color:var(--tinta-suave)}
 .sin{border:1px dashed var(--linea);border-radius:18px;padding:22px;display:grid;gap:12px;justify-items:start;color:var(--tinta-suave)}
 .mas{display:flex;justify-content:center;margin-top:24px}
 
@@ -450,7 +452,7 @@ footer img{width:64px;height:64px;border-radius:50%}
 
 <div class="franja" aria-label="Por qué comprar en Geco Shoes">
   <div class="cinta" id="cinta">
-    <span>Pagas al recibir</span><span>Bogotá el mismo día</span><span>Resto del país en 1 a 2 días</span><span>Siempre con número de guía</span><span>Cambios de talla</span>
+    <span>Pagas al recibir</span><span>Bogotá el mismo día pidiendo antes de la 1 p. m.</span><span>Resto del país en 1 a 3 días hábiles</span><span>Envío gratis pagando por adelantado</span><span>Siempre con número de guía</span><span>Cambios de talla</span>
   </div>
 </div>
 
@@ -472,56 +474,12 @@ footer img{width:64px;height:64px;border-radius:50%}
       <p class="eyebrow">Nuevo · Modelo Sakura · 5 colores</p>
       <h1>Sakura, la bota sobre la rodilla, en <em id="h1-color">vino</em></h1>
       <div class="datos"><span>Caña arrugada</span><span>Tacón cuadrado</span><span>Tallas 34 a 40</span><span>Pagas al recibir</span></div>
-      <p class="precio"><b>Precio:</b> pregúntalo por WhatsApp y te respondemos al momento.</p>
+      <p class="precio"><b>$170.000</b> · pagas al recibir</p>
       <p class="eyebrow">Elige tu color</p>
       <div class="muestras" id="muestras" role="group" aria-label="Colores de la Sakura"></div>
       <button class="btn presionable" type="button" id="dest-agregar">Elegir talla y agregar</button>
     </div>
   </div>
-
-  <section id="vitrina" class="vitrina-sec" aria-labelledby="t-vit">
-    <div class="titulo aparece">
-      <p class="eyebrow">Vitrina Geco</p>
-      <h2 id="t-vit">Pasa el dedo y mira cada bota</h2>
-    </div>
-    <div class="vitrina" id="vitrina-riel" aria-label="Vitrina de botas"></div>
-    <div class="vitrina-pie">
-      <button class="presionable" type="button" id="vit-ant" aria-label="Bota anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
-      <div class="vitrina-puntos" id="vit-puntos" aria-hidden="true"></div>
-      <button class="presionable" type="button" id="vit-sig" aria-label="Bota siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
-    </div>
-  </section>
-
-  <section aria-labelledby="t-cine">
-    <div class="titulo aparece">
-      <p class="eyebrow">En movimiento</p>
-      <h2 id="t-cine">Mírala caminar</h2>
-    </div>
-    <div class="cine">
-      <div class="video-marco aparece">
-        <video id="video" src="video/sakura-vertical.mp4" poster="img/vino.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video de la bota Sakura en sus 5 colores"></video>
-        <button class="sonido presionable" id="sonido" type="button">Activar sonido</button>
-      </div>
-      <div class="detalles" id="detalles">
-        <figure class="clip aparece"><img src="img/vino.jpg" alt="Detalle de la caña arrugada"><figcaption><b>Caña arrugada</b><small>Cae suave sobre la rodilla</small></figcaption></figure>
-        <figure class="clip aparece" style="--d:80ms"><img src="img/vino.jpg" alt="Detalle del tacón cuadrado"><figcaption><b>Tacón cuadrado</b><small>Firme todo el día</small></figcaption></figure>
-        <figure class="clip aparece" style="--d:160ms"><img src="img/vino.jpg" alt="Detalle de la punta"><figcaption><b>Punta fina</b><small>Alarga la pierna</small></figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <section id="buscar" aria-labelledby="t-bus">
-    <div class="titulo aparece">
-      <p class="eyebrow">Encuentra tu bota</p>
-      <h2 id="t-bus">Tres preguntas y te mostramos las tuyas</h2>
-    </div>
-    <div class="buscador aparece">
-      <div class="pregunta"><b><small>01</small>¿Para quién es?</b><div class="opciones" data-q="g"><button type="button" data-v="mujer" aria-pressed="false">Para mí</button><button type="button" data-v="ninas" aria-pressed="false">Para una niña</button></div></div>
-      <div class="pregunta"><b><small>02</small>¿Con tacón?</b><div class="opciones" data-q="tacon"><button type="button" data-v="si" aria-pressed="false">Sí, con tacón</button><button type="button" data-v="no" aria-pressed="false">Sin tacón</button><button type="button" data-v="igual" aria-pressed="false">Me da igual</button></div></div>
-      <div class="pregunta"><b><small>03</small>¿Qué tan alta?</b><div class="opciones" data-q="cana"><button type="button" data-v="tobillo" aria-pressed="false">Al tobillo</button><button type="button" data-v="media" aria-pressed="false">A media pierna</button><button type="button" data-v="alta" aria-pressed="false">Alta o sobre la rodilla</button><button type="button" data-v="igual" aria-pressed="false">Me da igual</button></div></div>
-      <div class="resultado" id="resultado" aria-live="polite"><p>Responde y aquí aparecen las botas que van contigo.</p></div>
-    </div>
-  </section>
 
   <section id="coleccion" aria-labelledby="t-col">
     <div class="titulo aparece">
@@ -557,11 +515,55 @@ footer img{width:64px;height:64px;border-radius:50%}
     <div class="mas" id="mas" hidden><button class="btn-sec presionable" type="button" id="ver-mas">Ver más botas</button></div>
   </section>
 
+  <section id="buscar" aria-labelledby="t-bus">
+    <div class="titulo aparece">
+      <p class="eyebrow">Encuentra tu bota</p>
+      <h2 id="t-bus">Tres preguntas y te mostramos las tuyas</h2>
+    </div>
+    <div class="buscador aparece">
+      <div class="pregunta"><b><small>01</small>¿Para quién es?</b><div class="opciones" data-q="g"><button type="button" data-v="mujer" aria-pressed="false">Para mí</button><button type="button" data-v="ninas" aria-pressed="false">Para una niña</button></div></div>
+      <div class="pregunta"><b><small>02</small>¿Con tacón?</b><div class="opciones" data-q="tacon"><button type="button" data-v="si" aria-pressed="false">Sí, con tacón</button><button type="button" data-v="no" aria-pressed="false">Sin tacón</button><button type="button" data-v="igual" aria-pressed="false">Me da igual</button></div></div>
+      <div class="pregunta"><b><small>03</small>¿Qué tan alta?</b><div class="opciones" data-q="cana"><button type="button" data-v="tobillo" aria-pressed="false">Al tobillo</button><button type="button" data-v="media" aria-pressed="false">A media pierna</button><button type="button" data-v="alta" aria-pressed="false">Alta o sobre la rodilla</button><button type="button" data-v="igual" aria-pressed="false">Me da igual</button></div></div>
+      <div class="resultado" id="resultado" aria-live="polite"><p>Responde y aquí aparecen las botas que van contigo.</p></div>
+    </div>
+  </section>
+
+  <section id="vitrina" class="vitrina-sec" aria-labelledby="t-vit">
+    <div class="titulo aparece">
+      <p class="eyebrow">Vitrina Geco</p>
+      <h2 id="t-vit">Pasa el dedo y mira cada bota</h2>
+    </div>
+    <div class="vitrina" id="vitrina-riel" aria-label="Vitrina de botas"></div>
+    <div class="vitrina-pie">
+      <button class="presionable" type="button" id="vit-ant" aria-label="Bota anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+      <div class="vitrina-puntos" id="vit-puntos" aria-hidden="true"></div>
+      <button class="presionable" type="button" id="vit-sig" aria-label="Bota siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-cine">
+    <div class="titulo aparece">
+      <p class="eyebrow">En movimiento</p>
+      <h2 id="t-cine">Mírala caminar</h2>
+    </div>
+    <div class="cine">
+      <div class="video-marco aparece">
+        <video id="video" src="video/sakura-vertical.mp4" poster="img/vino.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video de la bota Sakura en sus 5 colores"></video>
+        <button class="sonido presionable" id="sonido" type="button">Activar sonido</button>
+      </div>
+      <div class="detalles" id="detalles">
+        <figure class="clip aparece"><img src="img/vino.jpg" alt="Detalle de la caña arrugada"><figcaption><b>Caña arrugada</b><small>Cae suave sobre la rodilla</small></figcaption></figure>
+        <figure class="clip aparece" style="--d:80ms"><img src="img/vino.jpg" alt="Detalle del tacón cuadrado"><figcaption><b>Tacón cuadrado</b><small>Firme todo el día</small></figcaption></figure>
+        <figure class="clip aparece" style="--d:160ms"><img src="img/vino.jpg" alt="Detalle de la punta"><figcaption><b>Punta fina</b><small>Alarga la pierna</small></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
   <section id="pedido" aria-labelledby="t-ped">
     <div class="titulo aparece">
       <p class="eyebrow">Tu pedido</p>
       <h2 id="t-ped">Escríbenos y la recibes en casa</h2>
-      <p>Armamos el mensaje con todo lo que elegiste. Lo envías por WhatsApp y te confirmamos disponibilidad, precio y envío.</p>
+      <p>Armamos el mensaje con todo lo que elegiste. Lo envías por WhatsApp y te confirmamos disponibilidad y envío.</p>
     </div>
     <div class="pedido">
       <div class="paso">
@@ -571,6 +573,9 @@ footer img{width:64px;height:64px;border-radius:50%}
           <label class="campo" for="f-nombre"><span>Tu nombre</span><input id="f-nombre" autocomplete="given-name" placeholder="Ej. Laura"></label>
           <label class="campo" for="f-ciudad"><span>Ciudad</span><input id="f-ciudad" autocomplete="address-level2" placeholder="Ej. Bogotá"></label>
           <label class="campo" for="f-cm"><span>Largo del pie</span><input id="f-cm" inputmode="decimal" placeholder="Opcional, en cm"></label>
+        </div>
+        <div class="campo"><span id="t-pago">¿Cómo quieres pagar?</span>
+          <div class="opciones" id="f-pago" role="group" aria-labelledby="t-pago"><button type="button" data-v="contra" aria-pressed="true">Contra entrega · envío $15.000</button><button type="button" data-v="adelantado" aria-pressed="false">Por adelantado · envío gratis</button></div>
         </div>
       </div>
       <div class="paso">
@@ -596,10 +601,10 @@ footer img{width:64px;height:64px;border-radius:50%}
     <ol class="ruta" id="ruta">
       <span class="linea" aria-hidden="true"></span>
       <span class="caja" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Z"/><path d="m3 7.5 9 4.5 9-4.5M12 12v9"/></svg></span>
-      <li><b>Nos escribes</b><p>Por WhatsApp con la referencia, el color y la talla. Te confirmamos disponibilidad y precio.</p></li>
-      <li><b>Despachamos</b><p>En Bogotá llega el mismo día. Al resto del país, en 1 a 2 días.</p></li>
+      <li><b>Nos escribes</b><p>Por WhatsApp con la referencia, el color y la talla. Te confirmamos disponibilidad.</p></li>
+      <li><b>Despachamos</b><p>En Bogotá, si pides antes de la 1 de la tarde, te llega el mismo día. Al resto del país despachamos al día siguiente con Interrapidísimo y llega en 1 a 3 días hábiles.</p></li>
       <li><b>La rastreas</b><p>Te enviamos el número de guía de la transportadora para que la sigas.</p></li>
-      <li><b>Pagas al recibir</b><p>No pagas nada por adelantado. Pagas cuando la tienes en tus manos.</p></li>
+      <li><b>Pagas como prefieras</b><p><b>Contra entrega:</b> separas tu pedido con los $15.000 del envío y pagas la bota cuando la recibes. <b>Por adelantado:</b> el envío es gratis. Recibimos Nequi, Bancolombia, Daviplata o Bre-B desde cualquier banco.</p></li>
     </ol>
   </section>
 
@@ -610,9 +615,10 @@ footer img{width:64px;height:64px;border-radius:50%}
     </div>
     <div class="faq">
       <details><summary>¿Qué tallas hay?</summary><p>La Sakura y la Karol vienen de la 34 a la 40. Para las demás referencias y para niñas, escríbenos la talla y te confirmamos si está disponible.</p></details>
-      <details><summary>¿Puedo cambiar la talla?</summary><p>Sí. El cambio de talla se hace con el envío de ida y vuelta por cuenta del cliente.</p></details>
+      <details><summary>¿Puedo cambiar la talla?</summary><p>Sí. Como te damos la guía para medir tu pie antes de pedir, los envíos de ida y vuelta del cambio corren por tu cuenta. Por eso te recomendamos medirte y escribirnos los centímetros: te ayudamos a acertar la talla desde el primer pedido.</p></details>
       <details><summary>¿Cómo mido el pie?</summary><p>Pisa una hoja contra la pared, marca la punta del dedo más largo y mide hasta el talón. Escríbenos los centímetros y te ayudamos con la talla.</p></details>
-      <details><summary>¿Cómo pago?</summary><p>Contra entrega: pagas cuando recibes la bota en tu casa.</p></details>
+      <details><summary>¿Cómo pago?</summary><p>Tienes dos opciones. <b>Contra entrega:</b> pagas $15.000 del envío para separar tu pedido y la bota la pagas cuando te llega. <b>Por adelantado:</b> pagas la bota antes del despacho y el envío es gratis en compras desde $100.000. Recibimos Nequi, Bancolombia, Daviplata o transferencia inmediata Bre-B desde cualquier banco.</p></details>
+      <details><summary>¿Por qué se pagan $15.000 en contra entrega?</summary><p>La transportadora cobra un porcentaje extra por recaudar el dinero en tu puerta. Con esos $15.000 cubrimos el envío y separamos tu bota para ti.</p></details>
     </div>
   </section>
 
@@ -638,6 +644,7 @@ footer img{width:64px;height:64px;border-radius:50%}
       <div style="display:grid;gap:14px;min-width:0">
         <p class="eyebrow" id="h-ref"></p>
         <h3 id="h-nombre"></h3>
+        <p class="hoja-precio" id="h-precio"></p>
         <p class="desc" id="h-desc"></p>
         <div class="paso">
           <span class="lbl">Color <small id="h-color-txt"></small></span>
@@ -649,6 +656,7 @@ footer img{width:64px;height:64px;border-radius:50%}
           <div class="talla-libre" id="h-talla-libre" hidden><input id="h-talla-input" inputmode="numeric" placeholder="Ej. 30" aria-label="Talla de la niña"><span class="aviso">Escribe la talla que usa</span></div>
           <details class="guia"><summary>¿No sabes tu talla?</summary>
             <ol><li>Pisa una hoja de papel con el talón contra la pared.</li><li>Marca la punta del dedo más largo.</li><li>Mide de la marca a la pared en centímetros.</li><li>Escríbelo en "Largo del pie" en tu pedido y te ayudamos a elegir.</li></ol>
+            <p class="aviso">Si después necesitas otra talla, los envíos de ida y vuelta del cambio los pagas tú. Medirte antes te ahorra ese costo.</p>
           </details>
         </div>
         <div class="agregar-fila">
@@ -678,6 +686,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   const fino = matchMedia("(hover: hover) and (pointer: fine)").matches;
   const porRef = r => CAT.find(p => p.ref === r);
   const est = src => /\.jpg$/i.test(src) ? "estudio real" : "estudio";
+  const pesos = n => "$" + Number(n).toLocaleString("es-CO");
   let bolsa = [];
   try { bolsa = JSON.parse(localStorage.getItem("geco-bolsa") || "[]"); if (!Array.isArray(bolsa)) bolsa = []; } catch(e){ bolsa = []; }
   // las bolsas guardadas por la versión anterior apuntan a la foto original; se pasan a la del estudio
@@ -717,7 +726,8 @@ footer img{width:64px;height:64px;border-radius:50%}
     if (!pausado && !document.hidden){
       const p = Math.min(1, (now - t0) / DUR);
       barras.forEach((b,k) => b.style.width = k < idx ? "100%" : k === idx ? (p*100)+"%" : "0");
-      if (p >= 1){ const n = (idx + 1) % DEST.colores.length; t0 = now; if (n === 0) barras.forEach(b => b.style.width = "0"); pintar(n); }
+      // da una sola vuelta por los colores y se queda en el primero
+      if (p >= 1){ const n = (idx + 1) % DEST.colores.length; t0 = now; if (n === 0){ barras.forEach(b => b.style.width = "0"); ponerPausa(true); } pintar(n); }
     } else if (document.hidden) t0 = now - 0;
     requestAnimationFrame(tick);
   }
@@ -792,7 +802,6 @@ footer img{width:64px;height:64px;border-radius:50%}
     }
     requestAnimationFrame(cuadro);
   })();
-  $("#cinta").insertAdjacentHTML("beforeend", $("#cinta").innerHTML.replace(/<span>/g, '<span aria-hidden="true">'));
 
   /* ---------- vitrina giratoria ---------- */
   const riel = $("#vitrina-riel"), VIT = CAT.filter(p => p.vitrina);
@@ -838,7 +847,7 @@ footer img{width:64px;height:64px;border-radius:50%}
       <span class="img ${est(c.src)}" style="display:block"><img src="${c.src}" alt="${esc(p.nombre)} ${esc(c.n.toLowerCase())}" loading="lazy" draggable="false"><span class="brillo"></span>${p.nuevo ? '<span class="nuevo">Nuevo</span>' : ""}</span>
       <span class="ref">${p.ref} · ${esc(p.tipo)}</span>
       <h3>${esc(p.nombre)}</h3>
-      <span class="fila"><span class="puntos">${puntos(p)}</span><span class="ver">Ver</span></span>
+      <span class="fila"><span class="puntos">${puntos(p)}</span>${p.precio ? `<span class="valor">${pesos(p.precio)}</span>` : '<span class="valor consulta">Precio por WhatsApp</span>'}</span>
     </button>`;
   }
   function activarTarjetas(root){
@@ -918,7 +927,7 @@ footer img{width:64px;height:64px;border-radius:50%}
       : "<p>Con esas respuestas no tenemos una todavía. Prueba cambiando una, o escríbenos y te contamos qué llega pronto.</p>";
     activarTarjetas(out);
   }
-  $$(".opciones").forEach(g => g.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+  $$(".opciones[data-q]").forEach(g => g.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
     resp[g.dataset.q] = b.dataset.v; g.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); buscar();
   })));
 
@@ -932,6 +941,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     $("#h-ref").textContent = p.ref + " · " + p.tipo + (p.g === "ninas" ? " · Niña" : " · Mujer");
     $("#h-nombre").textContent = p.nombre;
     $("#h-desc").textContent = p.d;
+    $("#h-precio").innerHTML = p.precio ? pesos(p.precio) + "<small>Pagas al recibir</small>" : "<small>Precio por WhatsApp: te lo confirmamos con tu talla</small>";
     $("#h-colores").innerHTML = p.colores.map((c,i) => `<button type="button" data-i="${i}" aria-pressed="${i===colorSel}"><i style="background:${c.c}"></i>${esc(c.n)}</button>`).join("");
     $$("#h-colores button").forEach(b => b.addEventListener("click", () => elegirColor(+b.dataset.i)));
     const nina = p.g === "ninas";
@@ -953,7 +963,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     himg.parentNode.className = est(c.src);
     $("#h-color-txt").textContent = c.n;
     $$("#h-colores button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i === i));
-    const txt = "Hola Geco Shoes, quiero saber el precio de la " + actual.ref + " " + actual.nombre + " en " + c.n.toLowerCase() + ". ¿Tienen mi talla?";
+    const txt = "Hola Geco Shoes, " + (actual.precio ? "me interesa" : "quiero saber el precio de") + " la " + actual.ref + " " + actual.nombre + " en " + c.n.toLowerCase() + ". ¿Tienen mi talla?";
     $("#h-preguntar").href = "https://wa.me/" + NUM + "?text=" + encodeURIComponent(txt);
   }
   function cerrar(){
@@ -1034,6 +1044,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   });
 
   /* ---------- pedido ---------- */
+  let pago = "contra";
   function pintarBolsa(){
     $("#bolsa-n").textContent = bolsa.length;
     $("#items-n").textContent = bolsa.length ? bolsa.length + (bolsa.length === 1 ? " bota" : " botas") : "";
@@ -1049,18 +1060,23 @@ footer img{width:64px;height:64px;border-radius:50%}
   function mensaje(){
     const nombre = $("#f-nombre").value.trim(), ciudad = $("#f-ciudad").value.trim(), cm = $("#f-cm").value.trim();
     const l = ["Hola Geco Shoes, quiero hacer este pedido:"];
-    if (bolsa.length) bolsa.forEach(b => l.push("• " + b.ref + " " + b.nombre + " · " + b.color + " · talla " + b.talla + (b.g === "ninas" ? " (niña)" : "")));
+    if (bolsa.length) bolsa.forEach(b => { const p = porRef(b.ref); l.push("• " + b.ref + " " + b.nombre + " · " + b.color + " · talla " + b.talla + (b.g === "ninas" ? " (niña)" : "") + (p && p.precio ? " · " + pesos(p.precio) : "")); });
     else l.push("• (todavía no elijo, ¿me ayudan?)");
     if (cm) l.push("Mi pie mide: " + cm);
     if (nombre) l.push("Nombre: " + nombre);
     if (ciudad) l.push("Ciudad: " + ciudad);
-    l.push("¿Cuál es el precio y cuándo me llega? Pago contra entrega.");
+    l.push(pago === "adelantado" ? "Quiero pagar por adelantado (envío gratis)." : "Quiero pagar contra entrega (envío $15.000).");
+    const sinPrecio = bolsa.some(b => { const p = porRef(b.ref); return !p || !p.precio; });
+    l.push((sinPrecio ? "¿Me confirman el precio, la disponibilidad" : "¿Me confirman disponibilidad") + " y cuándo me llega?");
     const txt = l.join("\n");
     $("#mensaje").textContent = txt;
     $("#wa-enviar").href = "https://wa.me/" + NUM + "?text=" + encodeURIComponent(txt);
     return txt;
   }
   ["#f-nombre","#f-ciudad","#f-cm"].forEach(s => $(s).addEventListener("input", mensaje));
+  $$("#f-pago button").forEach(b => b.addEventListener("click", () => {
+    pago = b.dataset.v; $$("#f-pago button").forEach(x => x.setAttribute("aria-pressed", x === b)); mensaje();
+  }));
   $("#copiar").addEventListener("click", () => {
     const txt = mensaje(), av = $("#aviso");
     const ok = () => { av.className = "aviso ok"; av.textContent = "Mensaje copiado. Pégalo en WhatsApp al 315 060 8939."; };
