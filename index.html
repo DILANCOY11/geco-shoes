@@ -342,6 +342,18 @@ input{width:100%;border:1px solid var(--linea);background:var(--marmol);border-r
 .guia{font-size:14px;color:var(--tinta-suave)}
 .guia summary{cursor:pointer;font-weight:600;color:var(--tinta)}
 .guia ol{margin:8px 0 0;padding-left:20px;display:grid;gap:4px}
+/* calculadora: la clienta escribe los cm de su pie y la página le dice la talla */
+.calc{display:grid;gap:8px;padding:12px 14px;border:1px solid var(--linea);border-radius:14px;background:color-mix(in oklab, var(--papel) 70%, transparent)}
+.calc label{font-size:14px;font-weight:600}
+.calc-fila{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--tinta-suave)}
+.calc-fila input{max-width:110px}
+.calc-res{font-size:14px;color:var(--tinta-suave);min-height:1.4em}
+.calc-res b{color:var(--tinta);font-size:17px}
+.tabla-tallas{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:18px;margin-top:10px}
+.tabla-tallas table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:14px}
+.tabla-tallas caption{text-align:left;font-weight:700;padding-bottom:6px}
+.tabla-tallas th,.tabla-tallas td{padding:6px 8px;border-bottom:1px solid var(--linea);text-align:left}
+.tabla-tallas th{font-size:12.5px;color:var(--tinta-suave);font-weight:600}
 .hoja .agregar-fila{display:flex;gap:10px;flex-wrap:wrap}
 .hoja .agregar-fila .btn{flex:1 1 200px}
 .vuela{position:fixed;z-index:80;pointer-events:none;border-radius:18px;overflow:hidden}
@@ -619,7 +631,8 @@ footer img{width:64px;height:64px;border-radius:50%}
     <div class="faq">
       <details><summary>¿Qué tallas hay?</summary><p>La Sakura y la Karol vienen de la 34 a la 40. Para las demás referencias y para niñas, escríbenos la talla y te confirmamos si está disponible.</p></details>
       <details><summary>¿Puedo cambiar la talla?</summary><p>Sí. Como te damos la guía para medir tu pie antes de pedir, los envíos de ida y vuelta del cambio corren por tu cuenta. Por eso te recomendamos medirte y escribirnos los centímetros: te ayudamos a acertar la talla desde el primer pedido.</p></details>
-      <details><summary>¿Cómo mido el pie?</summary><p>Pisa una hoja contra la pared, marca la punta del dedo más largo y mide hasta el talón. Escríbenos los centímetros y te ayudamos con la talla.</p></details>
+      <details><summary>¿Cómo mido el pie?</summary><p>Pisa una hoja contra la pared, marca la punta del dedo más largo y mide hasta el talón. Busca los centímetros en la tabla o escríbelos en la ficha de la bota y te decimos tu talla. Si quedas entre dos tallas, elige la más grande.</p>
+        <div class="tabla-tallas" id="tabla-tallas"></div></details>
       <details><summary>¿Cómo pago?</summary><p>Tienes dos opciones. <b>Contra entrega:</b> pagas $15.000 del envío para separar tu pedido y la bota la pagas cuando te llega. <b>Por adelantado:</b> pagas la bota antes del despacho y el envío es gratis en compras desde $100.000. Recibimos Nequi, Bancolombia, Daviplata o transferencia inmediata Bre-B desde cualquier banco.</p></details>
       <details><summary>¿Por qué se pagan $15.000 en contra entrega?</summary><p>La transportadora cobra un porcentaje extra por recaudar el dinero en tu puerta. Con esos $15.000 cubrimos el envío y separamos tu bota para ti.</p></details>
     </div>
@@ -657,8 +670,13 @@ footer img{width:64px;height:64px;border-radius:50%}
           <span class="lbl">Talla <small id="h-talla-nota"></small></span>
           <div class="tallas" id="h-tallas" role="group" aria-label="Talla"></div>
           <div class="talla-libre" id="h-talla-libre" hidden><input id="h-talla-input" inputmode="numeric" placeholder="Ej. 30" aria-label="Talla de la niña"><span class="aviso">Escribe la talla que usa</span></div>
-          <details class="guia"><summary>¿No sabes tu talla?</summary>
-            <ol><li>Pisa una hoja de papel con el talón contra la pared.</li><li>Marca la punta del dedo más largo.</li><li>Mide de la marca a la pared en centímetros.</li><li>Escríbelo en "Largo del pie" en tu pedido y te ayudamos a elegir.</li></ol>
+          <div class="calc">
+            <label for="h-cm">¿No sabes tu talla? Mide tu pie</label>
+            <div class="calc-fila"><input id="h-cm" inputmode="decimal" placeholder="Ej. 24" autocomplete="off"><span>cm</span></div>
+            <p class="calc-res" id="h-cm-res" aria-live="polite"></p>
+          </div>
+          <details class="guia"><summary>¿Cómo me mido el pie?</summary>
+            <ol><li>Pisa una hoja de papel con el talón contra la pared.</li><li>Marca la punta del dedo más largo.</li><li>Mide de la marca a la pared en centímetros.</li><li>Escribe los centímetros arriba y te decimos tu talla.</li></ol>
             <p class="aviso">Si después necesitas otra talla, los envíos de ida y vuelta del cambio los pagas tú. Medirte antes te ahorra ese costo.</p>
           </details>
         </div>
@@ -938,6 +956,37 @@ footer img{width:64px;height:64px;border-radius:50%}
   const velo = $("#velo"), giro = $("#giro"), himg = $("#h-img");
   let actual = null, colorSel = 0, tallaSel = null, ultimoFoco = null, lupa = false;
   const TALLAS = ["34","35","36","37","38","39","40"];
+
+  // tablas de tallas de Geco: [talla, largo del pie en cm]
+  const TABLA = {
+    mujer: [[32,21.5],[33,21.8],[34,22],[35,22.5],[36,23],[37,24],[38,25],[39,25.5],[40,26],[41,27],[42,28]],
+    ninas: [[23,15],[24,15.5],[25,16],[26,17],[27,17.5],[28,18],[29,19],[30,19.5],[31,20],[32,21],[33,21.5],[34,22]]
+  };
+  // entre dos tallas se recomienda la más grande
+  function tallaPorCm(g, txt){
+    const cm = parseFloat(String(txt).replace(",", ".")), t = TABLA[g] || TABLA.mujer;
+    if (!(cm > 0)) return null;
+    if (cm < t[0][1] - 1.5) return {fuera: "pequeña"};
+    const f = t.find(([, c]) => cm <= c + .001);
+    return f ? {talla: String(f[0])} : {fuera: "grande"};
+  }
+  function calcular(){
+    const txt = $("#h-cm").value.trim(), res = $("#h-cm-res"), nina = actual.g === "ninas";
+    $("#f-cm").value = txt; mensaje();
+    const r = txt ? tallaPorCm(actual.g, txt) : null;
+    if (!r){ res.textContent = txt ? "Escribe solo el número, por ejemplo 24 o 23,5." : ""; return; }
+    if (r.fuera){ res.textContent = "Esa medida queda fuera de nuestra tabla. Escríbenos por WhatsApp y te ayudamos."; return; }
+    if (nina){ $("#h-talla-input").value = r.talla; res.innerHTML = "Su talla es la <b>" + r.talla + "</b>. Ya la escribimos arriba."; return; }
+    const btn = $$("#h-tallas .talla").find(b => b.textContent === r.talla);
+    $$("#h-tallas .talla").forEach(b => b.setAttribute("aria-pressed", b === btn));
+    tallaSel = btn ? r.talla : null;
+    res.innerHTML = btn ? "Tu talla es la <b>" + r.talla + "</b>. Ya la marcamos." : "Tu talla es la <b>" + r.talla + "</b>. Esta bota viene de la 34 a la 40: escríbenos y te ayudamos.";
+  }
+  $("#h-cm").addEventListener("input", calcular);
+  $("#tabla-tallas").innerHTML = [["mujer", "Mujer"], ["ninas", "Niña"]].map(([g, n]) =>
+    `<table><caption>${n}</caption><thead><tr><th scope="col">Talla</th><th scope="col">Pie (cm)</th></tr></thead><tbody>${
+      TABLA[g].map(([t, c]) => `<tr><td>${t}</td><td>${String(c).replace(".", ",")}</td></tr>`).join("")}</tbody></table>`).join("");
+
   function abrir(p, ci, desde){
     if (!p) return;
     actual = p; colorSel = ci || 0; tallaSel = null; ultimoFoco = desde && desde.closest("button") || document.activeElement;
@@ -949,9 +998,11 @@ footer img{width:64px;height:64px;border-radius:50%}
     $$("#h-colores button").forEach(b => b.addEventListener("click", () => elegirColor(+b.dataset.i)));
     const nina = p.g === "ninas";
     $("#h-tallas").hidden = nina; $("#h-talla-libre").hidden = !nina; $("#h-talla-input").value = "";
+    $("#h-cm").value = $("#f-cm").value; $("#h-cm-res").textContent = "";
     $("#h-talla-nota").textContent = p.tallas ? "Disponible de la " + p.tallas : nina ? "Te confirmamos disponibilidad" : "Elige tu talla y te confirmamos";
     $("#h-tallas").innerHTML = TALLAS.map(t => `<button class="talla" type="button" aria-pressed="false">${t}</button>`).join("");
     $$("#h-tallas .talla").forEach(b => b.addEventListener("click", () => { tallaSel = b.textContent; $$("#h-tallas .talla").forEach(x => x.setAttribute("aria-pressed", x === b)); }));
+    if ($("#h-cm").value) calcular();
     ponerLupa(false); himg.style.transform = "";
     elegirColor(colorSel);
     velo.classList.add("abierto"); velo.setAttribute("aria-hidden", "false");
@@ -1065,7 +1116,11 @@ footer img{width:64px;height:64px;border-radius:50%}
     const l = ["Hola Geco Shoes, quiero hacer este pedido:"];
     if (bolsa.length) bolsa.forEach(b => { const p = porRef(b.ref); l.push("• " + b.ref + " " + b.nombre + " · " + b.color + " · talla " + b.talla + (b.g === "ninas" ? " (niña)" : "") + (p && p.precio ? " · " + pesos(p.precio) : "")); });
     else l.push("• (todavía no elijo, ¿me ayudan?)");
-    if (cm) l.push("Mi pie mide: " + cm);
+    if (cm){
+      // talla sugerida solo si todo el pedido es del mismo grupo (mujer o niña)
+      const grupos = [...new Set(bolsa.map(b => b.g))], t = grupos.length === 1 ? tallaPorCm(grupos[0], cm) : null;
+      l.push("Mi pie mide: " + cm.replace(/\s*cm$/i, "") + " cm" + (t && t.talla ? " (según la tabla, talla " + t.talla + ")" : ""));
+    }
     if (nombre) l.push("Nombre: " + nombre);
     if (ciudad) l.push("Ciudad: " + ciudad);
     l.push(pago === "adelantado" ? "Quiero pagar por adelantado (envío gratis)." : "Quiero pagar contra entrega (envío $15.000).");
