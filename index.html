@@ -1018,17 +1018,32 @@ footer img{width:64px;height:64px;border-radius:50%}
     $$("#h-tallas .talla").forEach(b => b.addEventListener("click", () => { tallaSel = b.textContent; $$("#h-tallas .talla").forEach(x => x.setAttribute("aria-pressed", x === b)); }));
     if ($("#h-cm").value) calcular();
     ponerLupa(false); himg.style.transform = "";
-    elegirColor(colorSel);
+    precargar(p);
+    elegirColor(colorSel, true);
     velo.classList.add("abierto"); velo.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
     $(".hoja").scrollTop = 0;
     setTimeout(() => $("#h-cerrar").focus({preventScroll: true}), 60);
     if (location.hash.slice(1).toUpperCase() !== p.ref) history.replaceState(null, "", "#" + p.ref);
   }
-  function elegirColor(i){
-    colorSel = i; const c = actual.colores[i];
-    himg.src = c.src; himg.alt = actual.nombre + " color " + c.n.toLowerCase();
-    himg.parentNode.className = est(c.src);
+  // al abrir una bota se descargan de una vez las fotos de todos sus colores, así el cambio de color es instantáneo
+  const cargadas = {};
+  function precargar(p){
+    p.colores.forEach(c => {
+      if (cargadas[c.src]) return;
+      const im = new Image(); im.src = c.src;
+      cargadas[c.src] = im.decode ? im.decode().catch(() => {}) : Promise.resolve();
+    });
+  }
+  function elegirColor(i, ya){
+    colorSel = i; const c = actual.colores[i], p = actual;
+    // si la foto aún no llegó, se deja la anterior hasta que esté lista (en vez de quedar en blanco)
+    const poner = () => {
+      if (actual !== p || colorSel !== i) return;
+      himg.src = c.src; himg.alt = p.nombre + " color " + c.n.toLowerCase();
+      himg.parentNode.className = est(c.src);
+    };
+    if (ya) poner(); else (cargadas[c.src] || Promise.resolve()).then(poner);
     $("#h-color-txt").textContent = c.n;
     $$("#h-colores button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i === i));
     const txt = "Hola Geco Shoes, " + (actual.precio ? "me interesa" : "quiero saber el precio de") + " la " + actual.nombre + " en " + c.n.toLowerCase() + ". ¿Tienen mi talla?";
