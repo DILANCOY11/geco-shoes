@@ -619,7 +619,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     <ol class="ruta" id="ruta">
       <span class="linea" aria-hidden="true"></span>
       <span class="caja" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Z"/><path d="m3 7.5 9 4.5 9-4.5M12 12v9"/></svg></span>
-      <li><b>Nos escribes</b><p>Por WhatsApp con la referencia, el color y la talla. Te confirmamos disponibilidad.</p></li>
+      <li><b>Nos escribes</b><p>Por WhatsApp con el nombre de la bota, el color y la talla. Te confirmamos disponibilidad.</p></li>
       <li><b>Despachamos</b><p>En Bogotá, si pides antes de la 1 de la tarde, te llega el mismo día entre las 4 y las 10 de la noche. Al resto del país despachamos al día siguiente con Interrapidísimo y llega en 1 a 3 días hábiles.</p></li>
       <li><b>La rastreas</b><p>Te enviamos el número de guía de la transportadora para que la sigas.</p></li>
       <li><b>Pagas como prefieras</b><p><b>En Bogotá:</b> el envío es gratis y pagas todo al recibir. <b>Otras ciudades, contra entrega:</b> separas tu pedido con los $15.000 del envío y pagas la bota cuando la recibes. <b>Por adelantado:</b> el envío es gratis. Recibimos Nequi, Bancolombia, Daviplata o Bre-B desde cualquier banco.</p></li>
@@ -842,7 +842,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   const riel = $("#vitrina-riel"), VIT = CAT.filter(p => p.vitrina);
   riel.innerHTML = VIT.map(p => `<button class="pieza" type="button" data-ref="${p.ref}" aria-label="${esc(p.nombre)}">
       <span class="${est(p.colores[0].src)}" style="display:block"><img src="${p.colores[0].src}" alt="" loading="lazy" draggable="false"></span>
-      <span class="placa"><b>${esc(p.nombre)}</b><small>${p.ref} · ${p.colores.length} ${p.colores.length === 1 ? "color" : "colores"}</small></span></button>`).join("");
+      <span class="placa"><b>${esc(p.nombre)}</b><small>${p.colores.length} ${p.colores.length === 1 ? "color" : "colores"}</small></span></button>`).join("");
   $("#vit-puntos").innerHTML = VIT.map(() => "<i></i>").join("");
   const piezas = $$("#vitrina-riel .pieza"), vpuntos = $$("#vit-puntos i");
   let ultimoX = riel.scrollLeft, vel = 0, enVista = false, centro = 0;
@@ -880,7 +880,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     const c = p.colores[ci || 0];
     return `<button class="tarjeta" type="button" data-ref="${p.ref}" data-c="${ci || 0}" style="--i:${i || 0}">
       <span class="img ${est(c.src)}" style="display:block"><img src="${c.src}" alt="${esc(p.nombre)} ${esc(c.n.toLowerCase())}" loading="lazy" draggable="false"><span class="brillo"></span>${p.nuevo ? '<span class="nuevo">Nuevo</span>' : ""}</span>
-      <span class="ref">${p.ref} · ${esc(p.tipo)}</span>
+      <span class="ref">${esc(p.tipo)}</span>
       <h3>${esc(p.nombre)}</h3>
       <span class="fila"><span class="puntos">${puntos(p)}</span>${p.precio ? `<span class="valor">${pesos(p.precio)}</span>` : '<span class="valor consulta">Precio por WhatsApp</span>'}</span>
     </button>`;
@@ -1004,7 +1004,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   function abrir(p, ci, desde){
     if (!p) return;
     actual = p; colorSel = ci || 0; tallaSel = null; ultimoFoco = desde && desde.closest("button") || document.activeElement;
-    $("#h-ref").textContent = p.ref + " · " + p.tipo + (p.g === "ninas" ? " · Niña" : " · Mujer");
+    $("#h-ref").textContent = p.tipo + (p.g === "ninas" ? " · Niña" : " · Mujer"); // el código de referencia es interno: no se muestra
     $("#h-nombre").textContent = p.nombre;
     $("#h-desc").textContent = p.d;
     $("#h-precio").innerHTML = p.precio ? pesos(p.precio) + "<small>Pagas al recibir</small>" : "<small>Precio por WhatsApp: te lo confirmamos con tu talla</small>";
@@ -1031,7 +1031,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     himg.parentNode.className = est(c.src);
     $("#h-color-txt").textContent = c.n;
     $$("#h-colores button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i === i));
-    const txt = "Hola Geco Shoes, " + (actual.precio ? "me interesa" : "quiero saber el precio de") + " la " + actual.ref + " " + actual.nombre + " en " + c.n.toLowerCase() + ". ¿Tienen mi talla?";
+    const txt = "Hola Geco Shoes, " + (actual.precio ? "me interesa" : "quiero saber el precio de") + " la " + actual.nombre + " en " + c.n.toLowerCase() + ". ¿Tienen mi talla?";
     $("#h-preguntar").href = "https://wa.me/" + NUM + "?text=" + encodeURIComponent(txt);
   }
   function cerrar(){
@@ -1118,7 +1118,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     $("#bolsa-n").hidden = !bolsa.length; // con el pedido vacío no se muestra el 0
     $("#items-n").textContent = bolsa.length ? bolsa.length + (bolsa.length === 1 ? " bota" : " botas") : "";
     $("#items").innerHTML = bolsa.length ? bolsa.map((b,i) => `
-      <li class="item"><span class="${est(b.src)}"><img src="${esc(b.src)}" alt=""></span><span><b>${esc(b.nombre)}</b><small>${esc(b.ref)} · ${esc(b.color)} · Talla ${esc(b.talla)}</small></span><button type="button" data-i="${i}">Quitar</button></li>`).join("")
+      <li class="item"><span class="${est(b.src)}"><img src="${esc(b.src)}" alt=""></span><span><b>${esc(b.nombre)}</b><small>${esc(b.color)} · Talla ${esc(b.talla)}</small></span><button type="button" data-i="${i}">Quitar</button></li>`).join("")
       : '<li class="vacio">Aún no has elegido botas. Toca una en la colección y agrégala.</li>';
     $$("#items button").forEach(b => b.addEventListener("click", () => { bolsa.splice(+b.dataset.i, 1); guardar(); pintarBolsa(); }));
     $("#fija-txt").textContent = bolsa.length ? "Tu pedido: " + bolsa.length + (bolsa.length === 1 ? " bota" : " botas") : "¿Dudas? Escríbenos";
@@ -1128,7 +1128,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   function mensaje(){
     const nombre = $("#f-nombre").value.trim(), ciudad = $("#f-ciudad").value.trim(), cm = $("#f-cm").value.trim();
     const l = ["Hola Geco Shoes, quiero hacer este pedido:"];
-    if (bolsa.length) bolsa.forEach(b => { const p = porRef(b.ref); l.push("• " + b.ref + " " + b.nombre + " · " + b.color + " · talla " + b.talla + (b.g === "ninas" ? " (niña)" : "") + (p && p.precio ? " · " + pesos(p.precio) : "")); });
+    if (bolsa.length) bolsa.forEach(b => { const p = porRef(b.ref); l.push("• " + b.nombre + " · " + b.color + " · talla " + b.talla + (b.g === "ninas" ? " (niña)" : "") + (p && p.precio ? " · " + pesos(p.precio) : "")); });
     else l.push("• (todavía no elijo, ¿me ayudan?)");
     if (cm){
       // talla sugerida solo si todo el pedido es del mismo grupo (mujer o niña)
