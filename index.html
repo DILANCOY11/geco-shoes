@@ -27,7 +27,7 @@
   {"ref":"S01","precio":170000,"g":"mujer","tipo":"Sobre la rodilla","nombre":"Sakura","nuevo":true,"vitrina":true,"tallas":"34 a 40","tacon":"si","cana":"alta",
    "d":"Caña arrugada que cae sobre la rodilla, tacón cuadrado y punta fina.",
    "colores":[
-    {"n":"Vino","c":"#8E1F2B","tono":"#8E1F2B","fam":"Vino","src":"img/vino.jpg","foto":"img/vino.jpg","mat":"base cuero"},
+    {"n":"Rojo","c":"#8E1F2B","tono":"#8E1F2B","fam":"Rojo","src":"img/vino.jpg","foto":"img/vino.jpg","mat":"base cuero"},
     {"n":"Negro","c":"#2A2426","tono":"#2A2426","fam":"Negro","src":"img/negro.jpg","foto":"img/negro.jpg","mat":"base cuero"},
     {"n":"Beige","c":"#CDB497","tono":"#A57E55","fam":"Beige","src":"img/beige.jpg","foto":"img/beige.jpg","mat":"base cuero"},
     {"n":"Blanco","c":"#F6F2EC","tono":"#A8968A","fam":"Blanco","src":"img/blanco.jpg","foto":"img/blanco.jpg","mat":"base cuero"},
@@ -477,11 +477,11 @@ footer img{width:64px;height:64px;border-radius:50%}
   <div class="pasarela" id="pasarela">
     <canvas class="petalos" id="petalos" aria-hidden="true"></canvas>
     <div class="escena">
-      <div class="nombre-gigante" id="nombre-gigante" aria-hidden="true"><span>Vino</span></div>
-      <div class="foto estudio real" id="foto" role="img" aria-label="Bota Sakura color vino">
+      <div class="nombre-gigante" id="nombre-gigante" aria-hidden="true"><span>Sakura</span></div>
+      <div class="foto estudio real" id="foto" role="img" aria-label="Bota Sakura color rojo">
         <div class="historia" id="historia" aria-hidden="true"></div>
         <span class="desliza" id="desliza" aria-hidden="true">← desliza →</span>
-        <div class="etiqueta"><span class="punto"></span><span id="etq">Vino · base cuero</span></div>
+        <div class="etiqueta"><span class="punto"></span><span id="etq">Rojo · base cuero</span></div>
         <button class="pausa presionable" id="pausa" type="button" aria-label="Pausar la pasarela">
           <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" id="ico-pausa"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>
         </button>
@@ -903,7 +903,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   $("#cnt-mujer").textContent = CAT.filter(p => p.g === "mujer").length;
   $("#cnt-ninas").textContent = CAT.filter(p => p.g === "ninas").length;
   const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
-  const FAM = {Negro:"#1d1a19", Blanco:"#f4f3f1", Beige:"#CDB497", Vino:"#8E1F2B", Jean:"#668BBB"};
+  const FAM = {Negro:"#1d1a19", Blanco:"#f4f3f1", Beige:"#CDB497", Rojo:"#8E1F2B", Jean:"#668BBB"};
   function moverPildora(){
     const b = $(`#pestanas button[data-g="${f.g}"]`), pl = $("#pildora");
     pl.style.width = b.offsetWidth + "px"; pl.style.transform = `translateX(${b.offsetLeft}px)`;
