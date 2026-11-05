@@ -60,6 +60,27 @@
   {"ref":"M07","precio":140000,"g":"mujer","tipo":"Vaqueras","nombre":"Nevada","vitrina":true,"tacon":"si","cana":"media",
    "d":"Bordado claro en llamas, cremallera lateral y tacón cuadrado.",
    "colores":[{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/estudio/m2.webp","foto":"img/m2.jpg"}]},
+  {"ref":"A01","g":"mujer","tipo":"Botines de abrigo","nombre":"Mullida","nuevo":true,"tacon":"no","cana":"tobillo",
+   "d":"Pantufla con plataforma y cuello de peluche. Foto real.",
+   "colores":[{"n":"Beige","c":"#CDB497","fam":"Beige","src":"img/abrigo/mullida-beige.jpg","foto":"img/abrigo/mullida-beige.jpg"},{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/abrigo/mullida-negro.jpg","foto":"img/abrigo/mullida-negro.jpg"},{"n":"Camel","c":"#B9763A","fam":"Café","src":"img/abrigo/mullida-camel.jpg","foto":"img/abrigo/mullida-camel.jpg"}]},
+  {"ref":"A02","g":"mujer","tipo":"Botines de abrigo","nombre":"Puff","nuevo":true,"tacon":"no","cana":"tobillo",
+   "d":"Botín acolchado tipo puffer con plataforma y cinta lateral. Foto real.",
+   "colores":[{"n":"Café","c":"#7A4A2A","fam":"Café","src":"img/abrigo/puff-cafe.jpg","foto":"img/abrigo/puff-cafe.jpg"},{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/abrigo/puff-negro.jpg","foto":"img/abrigo/puff-negro.jpg"},{"n":"Topo","c":"#A58E7E","fam":"Beige","src":"img/abrigo/puff-topo.jpg","foto":"img/abrigo/puff-topo.jpg"},{"n":"Verde","c":"#5E6B4A","fam":"Verde","src":"img/abrigo/puff-verde.jpg","foto":"img/abrigo/puff-verde.jpg"}]},
+  {"ref":"A03","g":"mujer","tipo":"Botines de abrigo","nombre":"Lazo","nuevo":true,"tacon":"no","cana":"tobillo",
+   "d":"Botín de gamuza con plataforma y cinta de peluche en diagonal. Foto real.",
+   "colores":[{"n":"Topo","c":"#A58E7E","fam":"Beige","src":"img/abrigo/lazo-topo.jpg","foto":"img/abrigo/lazo-topo.jpg"},{"n":"Camel","c":"#B9763A","fam":"Café","src":"img/abrigo/lazo-camel.jpg","foto":"img/abrigo/lazo-camel.jpg"},{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/abrigo/lazo-negro.jpg","foto":"img/abrigo/lazo-negro.jpg"}]},
+  {"ref":"A04","g":"mujer","tipo":"Botines de abrigo","nombre":"Brillo","nuevo":true,"tacon":"no","cana":"tobillo",
+   "d":"Botín con plataforma, forro de peluche y detalle de brillos. Foto real.",
+   "colores":[{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/abrigo/brillo-negro.jpg","foto":"img/abrigo/brillo-negro.jpg"},{"n":"Beige","c":"#CDB497","fam":"Beige","src":"img/abrigo/brillo-beige.jpg","foto":"img/abrigo/brillo-beige.jpg"},{"n":"Olivo","c":"#8A7A4A","fam":"Verde","src":"img/abrigo/brillo-olivo.jpg","foto":"img/abrigo/brillo-olivo.jpg"}]},
+  {"ref":"A05","g":"mujer","tipo":"Botines de abrigo","nombre":"Trenza","nuevo":true,"tacon":"no","cana":"tobillo",
+   "d":"Botín con plataforma y puño tejido que se puede doblar. Foto real.",
+   "colores":[{"n":"Topo","c":"#A58E7E","fam":"Beige","src":"img/abrigo/trenza-topo.jpg","foto":"img/abrigo/trenza-topo.jpg"},{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/abrigo/trenza-negro.jpg","foto":"img/abrigo/trenza-negro.jpg"},{"n":"Beige","c":"#CDB497","fam":"Beige","src":"img/abrigo/trenza-beige.jpg","foto":"img/abrigo/trenza-beige.jpg"}]},
+  {"ref":"A06","g":"mujer","tipo":"Botines de abrigo","nombre":"Botón","nuevo":true,"tacon":"no","cana":"media",
+   "d":"Bota de gamuza con botones al lado y plataforma. Foto real.",
+   "colores":[{"n":"Beige","c":"#CDB497","fam":"Beige","src":"img/abrigo/boton-beige.jpg","foto":"img/abrigo/boton-beige.jpg"},{"n":"Negro","c":"#1d1a19","fam":"Negro","src":"img/abrigo/boton-negro.jpg","foto":"img/abrigo/boton-negro.jpg"},{"n":"Camel","c":"#B9763A","fam":"Café","src":"img/abrigo/boton-camel.jpg","foto":"img/abrigo/boton-camel.jpg"}]},
+  {"ref":"A07","g":"mujer","tipo":"Botines de abrigo","nombre":"Alpina","nuevo":true,"tacon":"no","cana":"media",
+   "d":"Bota acolchada tipo puffer con forro de peluche y suela de tacos. Foto real.",
+   "colores":[{"n":"Beige","c":"#CDB497","fam":"Beige","src":"img/abrigo/alpina-beige.jpg","foto":"img/abrigo/alpina-beige.jpg"}]},
   {"ref":"N01","precio":140000,"g":"ninas","tipo":"Combat","nombre":"Nube","vitrina":true,"tacon":"no","cana":"media",
    "d":"Cordones, cremallera lateral, hebilla y suela de tacos.",
    "colores":[{"n":"Blanco","c":"#f4f3f1","fam":"Blanco","src":"img/estudio/n1.webp","foto":"img/n1.jpg"}]},
@@ -319,8 +340,9 @@ section{padding-block:64px 0}
 .hoja .cerrar{position:absolute;z-index:6;right:var(--gr);top:14px;border:0;background:var(--marmol);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:22px;line-height:1}
 .hoja-cuerpo{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
 .visor{display:grid;gap:10px}
-.giro{position:relative;aspect-ratio:4/5;max-height:50dvh;width:100%;margin-inline:auto;perspective:900px;touch-action:pan-y;cursor:grab;user-select:none}
+.giro{position:relative;aspect-ratio:4/5;width:min(100%, 50dvh * .8);margin-inline:auto;perspective:900px;touch-action:pan-y;cursor:grab;user-select:none}
 .giro .estudio{position:absolute;inset:0;border-radius:18px;perspective:700px}
+.giro .estudio.real img{object-fit:contain}
 .giro .estudio img{transition:transform .6s var(--ease-cajon), filter .6s var(--ease-cajon)}
 .giro.arrastra .estudio img{transition:none}
 .giro.modo-lupa{touch-action:none;cursor:zoom-in}
@@ -1103,7 +1125,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     if (x < 0 || y < 0 || x > r.width || y > r.height) return;
     if (!vidrio){ vidrio = document.createElement("div"); vidrio.className = "lupa"; vidrio.innerHTML = "<div></div>"; giro.appendChild(vidrio); }
     const dentro = vidrio.firstChild;
-    dentro.style.backgroundImage = `url("${himg.src}")`; dentro.style.backgroundSize = /real/.test(himg.parentNode.className) ? "cover" : "contain";
+    dentro.style.backgroundImage = `url("${himg.src}")`; dentro.style.backgroundSize = "contain";
     dentro.style.width = r.width * Z + "px"; dentro.style.height = r.height * Z + "px";
     dentro.style.transform = `translate(${75 - x * Z}px, ${75 - y * Z}px)`;
     vidrio.style.left = x + "px"; vidrio.style.top = y + "px";
