@@ -636,11 +636,11 @@ footer img{width:64px;height:64px;border-radius:50%}
       <h2 id="t-faq">Antes de pedir</h2>
     </div>
     <div class="faq">
-      <details><summary>¿Qué tallas hay?</summary><p>La Sakura y la Karol vienen de la 34 a la 40. Para las demás referencias y para niñas, escríbenos la talla y te confirmamos si está disponible.</p></details>
+      <details open><summary>¿Qué tallas hay?</summary><p>La Sakura y la Karol vienen de la 34 a la 40. Para las demás referencias y para niñas, escríbenos la talla y te confirmamos si está disponible.</p></details>
       <details><summary>¿Puedo cambiar la talla?</summary><p>Sí. Como te damos la guía para medir tu pie antes de pedir, los envíos de ida y vuelta del cambio corren por tu cuenta. Por eso te recomendamos medirte y escribirnos los centímetros: te ayudamos a acertar la talla desde el primer pedido.</p></details>
       <details><summary>¿Cómo mido el pie?</summary><p>Pisa una hoja contra la pared, marca la punta del dedo más largo y mide hasta el talón. Busca los centímetros en la tabla o escríbelos en la ficha de la bota y te decimos tu talla. Si quedas entre dos tallas, elige la más grande.</p>
         <div class="tabla-tallas" id="tabla-tallas"></div></details>
-      <details><summary>¿Cómo pago?</summary><p><b>En Bogotá</b> el envío es gratis y pagas todo cuando te llega. <b>En otras ciudades</b> tienes dos opciones. <b>Contra entrega:</b> pagas $15.000 del envío para separar tu pedido y la bota la pagas cuando te llega. <b>Por adelantado:</b> pagas la bota antes del despacho y el envío es gratis. Recibimos Nequi, Bancolombia, Daviplata o transferencia inmediata Bre-B desde cualquier banco.</p></details>
+      <details open><summary>¿Cómo pago?</summary><p><b>En Bogotá</b> el envío es gratis y pagas todo cuando te llega. <b>En otras ciudades</b> tienes dos opciones. <b>Contra entrega:</b> pagas $15.000 del envío para separar tu pedido y la bota la pagas cuando te llega. <b>Por adelantado:</b> pagas la bota antes del despacho y el envío es gratis. Recibimos Nequi, Bancolombia, Daviplata o transferencia inmediata Bre-B desde cualquier banco.</p></details>
       <details><summary>¿Por qué se pagan $15.000 en contra entrega?</summary><p>Solo aplica fuera de Bogotá. La transportadora cobra un porcentaje extra por recaudar el dinero en tu puerta. Con esos $15.000 cubrimos el envío y separamos tu bota para ti.</p></details>
     </div>
   </section>
@@ -755,7 +755,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     } else gigante.firstChild.textContent = h.corto;
     $("#d-titulo").innerHTML = esc(h.nombre || p.nombre) + ", <em>" + esc(h.lema) + "</em>";
     $("#d-datos").innerHTML = [p.nuevo ? "Nueva" : "", p.g === "ninas" ? "Para niña" : "", p.tallas ? "Tallas " + p.tallas : "", p.colores.length > 1 ? p.colores.length + " colores" : "", "Pagas al recibir"].filter(Boolean).map(t => `<span>${esc(t)}</span>`).join("");
-    $("#d-precio").innerHTML = p.precio ? "<b>" + pesos(p.precio) + "</b> · envío gratis pagando por adelantado" : "<b>Precio por WhatsApp</b>";
+    $("#d-precio").innerHTML = p.precio ? "<b>" + pesos(p.precio) + "</b> · Bogotá: envío gratis y pagas al recibir" : "<b>Precio por WhatsApp</b>";
     $("#etq").textContent = c.n + (p.precio ? " · " + pesos(p.precio) : "");
     foto.setAttribute("aria-label", p.nombre + " color " + c.n.toLowerCase());
     $$("#muestras .muestra").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i === i));
