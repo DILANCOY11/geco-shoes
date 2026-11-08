@@ -20,7 +20,7 @@
   g: "mujer" o "ninas" · tipo: crea los filtros de estilo solo · tacon: "si"/"no" · cana: "tobillo"/"media"/"alta" (para el buscador)
   vitrina: true la pone en la vitrina que se desliza · nuevo: true le pone la etiqueta "Nuevo"
   precio: en pesos, sin puntos (170000). Si no tiene precio, la página dice "Precio por WhatsApp" (las de proveedores P01–P56 y Q01–Q15, 2026-11-07, van sin precio hasta confirmarlo)
-  colores: n (nombre), c (color del punto), fam (familia para el filtro), src (foto en estudio, sin fondo), foto (foto original)
+  colores: n (nombre), c (color del punto), fam (familia para el filtro), src y foto (foto Ivory con marca de agua, img/ivory), det (detalle real), orig (foto original). modelo: {src, color} foto con la modelo Geco, una por referencia
 -->
 <script type="application/json" id="catalogo">
 [
@@ -42,54 +42,66 @@
     "c": "#8E1F2B",
     "tono": "#8E1F2B",
     "fam": "Rojo",
-    "src": "img/vino.jpg",
-    "foto": "img/vino.jpg",
-    "mat": "base cuero"
+    "src": "img/ivory/sk-vino.jpg",
+    "foto": "img/ivory/sk-vino.jpg",
+    "mat": "base cuero",
+    "orig": "img/vino.jpg",
+    "det": "img/ivory/sk-vino-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#2A2426",
     "tono": "#2A2426",
     "fam": "Negro",
-    "src": "img/negro.jpg",
-    "foto": "img/negro.jpg",
-    "mat": "base cuero"
+    "src": "img/ivory/sk-negro.jpg",
+    "foto": "img/ivory/sk-negro.jpg",
+    "mat": "base cuero",
+    "orig": "img/negro.jpg",
+    "det": "img/ivory/sk-negro-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "tono": "#A57E55",
     "fam": "Beige",
-    "src": "img/beige.jpg",
-    "foto": "img/beige.jpg",
-    "mat": "base cuero"
+    "src": "img/ivory/sk-beige.jpg",
+    "foto": "img/ivory/sk-beige.jpg",
+    "mat": "base cuero",
+    "orig": "img/beige.jpg",
+    "det": "img/ivory/sk-beige-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#F6F2EC",
     "tono": "#A8968A",
     "fam": "Blanco",
-    "src": "img/blanco.jpg",
-    "foto": "img/blanco.jpg",
-    "mat": "base cuero"
+    "src": "img/ivory/sk-blanco.jpg",
+    "foto": "img/ivory/sk-blanco.jpg",
+    "mat": "base cuero",
+    "orig": "img/blanco.jpg",
+    "det": "img/ivory/sk-blanco-det.jpg"
    },
    {
     "n": "Jean",
     "c": "#668BBB",
     "tono": "#4E74A6",
     "fam": "Jean",
-    "src": "img/jean.jpg",
-    "foto": "img/jean.jpg",
-    "mat": "en jean"
+    "src": "img/ivory/sk-jean.jpg",
+    "foto": "img/ivory/sk-jean.jpg",
+    "mat": "en jean",
+    "orig": "img/jean.jpg",
+    "det": "img/ivory/sk-jean-det.jpg"
    },
    {
     "n": "Negro gamuza",
     "c": "#1f1c1d",
     "tono": "#2A2426",
     "fam": "Negro",
-    "src": "img/sakura-gamuza.jpg",
-    "foto": "img/sakura-gamuza.jpg",
-    "mat": "en gamuza"
+    "src": "img/ivory/sk-gamuza.jpg",
+    "foto": "img/ivory/sk-gamuza.jpg",
+    "mat": "en gamuza",
+    "orig": "img/sakura-gamuza.jpg",
+    "det": "img/ivory/sk-gamuza-det.jpg"
    }
   ]
  },
@@ -108,8 +120,10 @@
     "n": "Blanco",
     "c": "#EEEBE6",
     "fam": "Blanco",
-    "src": "img/proveedor/web/o-mi-062.webp",
-    "foto": "img/proveedor/web/o-mi-062.webp"
+    "src": "img/ivory/geco-mi-062.jpg",
+    "foto": "img/ivory/geco-mi-062.jpg",
+    "orig": "img/proveedor/web/o-mi-062.webp",
+    "det": "img/ivory/geco-mi-062-det.jpg"
    }
   ]
  },
@@ -128,15 +142,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-071.webp",
-    "foto": "img/proveedor/web/o-mi-071.webp"
+    "src": "img/ivory/geco-mi-071.jpg",
+    "foto": "img/ivory/geco-mi-071.jpg",
+    "orig": "img/proveedor/web/o-mi-071.webp",
+    "det": "img/ivory/geco-mi-071-det.jpg"
    },
    {
     "n": "Negro gamuza",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-061.webp",
-    "foto": "img/proveedor/web/o-mi-061.webp"
+    "src": "img/ivory/geco-mi-061.jpg",
+    "foto": "img/ivory/geco-mi-061.jpg",
+    "orig": "img/proveedor/web/o-mi-061.webp",
+    "det": "img/ivory/geco-mi-061-det.jpg"
    }
   ]
  },
@@ -155,29 +173,37 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-072.webp",
-    "foto": "img/proveedor/web/o-mi-072.webp"
+    "src": "img/ivory/geco-mi-072.jpg",
+    "foto": "img/ivory/geco-mi-072.jpg",
+    "orig": "img/proveedor/web/o-mi-072.webp",
+    "det": "img/ivory/geco-mi-072-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#E8DFCF",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mi-066.webp",
-    "foto": "img/proveedor/web/o-mi-066.webp"
+    "src": "img/ivory/geco-mi-066.jpg",
+    "foto": "img/ivory/geco-mi-066.jpg",
+    "orig": "img/proveedor/web/o-mi-066.webp",
+    "det": "img/ivory/geco-mi-066-det.jpg"
    },
    {
     "n": "Beige 2",
     "c": "#E8DFCF",
     "fam": "Beige",
-    "src": "img/logo/rocker-beige-solo.webp",
-    "foto": "img/logo/rocker-beige-solo.jpg"
+    "src": "img/ivory/rocker-beige.jpg",
+    "foto": "img/ivory/rocker-beige.jpg",
+    "orig": "img/logo/rocker-beige-solo.webp",
+    "det": "img/ivory/rocker-beige-det.jpg"
    },
    {
     "n": "Negro 2",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/logo/rocker-negro-solo.webp",
-    "foto": "img/logo/rocker-negro-solo.jpg"
+    "src": "img/ivory/rocker-negro.jpg",
+    "foto": "img/ivory/rocker-negro.jpg",
+    "orig": "img/logo/rocker-negro-solo.webp",
+    "det": "img/ivory/rocker-negro-det.jpg"
    }
   ]
  },
@@ -195,22 +221,28 @@
     "n": "Topo",
     "c": "#A58E7E",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mi-079.webp",
-    "foto": "img/proveedor/web/o-mi-079.webp"
+    "src": "img/ivory/geco-mi-079.jpg",
+    "foto": "img/ivory/geco-mi-079.jpg",
+    "orig": "img/proveedor/web/o-mi-079.webp",
+    "det": "img/ivory/geco-mi-079-det.jpg"
    },
    {
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mi-084.webp",
-    "foto": "img/proveedor/web/o-mi-084.webp"
+    "src": "img/ivory/geco-mi-084.jpg",
+    "foto": "img/ivory/geco-mi-084.jpg",
+    "orig": "img/proveedor/web/o-mi-084.webp",
+    "det": "img/ivory/geco-mi-084-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-092.webp",
-    "foto": "img/proveedor/web/o-mi-092.webp"
+    "src": "img/ivory/geco-mi-092.jpg",
+    "foto": "img/ivory/geco-mi-092.jpg",
+    "orig": "img/proveedor/web/o-mi-092.webp",
+    "det": "img/ivory/geco-mi-092-det.jpg"
    }
   ]
  },
@@ -228,22 +260,28 @@
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mi-074.webp",
-    "foto": "img/proveedor/web/o-mi-074.webp"
+    "src": "img/ivory/geco-mi-074.jpg",
+    "foto": "img/ivory/geco-mi-074.jpg",
+    "orig": "img/proveedor/web/o-mi-074.webp",
+    "det": "img/ivory/geco-mi-074-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-087.webp",
-    "foto": "img/proveedor/web/o-mi-087.webp"
+    "src": "img/ivory/geco-mi-087.jpg",
+    "foto": "img/ivory/geco-mi-087.jpg",
+    "orig": "img/proveedor/web/o-mi-087.webp",
+    "det": "img/ivory/geco-mi-087-det.jpg"
    },
    {
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mi-088.webp",
-    "foto": "img/proveedor/web/o-mi-088.webp"
+    "src": "img/ivory/geco-mi-088.jpg",
+    "foto": "img/ivory/geco-mi-088.jpg",
+    "orig": "img/proveedor/web/o-mi-088.webp",
+    "det": "img/ivory/geco-mi-088-det.jpg"
    }
   ]
  },
@@ -264,22 +302,28 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/estudio/biker-negro.webp",
-    "foto": "img/biker-negro.jpg"
+    "src": "img/ivory/biker-negro.jpg",
+    "foto": "img/ivory/biker-negro.jpg",
+    "orig": "img/estudio/biker-negro.webp",
+    "det": "img/ivory/biker-negro-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/estudio/biker-blanco.webp",
-    "foto": "img/biker-blanco.jpg"
+    "src": "img/ivory/biker-blanco.jpg",
+    "foto": "img/ivory/biker-blanco.jpg",
+    "orig": "img/estudio/biker-blanco.webp",
+    "det": "img/ivory/biker-blanco-det.jpg"
    },
    {
     "n": "Negro gamuza",
     "c": "#2b2827",
     "fam": "Negro",
-    "src": "img/estudio/biker-gamuza.webp",
-    "foto": "img/biker-gamuza.jpg"
+    "src": "img/ivory/biker-gamuza.jpg",
+    "foto": "img/ivory/biker-gamuza.jpg",
+    "orig": "img/estudio/biker-gamuza.webp",
+    "det": "img/ivory/biker-gamuza-det.jpg"
    }
   ]
  },
@@ -300,29 +344,37 @@
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/moka-blanco.jpg",
-    "foto": "img/moka-blanco.jpg"
+    "src": "img/ivory/moka-blanco.jpg",
+    "foto": "img/ivory/moka-blanco.jpg",
+    "orig": "img/moka-blanco.jpg",
+    "det": "img/ivory/moka-blanco-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#C9BFAF",
     "fam": "Beige",
-    "src": "img/moka-beige.jpg",
-    "foto": "img/moka-beige.jpg"
+    "src": "img/ivory/moka-beige.jpg",
+    "foto": "img/ivory/moka-beige.jpg",
+    "orig": "img/moka-beige.jpg",
+    "det": "img/ivory/moka-beige-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/moka-negro.jpg",
-    "foto": "img/moka-negro.jpg"
+    "src": "img/ivory/moka-negro.jpg",
+    "foto": "img/ivory/moka-negro.jpg",
+    "orig": "img/moka-negro.jpg",
+    "det": "img/ivory/moka-negro-det.jpg"
    },
    {
     "n": "Café",
     "c": "#4A3530",
     "fam": "Café",
-    "src": "img/moka-cafe.jpg",
-    "foto": "img/moka-cafe.jpg"
+    "src": "img/ivory/moka-cafe.jpg",
+    "foto": "img/ivory/moka-cafe.jpg",
+    "orig": "img/moka-cafe.jpg",
+    "det": "img/ivory/moka-cafe-det.jpg"
    }
   ]
  },
@@ -343,22 +395,28 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/estudio/samy-negro.webp",
-    "foto": "img/samy-negro.jpg"
+    "src": "img/ivory/samy-negro.jpg",
+    "foto": "img/ivory/samy-negro.jpg",
+    "orig": "img/estudio/samy-negro.webp",
+    "det": "img/ivory/samy-negro-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/estudio/samy-blanco.webp",
-    "foto": "img/samy-blanco.jpg"
+    "src": "img/ivory/samy-blanco.jpg",
+    "foto": "img/ivory/samy-blanco.jpg",
+    "orig": "img/estudio/samy-blanco.webp",
+    "det": "img/ivory/samy-blanco-det.jpg"
    },
    {
     "n": "Charol negro",
     "c": "linear-gradient(135deg,#000 40%,#6b6b6b 50%,#000 60%)",
     "fam": "Negro",
-    "src": "img/estudio/samy-charol.webp",
-    "foto": "img/samy-charol.jpg"
+    "src": "img/ivory/samy-charol.jpg",
+    "foto": "img/ivory/samy-charol.jpg",
+    "orig": "img/estudio/samy-charol.webp",
+    "det": "img/ivory/samy-charol-det.jpg"
    }
   ]
  },
@@ -376,29 +434,37 @@
     "n": "Café",
     "c": "#7A4A2A",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mi-075.webp",
-    "foto": "img/proveedor/web/o-mi-075.webp"
+    "src": "img/ivory/geco-mi-075.jpg",
+    "foto": "img/ivory/geco-mi-075.jpg",
+    "orig": "img/proveedor/web/o-mi-075.webp",
+    "det": "img/ivory/geco-mi-075-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-076.webp",
-    "foto": "img/proveedor/web/o-mi-076.webp"
+    "src": "img/ivory/geco-mi-076.jpg",
+    "foto": "img/ivory/geco-mi-076.jpg",
+    "orig": "img/proveedor/web/o-mi-076.webp",
+    "det": "img/ivory/geco-mi-076-det.jpg"
    },
    {
     "n": "Topo",
     "c": "#A58E7E",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mi-077.webp",
-    "foto": "img/proveedor/web/o-mi-077.webp"
+    "src": "img/ivory/geco-mi-077.jpg",
+    "foto": "img/ivory/geco-mi-077.jpg",
+    "orig": "img/proveedor/web/o-mi-077.webp",
+    "det": "img/ivory/geco-mi-077-det.jpg"
    },
    {
     "n": "Verde",
     "c": "#5E6B4A",
     "fam": "Verde",
-    "src": "img/proveedor/web/o-mi-091.webp",
-    "foto": "img/proveedor/web/o-mi-091.webp"
+    "src": "img/ivory/geco-mi-091.jpg",
+    "foto": "img/ivory/geco-mi-091.jpg",
+    "orig": "img/proveedor/web/o-mi-091.webp",
+    "det": "img/ivory/geco-mi-091-det.jpg"
    }
   ]
  },
@@ -419,36 +485,46 @@
     "n": "Jean",
     "c": "#4E74A6",
     "fam": "Jean",
-    "src": "img/texana/jean.jpg",
-    "foto": "img/texana/jean.jpg"
+    "src": "img/ivory/tx-jean.jpg",
+    "foto": "img/ivory/tx-jean.jpg",
+    "orig": "img/texana/jean.jpg",
+    "det": "img/ivory/tx-jean-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/texana/blanco.jpg",
-    "foto": "img/texana/blanco.jpg"
+    "src": "img/ivory/tx-blanco.jpg",
+    "foto": "img/ivory/tx-blanco.jpg",
+    "orig": "img/texana/blanco.jpg",
+    "det": "img/ivory/tx-blanco-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#D9D2C8",
     "fam": "Beige",
-    "src": "img/texana/beige.jpg",
-    "foto": "img/texana/beige.jpg"
+    "src": "img/ivory/tx-beige.jpg",
+    "foto": "img/ivory/tx-beige.jpg",
+    "orig": "img/texana/beige.jpg",
+    "det": "img/ivory/tx-beige-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/texana/negro.jpg",
-    "foto": "img/texana/negro.jpg"
+    "src": "img/ivory/tx-negro.jpg",
+    "foto": "img/ivory/tx-negro.jpg",
+    "orig": "img/texana/negro.jpg",
+    "det": "img/ivory/tx-negro-det.jpg"
    },
    {
     "n": "Café",
     "c": "#9A6A3E",
     "fam": "Café",
-    "src": "img/texana/cafe.jpg",
-    "foto": "img/texana/cafe.jpg"
+    "src": "img/ivory/tx-cafe.jpg",
+    "foto": "img/ivory/tx-cafe.jpg",
+    "orig": "img/texana/cafe.jpg",
+    "det": "img/ivory/tx-cafe-det.jpg"
    }
   ]
  },
@@ -468,43 +544,55 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-064.webp",
-    "foto": "img/proveedor/web/o-mi-064.webp"
+    "src": "img/ivory/geco-mi-064.jpg",
+    "foto": "img/ivory/geco-mi-064.jpg",
+    "orig": "img/proveedor/web/o-mi-064.webp",
+    "det": "img/ivory/geco-mi-064-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#F6F2EC",
     "fam": "Blanco",
-    "src": "img/proveedor/web/o-mi-065.webp",
-    "foto": "img/proveedor/web/o-mi-065.webp"
+    "src": "img/ivory/geco-mi-065.jpg",
+    "foto": "img/ivory/geco-mi-065.jpg",
+    "orig": "img/proveedor/web/o-mi-065.webp",
+    "det": "img/ivory/geco-mi-065-det.jpg"
    },
    {
     "n": "Charol negro",
     "c": "linear-gradient(135deg,#000 40%,#6b6b6b 50%,#000 60%)",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-068.webp",
-    "foto": "img/proveedor/web/o-mi-068.webp"
+    "src": "img/ivory/geco-mi-068.jpg",
+    "foto": "img/ivory/geco-mi-068.jpg",
+    "orig": "img/proveedor/web/o-mi-068.webp",
+    "det": "img/ivory/geco-mi-068-det.jpg"
    },
    {
     "n": "Negro 2",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/logo/m3n.webp",
-    "foto": "img/logo/m3n.jpg"
+    "src": "img/ivory/m3n.jpg",
+    "foto": "img/ivory/m3n.jpg",
+    "orig": "img/logo/m3n.webp",
+    "det": "img/ivory/m3n-det.jpg"
    },
    {
     "n": "Blanco 2",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/logo/m3b.webp",
-    "foto": "img/logo/m3b.jpg"
+    "src": "img/ivory/m3b.jpg",
+    "foto": "img/ivory/m3b.jpg",
+    "orig": "img/logo/m3b.webp",
+    "det": "img/ivory/m3b-det.jpg"
    },
    {
     "n": "Charol negro 2",
     "c": "linear-gradient(135deg,#000 40%,#6b6b6b 50%,#000 60%)",
     "fam": "Negro",
-    "src": "img/logo/m3c.webp",
-    "foto": "img/logo/m3c.jpg"
+    "src": "img/ivory/m3c.jpg",
+    "foto": "img/ivory/m3c.jpg",
+    "orig": "img/logo/m3c.webp",
+    "det": "img/ivory/m3c-det.jpg"
    }
   ]
  },
@@ -522,15 +610,19 @@
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/logo/m8b.webp",
-    "foto": "img/logo/m8b.jpg"
+    "src": "img/ivory/m8b.jpg",
+    "foto": "img/ivory/m8b.jpg",
+    "orig": "img/logo/m8b.webp",
+    "det": "img/ivory/m8b-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/logo/m8n.webp",
-    "foto": "img/logo/m8n.jpg"
+    "src": "img/ivory/m8n.jpg",
+    "foto": "img/ivory/m8n.jpg",
+    "orig": "img/logo/m8n.webp",
+    "det": "img/ivory/m8n-det.jpg"
    }
   ]
  },
@@ -548,8 +640,10 @@
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/logo/m5.webp",
-    "foto": "img/logo/m5.jpg"
+    "src": "img/ivory/m5.jpg",
+    "foto": "img/ivory/m5.jpg",
+    "orig": "img/logo/m5.webp",
+    "det": "img/ivory/m5-det.jpg"
    }
   ]
  },
@@ -568,8 +662,10 @@
     "n": "Blanco y café",
     "c": "linear-gradient(135deg,#f4f3f1 50%,#8a5a35 50%)",
     "fam": "Blanco",
-    "src": "img/logo/m7.webp",
-    "foto": "img/logo/m7.jpg"
+    "src": "img/ivory/m7.jpg",
+    "foto": "img/ivory/m7.jpg",
+    "orig": "img/logo/m7.webp",
+    "det": "img/ivory/m7-det.jpg"
    }
   ]
  },
@@ -588,8 +684,10 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/logo/m2.webp",
-    "foto": "img/logo/m2.jpg"
+    "src": "img/ivory/m2.jpg",
+    "foto": "img/ivory/m2.jpg",
+    "orig": "img/logo/m2.webp",
+    "det": "img/ivory/m2-det.jpg"
    }
   ]
  },
@@ -607,22 +705,28 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-078.webp",
-    "foto": "img/proveedor/web/o-mi-078.webp"
+    "src": "img/ivory/geco-mi-078.jpg",
+    "foto": "img/ivory/geco-mi-078.jpg",
+    "orig": "img/proveedor/web/o-mi-078.webp",
+    "det": "img/ivory/geco-mi-078-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mi-085.webp",
-    "foto": "img/proveedor/web/o-mi-085.webp"
+    "src": "img/ivory/geco-mi-085.jpg",
+    "foto": "img/ivory/geco-mi-085.jpg",
+    "orig": "img/proveedor/web/o-mi-085.webp",
+    "det": "img/ivory/geco-mi-085-det.jpg"
    },
    {
     "n": "Olivo",
     "c": "#8A7A4A",
     "fam": "Verde",
-    "src": "img/proveedor/web/o-mi-089.webp",
-    "foto": "img/proveedor/web/o-mi-089.webp"
+    "src": "img/ivory/geco-mi-089.jpg",
+    "foto": "img/ivory/geco-mi-089.jpg",
+    "orig": "img/proveedor/web/o-mi-089.webp",
+    "det": "img/ivory/geco-mi-089-det.jpg"
    }
   ]
  },
@@ -640,22 +744,28 @@
     "n": "Topo",
     "c": "#A58E7E",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mi-082.webp",
-    "foto": "img/proveedor/web/o-mi-082.webp"
+    "src": "img/ivory/geco-mi-082.jpg",
+    "foto": "img/ivory/geco-mi-082.jpg",
+    "orig": "img/proveedor/web/o-mi-082.webp",
+    "det": "img/ivory/geco-mi-082-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-086.webp",
-    "foto": "img/proveedor/web/o-mi-086.webp"
+    "src": "img/ivory/geco-mi-086.jpg",
+    "foto": "img/ivory/geco-mi-086.jpg",
+    "orig": "img/proveedor/web/o-mi-086.webp",
+    "det": "img/ivory/geco-mi-086-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mi-090.webp",
-    "foto": "img/proveedor/web/o-mi-090.webp"
+    "src": "img/ivory/geco-mi-090.jpg",
+    "foto": "img/ivory/geco-mi-090.jpg",
+    "orig": "img/proveedor/web/o-mi-090.webp",
+    "det": "img/ivory/geco-mi-090-det.jpg"
    }
   ]
  },
@@ -673,22 +783,28 @@
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mi-073.webp",
-    "foto": "img/proveedor/web/o-mi-073.webp"
+    "src": "img/ivory/geco-mi-073.jpg",
+    "foto": "img/ivory/geco-mi-073.jpg",
+    "orig": "img/proveedor/web/o-mi-073.webp",
+    "det": "img/ivory/geco-mi-073-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-081.webp",
-    "foto": "img/proveedor/web/o-mi-081.webp"
+    "src": "img/ivory/geco-mi-081.jpg",
+    "foto": "img/ivory/geco-mi-081.jpg",
+    "orig": "img/proveedor/web/o-mi-081.webp",
+    "det": "img/ivory/geco-mi-081-det.jpg"
    },
    {
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mi-083.webp",
-    "foto": "img/proveedor/web/o-mi-083.webp"
+    "src": "img/ivory/geco-mi-083-a.jpg",
+    "foto": "img/ivory/geco-mi-083-a.jpg",
+    "orig": "img/proveedor/web/o-mi-083.webp",
+    "det": "img/ivory/geco-mi-083-a-det.jpg"
    }
   ]
  },
@@ -706,8 +822,10 @@
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mi-080.webp",
-    "foto": "img/proveedor/web/o-mi-080.webp"
+    "src": "img/ivory/geco-mi-080.jpg",
+    "foto": "img/ivory/geco-mi-080.jpg",
+    "orig": "img/proveedor/web/o-mi-080.webp",
+    "det": "img/ivory/geco-mi-080-det.jpg"
    }
   ]
  },
@@ -725,8 +843,10 @@
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mi-070.webp",
-    "foto": "img/proveedor/web/o-mi-070.webp"
+    "src": "img/ivory/geco-mi-070.jpg",
+    "foto": "img/ivory/geco-mi-070.jpg",
+    "orig": "img/proveedor/web/o-mi-070.webp",
+    "det": "img/ivory/geco-mi-070-det.jpg"
    }
   ]
  },
@@ -751,8 +871,10 @@
     "n": "Blanco 2",
     "c": "#F5F2EE",
     "fam": "Blanco",
-    "src": "img/logo/tenis-blanco-2.webp",
-    "foto": "img/logo/tenis-blanco-2.jpg"
+    "src": "img/ivory/tenis-blanco-2.jpg",
+    "foto": "img/ivory/tenis-blanco-2.jpg",
+    "orig": "img/logo/tenis-blanco-2.webp",
+    "det": "img/ivory/tenis-blanco-2-det.jpg"
    }
   ]
  },
@@ -771,8 +893,10 @@
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/logo/n1.webp",
-    "foto": "img/logo/n1.jpg"
+    "src": "img/ivory/n1.jpg",
+    "foto": "img/ivory/n1.jpg",
+    "orig": "img/logo/n1.webp",
+    "det": "img/ivory/n1-det.jpg"
    }
   ]
  },
@@ -790,8 +914,10 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/logo/n2.webp",
-    "foto": "img/logo/n2.jpg"
+    "src": "img/ivory/n2.jpg",
+    "foto": "img/ivory/n2.jpg",
+    "orig": "img/logo/n2.webp",
+    "det": "img/ivory/n2-det.jpg"
    }
   ]
  },
@@ -809,8 +935,10 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/logo/n3.webp",
-    "foto": "img/logo/n3.jpg"
+    "src": "img/ivory/n3.jpg",
+    "foto": "img/ivory/n3.jpg",
+    "orig": "img/logo/n3.webp",
+    "det": "img/ivory/n3-det.jpg"
    }
   ]
  },
@@ -829,8 +957,10 @@
     "n": "Charol negro",
     "c": "linear-gradient(135deg,#000 40%,#6b6b6b 50%,#000 60%)",
     "fam": "Negro",
-    "src": "img/logo/n4.webp",
-    "foto": "img/logo/n4.jpg"
+    "src": "img/ivory/n4.jpg",
+    "foto": "img/ivory/n4.jpg",
+    "orig": "img/logo/n4.webp",
+    "det": "img/ivory/n4-det.jpg"
    }
   ]
  },
@@ -849,16 +979,20 @@
     "n": "Negro gamuza",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-001-a.webp",
-    "foto": "img/proveedor/web/mi-001-a.webp",
-    "mat": "en gamuza"
+    "src": "img/ivory/geco-mi-001-a.jpg",
+    "foto": "img/ivory/geco-mi-001-a.jpg",
+    "mat": "en gamuza",
+    "orig": "img/proveedor/web/mi-001-a.webp",
+    "det": "img/ivory/geco-mi-001-a-det.jpg"
    },
    {
     "n": "Negro hebilla",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-001-b.webp",
-    "foto": "img/proveedor/web/mi-001-b.webp"
+    "src": "img/ivory/geco-mi-001-b.jpg",
+    "foto": "img/ivory/geco-mi-001-b.jpg",
+    "orig": "img/proveedor/web/mi-001-b.webp",
+    "det": "img/ivory/geco-mi-001-b-det.jpg"
    }
   ]
  },
@@ -878,37 +1012,47 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-002-a.webp",
-    "foto": "img/proveedor/web/mi-002-a.webp"
+    "src": "img/ivory/geco-mi-002-a.jpg",
+    "foto": "img/ivory/geco-mi-002-a.jpg",
+    "orig": "img/proveedor/web/mi-002-a.webp",
+    "det": "img/ivory/geco-mi-002-a-det.jpg"
    },
    {
     "n": "Negro 2",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-002-b.webp",
-    "foto": "img/proveedor/web/mi-002-b.webp"
+    "src": "img/ivory/geco-mi-002-b.jpg",
+    "foto": "img/ivory/geco-mi-002-b.jpg",
+    "orig": "img/proveedor/web/mi-002-b.webp",
+    "det": "img/ivory/geco-mi-002-b-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/proveedor/web/mi-002-c.webp",
-    "foto": "img/proveedor/web/mi-002-c.webp"
+    "src": "img/ivory/geco-mi-002-c.jpg",
+    "foto": "img/ivory/geco-mi-002-c.jpg",
+    "orig": "img/proveedor/web/mi-002-c.webp",
+    "det": "img/ivory/geco-mi-002-c-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-097-b.webp",
-    "foto": "img/proveedor/web/mi-097-b.webp"
+    "src": "img/ivory/geco-mi-097-b.jpg",
+    "foto": "img/ivory/geco-mi-097-b.jpg",
+    "orig": "img/proveedor/web/mi-097-b.webp",
+    "det": "img/ivory/geco-mi-097-b-det.jpg"
    },
    {
     "n": "Negro gamuza",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-097-a.webp",
-    "foto": "img/proveedor/web/mi-097-a.webp",
-    "mat": "en gamuza"
+    "src": "img/ivory/geco-mi-097-a.jpg",
+    "foto": "img/ivory/geco-mi-097-a.jpg",
+    "mat": "en gamuza",
+    "orig": "img/proveedor/web/mi-097-a.webp",
+    "det": "img/ivory/geco-mi-097-a-det.jpg"
    }
   ]
  },
@@ -927,15 +1071,19 @@
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/proveedor/web/mi-003-a.webp",
-    "foto": "img/proveedor/web/mi-003-a.webp"
+    "src": "img/ivory/geco-mi-003-a.jpg",
+    "foto": "img/ivory/geco-mi-003-a.jpg",
+    "orig": "img/proveedor/web/mi-003-a.webp",
+    "det": "img/ivory/geco-mi-003-a-det.jpg"
    },
    {
     "n": "Azul",
     "c": "#22304a",
     "fam": "Jean",
-    "src": "img/proveedor/web/mi-003-b.webp",
-    "foto": "img/proveedor/web/mi-003-b.webp"
+    "src": "img/ivory/geco-mi-003-b.jpg",
+    "foto": "img/ivory/geco-mi-003-b.jpg",
+    "orig": "img/proveedor/web/mi-003-b.webp",
+    "det": "img/ivory/geco-mi-003-b-det.jpg"
    }
   ]
  },
@@ -954,9 +1102,11 @@
     "n": "Negro gamuza",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-004-b.webp",
-    "foto": "img/proveedor/web/mi-004-b.webp",
-    "mat": "en gamuza"
+    "src": "img/ivory/geco-mi-004-b.jpg",
+    "foto": "img/ivory/geco-mi-004-b.jpg",
+    "mat": "en gamuza",
+    "orig": "img/proveedor/web/mi-004-b.webp",
+    "det": "img/ivory/geco-mi-004-b-det.jpg"
    }
   ]
  },
@@ -975,8 +1125,10 @@
     "n": "Negro gamuza",
     "c": "#1f1c1d",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mi-005.webp",
-    "foto": "img/proveedor/web/o-mi-005.webp"
+    "src": "img/ivory/geco-mi-005.jpg",
+    "foto": "img/ivory/geco-mi-005.jpg",
+    "orig": "img/proveedor/web/o-mi-005.webp",
+    "det": "img/ivory/geco-mi-005-det.jpg"
    }
   ]
  },
@@ -995,8 +1147,10 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-006.webp",
-    "foto": "img/proveedor/web/mi-006.webp"
+    "src": "img/ivory/geco-mi-006.jpg",
+    "foto": "img/ivory/geco-mi-006.jpg",
+    "orig": "img/proveedor/web/mi-006.webp",
+    "det": "img/ivory/geco-mi-006-det.jpg"
    }
   ]
  },
@@ -1016,29 +1170,37 @@
     "n": "Café",
     "c": "#5a3a28",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-007-a.webp",
-    "foto": "img/proveedor/web/mi-007-a.webp"
+    "src": "img/ivory/geco-mi-007-a.jpg",
+    "foto": "img/ivory/geco-mi-007-a.jpg",
+    "orig": "img/proveedor/web/mi-007-a.webp",
+    "det": "img/ivory/geco-mi-007-a-det.jpg"
    },
    {
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-007-b.webp",
-    "foto": "img/proveedor/web/mi-007-b.webp"
+    "src": "img/ivory/geco-mi-007-b.jpg",
+    "foto": "img/ivory/geco-mi-007-b.jpg",
+    "orig": "img/proveedor/web/mi-007-b.webp",
+    "det": "img/ivory/geco-mi-007-b-det.jpg"
    },
    {
     "n": "Camel 2",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-007-c.webp",
-    "foto": "img/proveedor/web/mi-007-c.webp"
+    "src": "img/ivory/geco-mi-007-c.jpg",
+    "foto": "img/ivory/geco-mi-007-c.jpg",
+    "orig": "img/proveedor/web/mi-007-c.webp",
+    "det": "img/ivory/geco-mi-007-c-det.jpg"
    },
    {
     "n": "Azul",
     "c": "#22304a",
     "fam": "Jean",
-    "src": "img/proveedor/web/mi-008-b.webp",
-    "foto": "img/proveedor/web/mi-008-b.webp"
+    "src": "img/ivory/geco-mi-008-b.jpg",
+    "foto": "img/ivory/geco-mi-008-b.jpg",
+    "orig": "img/proveedor/web/mi-008-b.webp",
+    "det": "img/ivory/geco-mi-008-b-det.jpg"
    }
   ]
  },
@@ -1057,8 +1219,10 @@
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-009-b.webp",
-    "foto": "img/proveedor/web/mi-009-b.webp"
+    "src": "img/ivory/geco-mi-009-b.jpg",
+    "foto": "img/ivory/geco-mi-009-b.jpg",
+    "orig": "img/proveedor/web/mi-009-b.webp",
+    "det": "img/ivory/geco-mi-009-b-det.jpg"
    }
   ]
  },
@@ -1077,37 +1241,47 @@
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/proveedor/web/mi-011-a.webp",
-    "foto": "img/proveedor/web/mi-011-a.webp"
+    "src": "img/ivory/geco-mi-011-a.jpg",
+    "foto": "img/ivory/geco-mi-011-a.jpg",
+    "orig": "img/proveedor/web/mi-011-a.webp",
+    "det": "img/ivory/geco-mi-011-a-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-011-b.webp",
-    "foto": "img/proveedor/web/mi-011-b.webp"
+    "src": "img/ivory/geco-mi-011-b.jpg",
+    "foto": "img/ivory/geco-mi-011-b.jpg",
+    "orig": "img/proveedor/web/mi-011-b.webp",
+    "det": "img/ivory/geco-mi-011-b-det.jpg"
    },
    {
     "n": "Charol negro",
     "c": "linear-gradient(135deg,#000 40%,#6b6b6b 50%,#000 60%)",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-012-a.webp",
-    "foto": "img/proveedor/web/mi-012-a.webp"
+    "src": "img/ivory/geco-mi-012-a.jpg",
+    "foto": "img/ivory/geco-mi-012-a.jpg",
+    "orig": "img/proveedor/web/mi-012-a.webp",
+    "det": "img/ivory/geco-mi-012-a-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-012-b.webp",
-    "foto": "img/proveedor/web/mi-012-b.webp"
+    "src": "img/ivory/geco-mi-012-b.jpg",
+    "foto": "img/ivory/geco-mi-012-b.jpg",
+    "orig": "img/proveedor/web/mi-012-b.webp",
+    "det": "img/ivory/geco-mi-012-b-det.jpg"
    },
    {
     "n": "Negro gamuza",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-013.webp",
-    "foto": "img/proveedor/web/mi-013.webp",
-    "mat": "en gamuza"
+    "src": "img/ivory/geco-mi-013.jpg",
+    "foto": "img/ivory/geco-mi-013.jpg",
+    "mat": "en gamuza",
+    "orig": "img/proveedor/web/mi-013.webp",
+    "det": "img/ivory/geco-mi-013-det.jpg"
    }
   ]
  },
@@ -1126,30 +1300,38 @@
     "n": "Negro gamuza",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-014-a.webp",
-    "foto": "img/proveedor/web/mi-014-a.webp",
-    "mat": "en gamuza"
+    "src": "img/ivory/geco-mi-014-a.jpg",
+    "foto": "img/ivory/geco-mi-014-a.jpg",
+    "mat": "en gamuza",
+    "orig": "img/proveedor/web/mi-014-a.webp",
+    "det": "img/ivory/geco-mi-014-a-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-014-b.webp",
-    "foto": "img/proveedor/web/mi-014-b.webp"
+    "src": "img/ivory/geco-mi-014-b.jpg",
+    "foto": "img/ivory/geco-mi-014-b.jpg",
+    "orig": "img/proveedor/web/mi-014-b.webp",
+    "det": "img/ivory/geco-mi-014-b-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-020-a.webp",
-    "foto": "img/proveedor/web/mi-020-a.webp"
+    "src": "img/ivory/geco-mi-020-a.jpg",
+    "foto": "img/ivory/geco-mi-020-a.jpg",
+    "orig": "img/proveedor/web/mi-020-a.webp",
+    "det": "img/ivory/geco-mi-020-a-det.jpg"
    },
    {
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-020-b.webp",
-    "foto": "img/proveedor/web/mi-020-b.webp"
+    "src": "img/ivory/geco-mi-020-b.jpg",
+    "foto": "img/ivory/geco-mi-020-b.jpg",
+    "orig": "img/proveedor/web/mi-020-b.webp",
+    "det": "img/ivory/geco-mi-020-b-det.jpg"
    }
   ]
  },
@@ -1168,15 +1350,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-015-a.webp",
-    "foto": "img/proveedor/web/mi-015-a.webp"
+    "src": "img/ivory/geco-mi-015-a.jpg",
+    "foto": "img/ivory/geco-mi-015-a.jpg",
+    "orig": "img/proveedor/web/mi-015-a.webp",
+    "det": "img/ivory/geco-mi-015-a-det.jpg"
    },
    {
     "n": "Negro cordones",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-015-b.webp",
-    "foto": "img/proveedor/web/mi-015-b.webp"
+    "src": "img/ivory/geco-mi-015-b.jpg",
+    "foto": "img/ivory/geco-mi-015-b.jpg",
+    "orig": "img/proveedor/web/mi-015-b.webp",
+    "det": "img/ivory/geco-mi-015-b-det.jpg"
    }
   ]
  },
@@ -1195,15 +1381,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-016.webp",
-    "foto": "img/proveedor/web/mi-016.webp"
+    "src": "img/ivory/geco-mi-016.jpg",
+    "foto": "img/ivory/geco-mi-016.jpg",
+    "orig": "img/proveedor/web/mi-016.webp",
+    "det": "img/ivory/geco-mi-016-det.jpg"
    },
    {
     "n": "Azul",
     "c": "#22304a",
     "fam": "Jean",
-    "src": "img/proveedor/web/mi-018-a.webp",
-    "foto": "img/proveedor/web/mi-018-a.webp"
+    "src": "img/ivory/geco-mi-018-a.jpg",
+    "foto": "img/ivory/geco-mi-018-a.jpg",
+    "orig": "img/proveedor/web/mi-018-a.webp",
+    "det": "img/ivory/geco-mi-018-a-det.jpg"
    }
   ]
  },
@@ -1222,8 +1412,10 @@
     "n": "Café croco",
     "c": "#5a3a28",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mi-017.webp",
-    "foto": "img/proveedor/web/o-mi-017.webp"
+    "src": "img/ivory/geco-mi-017.jpg",
+    "foto": "img/ivory/geco-mi-017.jpg",
+    "orig": "img/proveedor/web/o-mi-017.webp",
+    "det": "img/ivory/geco-mi-017-det.jpg"
    }
   ]
  },
@@ -1242,15 +1434,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-019-a.webp",
-    "foto": "img/proveedor/web/mi-019-a.webp"
+    "src": "img/ivory/geco-mi-019-a.jpg",
+    "foto": "img/ivory/geco-mi-019-a.jpg",
+    "orig": "img/proveedor/web/mi-019-a.webp",
+    "det": "img/ivory/geco-mi-019-a-det.jpg"
    },
    {
     "n": "Negro hebilla",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-019-b.webp",
-    "foto": "img/proveedor/web/mi-019-b.webp"
+    "src": "img/ivory/geco-mi-019-b.jpg",
+    "foto": "img/ivory/geco-mi-019-b.jpg",
+    "orig": "img/proveedor/web/mi-019-b.webp",
+    "det": "img/ivory/geco-mi-019-b-det.jpg"
    }
   ]
  },
@@ -1270,43 +1466,55 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-021-b.webp",
-    "foto": "img/proveedor/web/mi-021-b.webp"
+    "src": "img/ivory/geco-mi-021-b.jpg",
+    "foto": "img/ivory/geco-mi-021-b.jpg",
+    "orig": "img/proveedor/web/mi-021-b.webp",
+    "det": "img/ivory/geco-mi-021-b-det.jpg"
    },
    {
     "n": "Negro peluche",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-021-c.webp",
-    "foto": "img/proveedor/web/mi-021-c.webp"
+    "src": "img/ivory/geco-mi-021-c.jpg",
+    "foto": "img/ivory/geco-mi-021-c.jpg",
+    "orig": "img/proveedor/web/mi-021-c.webp",
+    "det": "img/ivory/geco-mi-021-c-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-024-a.webp",
-    "foto": "img/proveedor/web/mi-024-a.webp"
+    "src": "img/ivory/geco-mi-024-a.jpg",
+    "foto": "img/ivory/geco-mi-024-a.jpg",
+    "orig": "img/proveedor/web/mi-024-a.webp",
+    "det": "img/ivory/geco-mi-024-a-det.jpg"
    },
    {
     "n": "Beige peluche",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-024-b.webp",
-    "foto": "img/proveedor/web/mi-024-b.webp"
+    "src": "img/ivory/geco-mi-024-b.jpg",
+    "foto": "img/ivory/geco-mi-024-b.jpg",
+    "orig": "img/proveedor/web/mi-024-b.webp",
+    "det": "img/ivory/geco-mi-024-b-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/proveedor/web/mi-025-b.webp",
-    "foto": "img/proveedor/web/mi-025-b.webp"
+    "src": "img/ivory/geco-mi-025-b.jpg",
+    "foto": "img/ivory/geco-mi-025-b.jpg",
+    "orig": "img/proveedor/web/mi-025-b.webp",
+    "det": "img/ivory/geco-mi-025-b-det.jpg"
    },
    {
     "n": "Blanco 2",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/proveedor/web/mi-025-c.webp",
-    "foto": "img/proveedor/web/mi-025-c.webp"
+    "src": "img/ivory/geco-mi-025-c.jpg",
+    "foto": "img/ivory/geco-mi-025-c.jpg",
+    "orig": "img/proveedor/web/mi-025-c.webp",
+    "det": "img/ivory/geco-mi-025-c-det.jpg"
    }
   ]
  },
@@ -1325,15 +1533,19 @@
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-022-a.webp",
-    "foto": "img/proveedor/web/mi-022-a.webp"
+    "src": "img/ivory/geco-mi-022-a.jpg",
+    "foto": "img/ivory/geco-mi-022-a.jpg",
+    "orig": "img/proveedor/web/mi-022-a.webp",
+    "det": "img/ivory/geco-mi-022-a-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-022-b.webp",
-    "foto": "img/proveedor/web/mi-022-b.webp"
+    "src": "img/ivory/geco-mi-022-b.jpg",
+    "foto": "img/ivory/geco-mi-022-b.jpg",
+    "orig": "img/proveedor/web/mi-022-b.webp",
+    "det": "img/ivory/geco-mi-022-b-det.jpg"
    }
   ]
  },
@@ -1352,16 +1564,20 @@
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-096-a.webp",
-    "foto": "img/proveedor/web/mi-096-a.webp"
+    "src": "img/ivory/geco-mi-096-a.jpg",
+    "foto": "img/ivory/geco-mi-096-a.jpg",
+    "orig": "img/proveedor/web/mi-096-a.webp",
+    "det": "img/ivory/geco-mi-096-a-det.jpg"
    },
    {
     "n": "Negro gamuza",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-096-b.webp",
-    "foto": "img/proveedor/web/mi-096-b.webp",
-    "mat": "en gamuza"
+    "src": "img/ivory/geco-mi-096-b.jpg",
+    "foto": "img/ivory/geco-mi-096-b.jpg",
+    "mat": "en gamuza",
+    "orig": "img/proveedor/web/mi-096-b.webp",
+    "det": "img/ivory/geco-mi-096-b-det.jpg"
    }
   ]
  },
@@ -1380,8 +1596,10 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-023.webp",
-    "foto": "img/proveedor/web/mi-023.webp"
+    "src": "img/ivory/geco-mi-023.jpg",
+    "foto": "img/ivory/geco-mi-023.jpg",
+    "orig": "img/proveedor/web/mi-023.webp",
+    "det": "img/ivory/geco-mi-023-det.jpg"
    }
   ]
  },
@@ -1400,22 +1618,28 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-026-a.webp",
-    "foto": "img/proveedor/web/mi-026-a.webp"
+    "src": "img/ivory/geco-mi-026-a.jpg",
+    "foto": "img/ivory/geco-mi-026-a.jpg",
+    "orig": "img/proveedor/web/mi-026-a.webp",
+    "det": "img/ivory/geco-mi-026-a-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/proveedor/web/mi-026-b.webp",
-    "foto": "img/proveedor/web/mi-026-b.webp"
+    "src": "img/ivory/geco-mi-026-b.jpg",
+    "foto": "img/ivory/geco-mi-026-b.jpg",
+    "orig": "img/proveedor/web/mi-026-b.webp",
+    "det": "img/ivory/geco-mi-026-b-det.jpg"
    },
    {
     "n": "Negro 2",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-026-c.webp",
-    "foto": "img/proveedor/web/mi-026-c.webp"
+    "src": "img/ivory/geco-mi-026-c.jpg",
+    "foto": "img/ivory/geco-mi-026-c.jpg",
+    "orig": "img/proveedor/web/mi-026-c.webp",
+    "det": "img/ivory/geco-mi-026-c-det.jpg"
    }
   ]
  },
@@ -1434,8 +1658,10 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-027-b.webp",
-    "foto": "img/proveedor/web/mi-027-b.webp"
+    "src": "img/ivory/geco-mi-027-b.jpg",
+    "foto": "img/ivory/geco-mi-027-b.jpg",
+    "orig": "img/proveedor/web/mi-027-b.webp",
+    "det": "img/ivory/geco-mi-027-b-det.jpg"
    }
   ]
  },
@@ -1454,29 +1680,37 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-028-a.webp",
-    "foto": "img/proveedor/web/mi-028-a.webp"
+    "src": "img/ivory/geco-mi-028-a.jpg",
+    "foto": "img/ivory/geco-mi-028-a.jpg",
+    "orig": "img/proveedor/web/mi-028-a.webp",
+    "det": "img/ivory/geco-mi-028-a-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-029-a.webp",
-    "foto": "img/proveedor/web/mi-029-a.webp"
+    "src": "img/ivory/geco-mi-029-a.jpg",
+    "foto": "img/ivory/geco-mi-029-a.jpg",
+    "orig": "img/proveedor/web/mi-029-a.webp",
+    "det": "img/ivory/geco-mi-029-a-det.jpg"
    },
    {
     "n": "Negro 2",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-029-b.webp",
-    "foto": "img/proveedor/web/mi-029-b.webp"
+    "src": "img/ivory/geco-mi-029-b.jpg",
+    "foto": "img/ivory/geco-mi-029-b.jpg",
+    "orig": "img/proveedor/web/mi-029-b.webp",
+    "det": "img/ivory/geco-mi-029-b-det.jpg"
    },
    {
     "n": "Verde",
     "c": "#5E6B4A",
     "fam": "Verde",
-    "src": "img/proveedor/web/mi-029-c.webp",
-    "foto": "img/proveedor/web/mi-029-c.webp"
+    "src": "img/ivory/geco-mi-029-c.jpg",
+    "foto": "img/ivory/geco-mi-029-c.jpg",
+    "orig": "img/proveedor/web/mi-029-c.webp",
+    "det": "img/ivory/geco-mi-029-c-det.jpg"
    }
   ]
  },
@@ -1496,43 +1730,55 @@
     "n": "Negro aro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-030.webp",
-    "foto": "img/proveedor/web/mi-030.webp"
+    "src": "img/ivory/geco-mi-030.jpg",
+    "foto": "img/ivory/geco-mi-030.jpg",
+    "orig": "img/proveedor/web/mi-030.webp",
+    "det": "img/ivory/geco-mi-030-det.jpg"
    },
    {
     "n": "Negro cadena",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-028-b.webp",
-    "foto": "img/proveedor/web/mi-028-b.webp"
+    "src": "img/ivory/geco-mi-028-b.jpg",
+    "foto": "img/ivory/geco-mi-028-b.jpg",
+    "orig": "img/proveedor/web/mi-028-b.webp",
+    "det": "img/ivory/geco-mi-028-b-det.jpg"
    },
    {
     "n": "Gris",
     "c": "#8a8a88",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-033.webp",
-    "foto": "img/proveedor/web/mi-033.webp"
+    "src": "img/ivory/geco-mi-033.jpg",
+    "foto": "img/ivory/geco-mi-033.jpg",
+    "orig": "img/proveedor/web/mi-033.webp",
+    "det": "img/ivory/geco-mi-033-det.jpg"
    },
    {
     "n": "Charol negro",
     "c": "linear-gradient(135deg,#000 40%,#6b6b6b 50%,#000 60%)",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-034-a.webp",
-    "foto": "img/proveedor/web/mi-034-a.webp"
+    "src": "img/ivory/geco-mi-034-a.jpg",
+    "foto": "img/ivory/geco-mi-034-a.jpg",
+    "orig": "img/proveedor/web/mi-034-a.webp",
+    "det": "img/ivory/geco-mi-034-a-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-034-b.webp",
-    "foto": "img/proveedor/web/mi-034-b.webp"
+    "src": "img/ivory/geco-mi-034-b.jpg",
+    "foto": "img/ivory/geco-mi-034-b.jpg",
+    "orig": "img/proveedor/web/mi-034-b.webp",
+    "det": "img/ivory/geco-mi-034-b-det.jpg"
    },
    {
     "n": "Rojo charol",
     "c": "linear-gradient(135deg,#8e0d16 40%,#e04a52 50%,#8e0d16 60%)",
     "fam": "Rojo",
-    "src": "img/proveedor/web/mi-034-c.webp",
-    "foto": "img/proveedor/web/mi-034-c.webp"
+    "src": "img/ivory/geco-mi-034-c.jpg",
+    "foto": "img/ivory/geco-mi-034-c.jpg",
+    "orig": "img/proveedor/web/mi-034-c.webp",
+    "det": "img/ivory/geco-mi-034-c-det.jpg"
    }
   ]
  },
@@ -1551,29 +1797,37 @@
     "n": "Café",
     "c": "#5a3a28",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-035-b.webp",
-    "foto": "img/proveedor/web/mi-035-b.webp"
+    "src": "img/ivory/geco-mi-035-b.jpg",
+    "foto": "img/ivory/geco-mi-035-b.jpg",
+    "orig": "img/proveedor/web/mi-035-b.webp",
+    "det": "img/ivory/geco-mi-035-b-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-036-a.webp",
-    "foto": "img/proveedor/web/mi-036-a.webp"
+    "src": "img/ivory/geco-mi-036-a.jpg",
+    "foto": "img/ivory/geco-mi-036-a.jpg",
+    "orig": "img/proveedor/web/mi-036-a.webp",
+    "det": "img/ivory/geco-mi-036-a-det.jpg"
    },
    {
     "n": "Negro 2",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-036-b.webp",
-    "foto": "img/proveedor/web/mi-036-b.webp"
+    "src": "img/ivory/geco-mi-036-b.jpg",
+    "foto": "img/ivory/geco-mi-036-b.jpg",
+    "orig": "img/proveedor/web/mi-036-b.webp",
+    "det": "img/ivory/geco-mi-036-b-det.jpg"
    },
    {
     "n": "Café 2",
     "c": "#5a3a28",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-036-c.webp",
-    "foto": "img/proveedor/web/mi-036-c.webp"
+    "src": "img/ivory/geco-mi-036-c.jpg",
+    "foto": "img/ivory/geco-mi-036-c.jpg",
+    "orig": "img/proveedor/web/mi-036-c.webp",
+    "det": "img/ivory/geco-mi-036-c-det.jpg"
    }
   ]
  },
@@ -1592,29 +1846,37 @@
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-031-a.webp",
-    "foto": "img/proveedor/web/mi-031-a.webp"
+    "src": "img/ivory/geco-mi-031-a.jpg",
+    "foto": "img/ivory/geco-mi-031-a.jpg",
+    "orig": "img/proveedor/web/mi-031-a.webp",
+    "det": "img/ivory/geco-mi-031-a-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-031-b.webp",
-    "foto": "img/proveedor/web/mi-031-b.webp"
+    "src": "img/ivory/geco-mi-031-b.jpg",
+    "foto": "img/ivory/geco-mi-031-b.jpg",
+    "orig": "img/proveedor/web/mi-031-b.webp",
+    "det": "img/ivory/geco-mi-031-b-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/proveedor/web/mi-031-c.webp",
-    "foto": "img/proveedor/web/mi-031-c.webp"
+    "src": "img/ivory/geco-mi-031-c.jpg",
+    "foto": "img/ivory/geco-mi-031-c.jpg",
+    "orig": "img/proveedor/web/mi-031-c.webp",
+    "det": "img/ivory/geco-mi-031-c-det.jpg"
    },
    {
     "n": "Negro estampado",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-032.webp",
-    "foto": "img/proveedor/web/mi-032.webp"
+    "src": "img/ivory/geco-mi-032.jpg",
+    "foto": "img/ivory/geco-mi-032.jpg",
+    "orig": "img/proveedor/web/mi-032.webp",
+    "det": "img/ivory/geco-mi-032-det.jpg"
    }
   ]
  },
@@ -1633,15 +1895,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-037-a.webp",
-    "foto": "img/proveedor/web/mi-037-a.webp"
+    "src": "img/ivory/geco-mi-037-a.jpg",
+    "foto": "img/ivory/geco-mi-037-a.jpg",
+    "orig": "img/proveedor/web/mi-037-a.webp",
+    "det": "img/ivory/geco-mi-037-a-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-037-b.webp",
-    "foto": "img/proveedor/web/mi-037-b.webp"
+    "src": "img/ivory/geco-mi-037-b.jpg",
+    "foto": "img/ivory/geco-mi-037-b.jpg",
+    "orig": "img/proveedor/web/mi-037-b.webp",
+    "det": "img/ivory/geco-mi-037-b-det.jpg"
    }
   ]
  },
@@ -1660,15 +1926,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-038-a.webp",
-    "foto": "img/proveedor/web/mi-038-a.webp"
+    "src": "img/ivory/geco-mi-038-a.jpg",
+    "foto": "img/ivory/geco-mi-038-a.jpg",
+    "orig": "img/proveedor/web/mi-038-a.webp",
+    "det": "img/ivory/geco-mi-038-a-det.jpg"
    },
    {
     "n": "Negro hebillas",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-038-b.webp",
-    "foto": "img/proveedor/web/mi-038-b.webp"
+    "src": "img/ivory/geco-mi-038-b.jpg",
+    "foto": "img/ivory/geco-mi-038-b.jpg",
+    "orig": "img/proveedor/web/mi-038-b.webp",
+    "det": "img/ivory/geco-mi-038-b-det.jpg"
    }
   ]
  },
@@ -1687,15 +1957,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-039-a.webp",
-    "foto": "img/proveedor/web/mi-039-a.webp"
+    "src": "img/ivory/geco-mi-039-a.jpg",
+    "foto": "img/ivory/geco-mi-039-a.jpg",
+    "orig": "img/proveedor/web/mi-039-a.webp",
+    "det": "img/ivory/geco-mi-039-a-det.jpg"
    },
    {
     "n": "Negro cremallera",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-039-b.webp",
-    "foto": "img/proveedor/web/mi-039-b.webp"
+    "src": "img/ivory/geco-mi-039-b.jpg",
+    "foto": "img/ivory/geco-mi-039-b.jpg",
+    "orig": "img/proveedor/web/mi-039-b.webp",
+    "det": "img/ivory/geco-mi-039-b-det.jpg"
    }
   ]
  },
@@ -1714,15 +1988,19 @@
     "n": "Negro cadena",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-040-a.webp",
-    "foto": "img/proveedor/web/mi-040-a.webp"
+    "src": "img/ivory/geco-mi-040-a.jpg",
+    "foto": "img/ivory/geco-mi-040-a.jpg",
+    "orig": "img/proveedor/web/mi-040-a.webp",
+    "det": "img/ivory/geco-mi-040-a-det.jpg"
    },
    {
     "n": "Verde",
     "c": "#5E6B4A",
     "fam": "Verde",
-    "src": "img/proveedor/web/mi-040-b.webp",
-    "foto": "img/proveedor/web/mi-040-b.webp"
+    "src": "img/ivory/geco-mi-040-b.jpg",
+    "foto": "img/ivory/geco-mi-040-b.jpg",
+    "orig": "img/proveedor/web/mi-040-b.webp",
+    "det": "img/ivory/geco-mi-040-b-det.jpg"
    }
   ]
  },
@@ -1742,43 +2020,55 @@
     "n": "Negro aro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-041-a.webp",
-    "foto": "img/proveedor/web/mi-041-a.webp"
+    "src": "img/ivory/geco-mi-041-a.jpg",
+    "foto": "img/ivory/geco-mi-041-a.jpg",
+    "orig": "img/proveedor/web/mi-041-a.webp",
+    "det": "img/ivory/geco-mi-041-a-det.jpg"
    },
    {
     "n": "Negro cadena",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-041-b.webp",
-    "foto": "img/proveedor/web/mi-041-b.webp"
+    "src": "img/ivory/geco-mi-041-b.jpg",
+    "foto": "img/ivory/geco-mi-041-b.jpg",
+    "orig": "img/proveedor/web/mi-041-b.webp",
+    "det": "img/ivory/geco-mi-041-b-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-042-a.webp",
-    "foto": "img/proveedor/web/mi-042-a.webp"
+    "src": "img/ivory/geco-mi-042-a.jpg",
+    "foto": "img/ivory/geco-mi-042-a.jpg",
+    "orig": "img/proveedor/web/mi-042-a.webp",
+    "det": "img/ivory/geco-mi-042-a-det.jpg"
    },
    {
     "n": "Charol negro",
     "c": "linear-gradient(135deg,#000 40%,#6b6b6b 50%,#000 60%)",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-042-b.webp",
-    "foto": "img/proveedor/web/mi-042-b.webp"
+    "src": "img/ivory/geco-mi-042-b.jpg",
+    "foto": "img/ivory/geco-mi-042-b.jpg",
+    "orig": "img/proveedor/web/mi-042-b.webp",
+    "det": "img/ivory/geco-mi-042-b-det.jpg"
    },
    {
     "n": "Rojo charol",
     "c": "linear-gradient(135deg,#8e0d16 40%,#e04a52 50%,#8e0d16 60%)",
     "fam": "Rojo",
-    "src": "img/proveedor/web/mi-042-c.webp",
-    "foto": "img/proveedor/web/mi-042-c.webp"
+    "src": "img/ivory/geco-mi-042-c.jpg",
+    "foto": "img/ivory/geco-mi-042-c.jpg",
+    "orig": "img/proveedor/web/mi-042-c.webp",
+    "det": "img/ivory/geco-mi-042-c-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-043.webp",
-    "foto": "img/proveedor/web/mi-043.webp"
+    "src": "img/ivory/geco-mi-043.jpg",
+    "foto": "img/ivory/geco-mi-043.jpg",
+    "orig": "img/proveedor/web/mi-043.webp",
+    "det": "img/ivory/geco-mi-043-det.jpg"
    }
   ]
  },
@@ -1797,29 +2087,37 @@
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-044-a.webp",
-    "foto": "img/proveedor/web/mi-044-a.webp"
+    "src": "img/ivory/geco-mi-044-a.jpg",
+    "foto": "img/ivory/geco-mi-044-a.jpg",
+    "orig": "img/proveedor/web/mi-044-a.webp",
+    "det": "img/ivory/geco-mi-044-a-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/proveedor/web/mi-044-b.webp",
-    "foto": "img/proveedor/web/mi-044-b.webp"
+    "src": "img/ivory/geco-mi-044-b.jpg",
+    "foto": "img/ivory/geco-mi-044-b.jpg",
+    "orig": "img/proveedor/web/mi-044-b.webp",
+    "det": "img/ivory/geco-mi-044-b-det.jpg"
    },
    {
     "n": "Beige 2",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-044-c.webp",
-    "foto": "img/proveedor/web/mi-044-c.webp"
+    "src": "img/ivory/geco-mi-044-c.jpg",
+    "foto": "img/ivory/geco-mi-044-c.jpg",
+    "orig": "img/proveedor/web/mi-044-c.webp",
+    "det": "img/ivory/geco-mi-044-c-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-045-a.webp",
-    "foto": "img/proveedor/web/mi-045-a.webp"
+    "src": "img/ivory/geco-mi-045-a.jpg",
+    "foto": "img/ivory/geco-mi-045-a.jpg",
+    "orig": "img/proveedor/web/mi-045-a.webp",
+    "det": "img/ivory/geco-mi-045-a-det.jpg"
    }
   ]
  },
@@ -1838,22 +2136,28 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-046-a.webp",
-    "foto": "img/proveedor/web/mi-046-a.webp"
+    "src": "img/ivory/geco-mi-046-a.jpg",
+    "foto": "img/ivory/geco-mi-046-a.jpg",
+    "orig": "img/proveedor/web/mi-046-a.webp",
+    "det": "img/ivory/geco-mi-046-a-det.jpg"
    },
    {
     "n": "Café",
     "c": "#5a3a28",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-046-b.webp",
-    "foto": "img/proveedor/web/mi-046-b.webp"
+    "src": "img/ivory/geco-mi-046-b.jpg",
+    "foto": "img/ivory/geco-mi-046-b.jpg",
+    "orig": "img/proveedor/web/mi-046-b.webp",
+    "det": "img/ivory/geco-mi-046-b-det.jpg"
    },
    {
     "n": "Negro 2",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-046-c.webp",
-    "foto": "img/proveedor/web/mi-046-c.webp"
+    "src": "img/ivory/geco-mi-046-c.jpg",
+    "foto": "img/ivory/geco-mi-046-c.jpg",
+    "orig": "img/proveedor/web/mi-046-c.webp",
+    "det": "img/ivory/geco-mi-046-c-det.jpg"
    }
   ]
  },
@@ -1872,22 +2176,28 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-047-a.webp",
-    "foto": "img/proveedor/web/mi-047-a.webp"
+    "src": "img/ivory/geco-mi-047-a.jpg",
+    "foto": "img/ivory/geco-mi-047-a.jpg",
+    "orig": "img/proveedor/web/mi-047-a.webp",
+    "det": "img/ivory/geco-mi-047-a-det.jpg"
    },
    {
     "n": "Negro cremallera",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-047-b.webp",
-    "foto": "img/proveedor/web/mi-047-b.webp"
+    "src": "img/ivory/geco-mi-047-b.jpg",
+    "foto": "img/ivory/geco-mi-047-b.jpg",
+    "orig": "img/proveedor/web/mi-047-b.webp",
+    "det": "img/ivory/geco-mi-047-b-det.jpg"
    },
    {
     "n": "Negro hebilla",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-047-c.webp",
-    "foto": "img/proveedor/web/mi-047-c.webp"
+    "src": "img/ivory/geco-mi-047-c.jpg",
+    "foto": "img/ivory/geco-mi-047-c.jpg",
+    "orig": "img/proveedor/web/mi-047-c.webp",
+    "det": "img/ivory/geco-mi-047-c-det.jpg"
    }
   ]
  },
@@ -1906,8 +2216,10 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-048.webp",
-    "foto": "img/proveedor/web/mi-048.webp"
+    "src": "img/ivory/geco-mi-048.jpg",
+    "foto": "img/ivory/geco-mi-048.jpg",
+    "orig": "img/proveedor/web/mi-048.webp",
+    "det": "img/ivory/geco-mi-048-det.jpg"
    }
   ]
  },
@@ -1926,29 +2238,37 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-049.webp",
-    "foto": "img/proveedor/web/mi-049.webp"
+    "src": "img/ivory/geco-mi-049.jpg",
+    "foto": "img/ivory/geco-mi-049.jpg",
+    "orig": "img/proveedor/web/mi-049.webp",
+    "det": "img/ivory/geco-mi-049-det.jpg"
    },
    {
     "n": "Negro y beige",
     "c": "linear-gradient(135deg,#1d1a19 50%,#CDB497 50%)",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-060-a.webp",
-    "foto": "img/proveedor/web/mi-060-a.webp"
+    "src": "img/ivory/geco-mi-060-a.jpg",
+    "foto": "img/ivory/geco-mi-060-a.jpg",
+    "orig": "img/proveedor/web/mi-060-a.webp",
+    "det": "img/ivory/geco-mi-060-a-det.jpg"
    },
    {
     "n": "Café",
     "c": "#5a3a28",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-060-b.webp",
-    "foto": "img/proveedor/web/mi-060-b.webp"
+    "src": "img/ivory/geco-mi-060-b.jpg",
+    "foto": "img/ivory/geco-mi-060-b.jpg",
+    "orig": "img/proveedor/web/mi-060-b.webp",
+    "det": "img/ivory/geco-mi-060-b-det.jpg"
    },
    {
     "n": "Café 2",
     "c": "#5a3a28",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-060-c.webp",
-    "foto": "img/proveedor/web/mi-060-c.webp"
+    "src": "img/ivory/geco-mi-060-c.jpg",
+    "foto": "img/ivory/geco-mi-060-c.jpg",
+    "orig": "img/proveedor/web/mi-060-c.webp",
+    "det": "img/ivory/geco-mi-060-c-det.jpg"
    }
   ]
  },
@@ -1967,22 +2287,28 @@
     "n": "Negro aro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-050-a.webp",
-    "foto": "img/proveedor/web/mi-050-a.webp"
+    "src": "img/ivory/geco-mi-050-a.jpg",
+    "foto": "img/ivory/geco-mi-050-a.jpg",
+    "orig": "img/proveedor/web/mi-050-a.webp",
+    "det": "img/ivory/geco-mi-050-a-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#f4f3f1",
     "fam": "Blanco",
-    "src": "img/proveedor/web/mi-050-b.webp",
-    "foto": "img/proveedor/web/mi-050-b.webp"
+    "src": "img/ivory/geco-mi-050-b.jpg",
+    "foto": "img/ivory/geco-mi-050-b.jpg",
+    "orig": "img/proveedor/web/mi-050-b.webp",
+    "det": "img/ivory/geco-mi-050-b-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-057.webp",
-    "foto": "img/proveedor/web/mi-057.webp"
+    "src": "img/ivory/geco-mi-057.jpg",
+    "foto": "img/ivory/geco-mi-057.jpg",
+    "orig": "img/proveedor/web/mi-057.webp",
+    "det": "img/ivory/geco-mi-057-det.jpg"
    }
   ]
  },
@@ -2001,8 +2327,10 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-051.webp",
-    "foto": "img/proveedor/web/mi-051.webp"
+    "src": "img/ivory/geco-mi-051.jpg",
+    "foto": "img/ivory/geco-mi-051.jpg",
+    "orig": "img/proveedor/web/mi-051.webp",
+    "det": "img/ivory/geco-mi-051-det.jpg"
    }
   ]
  },
@@ -2021,15 +2349,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-052-a.webp",
-    "foto": "img/proveedor/web/mi-052-a.webp"
+    "src": "img/ivory/geco-mi-052-a.jpg",
+    "foto": "img/ivory/geco-mi-052-a.jpg",
+    "orig": "img/proveedor/web/mi-052-a.webp",
+    "det": "img/ivory/geco-mi-052-a-det.jpg"
    },
    {
     "n": "Negro 2",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-052-b.webp",
-    "foto": "img/proveedor/web/mi-052-b.webp"
+    "src": "img/ivory/geco-mi-052-b.jpg",
+    "foto": "img/ivory/geco-mi-052-b.jpg",
+    "orig": "img/proveedor/web/mi-052-b.webp",
+    "det": "img/ivory/geco-mi-052-b-det.jpg"
    }
   ]
  },
@@ -2048,15 +2380,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-053-a.webp",
-    "foto": "img/proveedor/web/mi-053-a.webp"
+    "src": "img/ivory/geco-mi-053-a.jpg",
+    "foto": "img/ivory/geco-mi-053-a.jpg",
+    "orig": "img/proveedor/web/mi-053-a.webp",
+    "det": "img/ivory/geco-mi-053-a-det.jpg"
    },
    {
     "n": "Negro 2",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-053-b.webp",
-    "foto": "img/proveedor/web/mi-053-b.webp"
+    "src": "img/ivory/geco-mi-053-b.jpg",
+    "foto": "img/ivory/geco-mi-053-b.jpg",
+    "orig": "img/proveedor/web/mi-053-b.webp",
+    "det": "img/ivory/geco-mi-053-b-det.jpg"
    }
   ]
  },
@@ -2075,23 +2411,29 @@
     "n": "Negro gamuza",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-054.webp",
-    "foto": "img/proveedor/web/mi-054.webp",
-    "mat": "en gamuza"
+    "src": "img/ivory/geco-mi-054.jpg",
+    "foto": "img/ivory/geco-mi-054.jpg",
+    "mat": "en gamuza",
+    "orig": "img/proveedor/web/mi-054.webp",
+    "det": "img/ivory/geco-mi-054-det.jpg"
    },
    {
     "n": "Café",
     "c": "#5a3a28",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-058-a.webp",
-    "foto": "img/proveedor/web/mi-058-a.webp"
+    "src": "img/ivory/geco-mi-058-a.jpg",
+    "foto": "img/ivory/geco-mi-058-a.jpg",
+    "orig": "img/proveedor/web/mi-058-a.webp",
+    "det": "img/ivory/geco-mi-058-a-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-058-b.webp",
-    "foto": "img/proveedor/web/mi-058-b.webp"
+    "src": "img/ivory/geco-mi-058-b.jpg",
+    "foto": "img/ivory/geco-mi-058-b.jpg",
+    "orig": "img/proveedor/web/mi-058-b.webp",
+    "det": "img/ivory/geco-mi-058-b-det.jpg"
    }
   ]
  },
@@ -2110,16 +2452,20 @@
     "n": "Negro gamuza",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-055-a.webp",
-    "foto": "img/proveedor/web/mi-055-a.webp",
-    "mat": "en gamuza"
+    "src": "img/ivory/geco-mi-055-a.jpg",
+    "foto": "img/ivory/geco-mi-055-a.jpg",
+    "mat": "en gamuza",
+    "orig": "img/proveedor/web/mi-055-a.webp",
+    "det": "img/ivory/geco-mi-055-a-det.jpg"
    },
    {
     "n": "Café",
     "c": "#5a3a28",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-055-b.webp",
-    "foto": "img/proveedor/web/mi-055-b.webp"
+    "src": "img/ivory/geco-mi-055-b.jpg",
+    "foto": "img/ivory/geco-mi-055-b.jpg",
+    "orig": "img/proveedor/web/mi-055-b.webp",
+    "det": "img/ivory/geco-mi-055-b-det.jpg"
    }
   ]
  },
@@ -2138,15 +2484,19 @@
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/mi-056-a.webp",
-    "foto": "img/proveedor/web/mi-056-a.webp"
+    "src": "img/ivory/geco-mi-056-a.jpg",
+    "foto": "img/ivory/geco-mi-056-a.jpg",
+    "orig": "img/proveedor/web/mi-056-a.webp",
+    "det": "img/ivory/geco-mi-056-a-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-056-b.webp",
-    "foto": "img/proveedor/web/mi-056-b.webp"
+    "src": "img/ivory/geco-mi-056-b.jpg",
+    "foto": "img/ivory/geco-mi-056-b.jpg",
+    "orig": "img/proveedor/web/mi-056-b.webp",
+    "det": "img/ivory/geco-mi-056-b-det.jpg"
    }
   ]
  },
@@ -2165,8 +2515,10 @@
     "n": "Negro estampado",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-059.webp",
-    "foto": "img/proveedor/web/mi-059.webp"
+    "src": "img/ivory/geco-mi-059.jpg",
+    "foto": "img/ivory/geco-mi-059.jpg",
+    "orig": "img/proveedor/web/mi-059.webp",
+    "det": "img/ivory/geco-mi-059-det.jpg"
    }
   ]
  },
@@ -2185,23 +2537,29 @@
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mi-095-a.webp",
-    "foto": "img/proveedor/web/mi-095-a.webp"
+    "src": "img/ivory/geco-mi-095-a.jpg",
+    "foto": "img/ivory/geco-mi-095-a.jpg",
+    "orig": "img/proveedor/web/mi-095-a.webp",
+    "det": "img/ivory/geco-mi-095-a-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-095-b.webp",
-    "foto": "img/proveedor/web/mi-095-b.webp"
+    "src": "img/ivory/geco-mi-095-b.jpg",
+    "foto": "img/ivory/geco-mi-095-b.jpg",
+    "orig": "img/proveedor/web/mi-095-b.webp",
+    "det": "img/ivory/geco-mi-095-b-det.jpg"
    },
    {
     "n": "Negro gamuza",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-095-c.webp",
-    "foto": "img/proveedor/web/mi-095-c.webp",
-    "mat": "en gamuza"
+    "src": "img/ivory/geco-mi-095-c.jpg",
+    "foto": "img/ivory/geco-mi-095-c.jpg",
+    "mat": "en gamuza",
+    "orig": "img/proveedor/web/mi-095-c.webp",
+    "det": "img/ivory/geco-mi-095-c-det.jpg"
    }
   ]
  },
@@ -2220,15 +2578,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-098-a.webp",
-    "foto": "img/proveedor/web/mi-098-a.webp"
+    "src": "img/ivory/geco-mi-098-a.jpg",
+    "foto": "img/ivory/geco-mi-098-a.jpg",
+    "orig": "img/proveedor/web/mi-098-a.webp",
+    "det": "img/ivory/geco-mi-098-a-det.jpg"
    },
    {
     "n": "Negro 2",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mi-098-b.webp",
-    "foto": "img/proveedor/web/mi-098-b.webp"
+    "src": "img/ivory/geco-mi-098-b.jpg",
+    "foto": "img/ivory/geco-mi-098-b.jpg",
+    "orig": "img/proveedor/web/mi-098-b.webp",
+    "det": "img/ivory/geco-mi-098-b-det.jpg"
    }
   ]
  },
@@ -2247,22 +2609,28 @@
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-01.webp",
-    "foto": "img/proveedor/web/o-mq-01.webp"
+    "src": "img/ivory/geco-mq-01.jpg",
+    "foto": "img/ivory/geco-mq-01.jpg",
+    "orig": "img/proveedor/web/o-mq-01.webp",
+    "det": "img/ivory/geco-mq-01-det.jpg"
    },
    {
     "n": "Café",
     "c": "#4A3530",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mq-02.webp",
-    "foto": "img/proveedor/web/o-mq-02.webp"
+    "src": "img/ivory/geco-mq-02.jpg",
+    "foto": "img/ivory/geco-mq-02.jpg",
+    "orig": "img/proveedor/web/o-mq-02.webp",
+    "det": "img/ivory/geco-mq-02-det.jpg"
    },
    {
     "n": "Negro puesta",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-03.webp",
-    "foto": "img/proveedor/web/o-mq-03.webp"
+    "src": "img/ivory/geco-mq-03.jpg",
+    "foto": "img/ivory/geco-mq-03.jpg",
+    "orig": "img/proveedor/web/o-mq-03.webp",
+    "det": "img/ivory/geco-mq-03-det.jpg"
    }
   ]
  },
@@ -2282,15 +2650,19 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/mq-05.webp",
-    "foto": "img/proveedor/web/mq-05.webp"
+    "src": "img/ivory/geco-mq-05.jpg",
+    "foto": "img/ivory/geco-mq-05.jpg",
+    "orig": "img/proveedor/web/mq-05.webp",
+    "det": "img/ivory/geco-mq-05-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/mq-06.webp",
-    "foto": "img/proveedor/web/mq-06.webp"
+    "src": "img/ivory/geco-mq-06.jpg",
+    "foto": "img/ivory/geco-mq-06.jpg",
+    "orig": "img/proveedor/web/mq-06.webp",
+    "det": "img/ivory/geco-mq-06-det.jpg"
    }
   ]
  },
@@ -2310,22 +2682,28 @@
     "n": "Negro brillo",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-07.webp",
-    "foto": "img/proveedor/web/o-mq-07.webp"
+    "src": "img/ivory/geco-mq-07.jpg",
+    "foto": "img/ivory/geco-mq-07.jpg",
+    "orig": "img/proveedor/web/o-mq-07.webp",
+    "det": "img/ivory/geco-mq-07-det.jpg"
    },
    {
     "n": "Beige brillo",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mq-08.webp",
-    "foto": "img/proveedor/web/o-mq-08.webp"
+    "src": "img/ivory/geco-mq-08.jpg",
+    "foto": "img/ivory/geco-mq-08.jpg",
+    "orig": "img/proveedor/web/o-mq-08.webp",
+    "det": "img/ivory/geco-mq-08-det.jpg"
    },
    {
     "n": "Topo brillo",
     "c": "#A58E7E",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mq-09.webp",
-    "foto": "img/proveedor/web/o-mq-09.webp"
+    "src": "img/ivory/geco-mq-09.jpg",
+    "foto": "img/ivory/geco-mq-09.jpg",
+    "orig": "img/proveedor/web/o-mq-09.webp",
+    "det": "img/ivory/geco-mq-09-det.jpg"
    }
   ]
  },
@@ -2344,22 +2722,28 @@
     "n": "Gris",
     "c": "#8a8a88",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-10.webp",
-    "foto": "img/proveedor/web/o-mq-10.webp"
+    "src": "img/ivory/geco-mq-10.jpg",
+    "foto": "img/ivory/geco-mq-10.jpg",
+    "orig": "img/proveedor/web/o-mq-10.webp",
+    "det": "img/ivory/geco-mq-10-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#F6F2EC",
     "fam": "Blanco",
-    "src": "img/proveedor/web/o-mq-11.webp",
-    "foto": "img/proveedor/web/o-mq-11.webp"
+    "src": "img/ivory/geco-mq-11.jpg",
+    "foto": "img/ivory/geco-mq-11.jpg",
+    "orig": "img/proveedor/web/o-mq-11.webp",
+    "det": "img/ivory/geco-mq-11-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-12.webp",
-    "foto": "img/proveedor/web/o-mq-12.webp"
+    "src": "img/ivory/geco-mq-12.jpg",
+    "foto": "img/ivory/geco-mq-12.jpg",
+    "orig": "img/proveedor/web/o-mq-12.webp",
+    "det": "img/ivory/geco-mq-12-det.jpg"
    }
   ]
  },
@@ -2378,22 +2762,28 @@
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-13.webp",
-    "foto": "img/proveedor/web/o-mq-13.webp"
+    "src": "img/ivory/geco-mq-13.jpg",
+    "foto": "img/ivory/geco-mq-13.jpg",
+    "orig": "img/proveedor/web/o-mq-13.webp",
+    "det": "img/ivory/geco-mq-13-det.jpg"
    },
    {
     "n": "Café",
     "c": "#4A3530",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mq-14.webp",
-    "foto": "img/proveedor/web/o-mq-14.webp"
+    "src": "img/ivory/geco-mq-14.jpg",
+    "foto": "img/ivory/geco-mq-14.jpg",
+    "orig": "img/proveedor/web/o-mq-14.webp",
+    "det": "img/ivory/geco-mq-14-det.jpg"
    },
    {
     "n": "Blanco",
     "c": "#F6F2EC",
     "fam": "Blanco",
-    "src": "img/proveedor/web/o-mq-15.webp",
-    "foto": "img/proveedor/web/o-mq-15.webp"
+    "src": "img/ivory/geco-mq-15.jpg",
+    "foto": "img/ivory/geco-mq-15.jpg",
+    "orig": "img/proveedor/web/o-mq-15.webp",
+    "det": "img/ivory/geco-mq-15-det.jpg"
    }
   ]
  },
@@ -2412,22 +2802,28 @@
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-16.webp",
-    "foto": "img/proveedor/web/o-mq-16.webp"
+    "src": "img/ivory/geco-mq-16.jpg",
+    "foto": "img/ivory/geco-mq-16.jpg",
+    "orig": "img/proveedor/web/o-mq-16.webp",
+    "det": "img/ivory/geco-mq-16-det.jpg"
    },
    {
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mq-25.webp",
-    "foto": "img/proveedor/web/o-mq-25.webp"
+    "src": "img/ivory/geco-mq-25.jpg",
+    "foto": "img/ivory/geco-mq-25.jpg",
+    "orig": "img/proveedor/web/o-mq-25.webp",
+    "det": "img/ivory/geco-mq-25-det.jpg"
    },
    {
     "n": "Gris",
     "c": "#8a8a88",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-26.webp",
-    "foto": "img/proveedor/web/o-mq-26.webp"
+    "src": "img/ivory/geco-mq-26.jpg",
+    "foto": "img/ivory/geco-mq-26.jpg",
+    "orig": "img/proveedor/web/o-mq-26.webp",
+    "det": "img/ivory/geco-mq-26-det.jpg"
    }
   ]
  },
@@ -2446,8 +2842,10 @@
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mq-17.webp",
-    "foto": "img/proveedor/web/o-mq-17.webp"
+    "src": "img/ivory/geco-mq-17.jpg",
+    "foto": "img/ivory/geco-mq-17.jpg",
+    "orig": "img/proveedor/web/o-mq-17.webp",
+    "det": "img/ivory/geco-mq-17-det.jpg"
    }
   ]
  },
@@ -2466,22 +2864,28 @@
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mq-18.webp",
-    "foto": "img/proveedor/web/o-mq-18.webp"
+    "src": "img/ivory/geco-mq-18.jpg",
+    "foto": "img/ivory/geco-mq-18.jpg",
+    "orig": "img/proveedor/web/o-mq-18.webp",
+    "det": "img/ivory/geco-mq-18-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mq-20.webp",
-    "foto": "img/proveedor/web/o-mq-20.webp"
+    "src": "img/ivory/geco-mq-20.jpg",
+    "foto": "img/ivory/geco-mq-20.jpg",
+    "orig": "img/proveedor/web/o-mq-20.webp",
+    "det": "img/ivory/geco-mq-20-det.jpg"
    },
    {
     "n": "Gris",
     "c": "#8a8a88",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-19.webp",
-    "foto": "img/proveedor/web/o-mq-19.webp"
+    "src": "img/ivory/geco-mq-19.jpg",
+    "foto": "img/ivory/geco-mq-19.jpg",
+    "orig": "img/proveedor/web/o-mq-19.webp",
+    "det": "img/ivory/geco-mq-19-det.jpg"
    }
   ]
  },
@@ -2500,15 +2904,19 @@
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-21.webp",
-    "foto": "img/proveedor/web/o-mq-21.webp"
+    "src": "img/ivory/geco-mq-21.jpg",
+    "foto": "img/ivory/geco-mq-21.jpg",
+    "orig": "img/proveedor/web/o-mq-21.webp",
+    "det": "img/ivory/geco-mq-21-det.jpg"
    },
    {
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mq-22.webp",
-    "foto": "img/proveedor/web/o-mq-22.webp"
+    "src": "img/ivory/geco-mq-22.jpg",
+    "foto": "img/ivory/geco-mq-22.jpg",
+    "orig": "img/proveedor/web/o-mq-22.webp",
+    "det": "img/ivory/geco-mq-22-det.jpg"
    }
   ]
  },
@@ -2527,15 +2935,19 @@
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-23.webp",
-    "foto": "img/proveedor/web/o-mq-23.webp"
+    "src": "img/ivory/geco-mq-23.jpg",
+    "foto": "img/ivory/geco-mq-23.jpg",
+    "orig": "img/proveedor/web/o-mq-23.webp",
+    "det": "img/ivory/geco-mq-23-det.jpg"
    },
    {
     "n": "Café",
     "c": "#4A3530",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mq-24.webp",
-    "foto": "img/proveedor/web/o-mq-24.webp"
+    "src": "img/ivory/geco-mq-24.jpg",
+    "foto": "img/ivory/geco-mq-24.jpg",
+    "orig": "img/proveedor/web/o-mq-24.webp",
+    "det": "img/ivory/geco-mq-24-det.jpg"
    }
   ]
  },
@@ -2554,15 +2966,19 @@
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mq-27.webp",
-    "foto": "img/proveedor/web/o-mq-27.webp"
+    "src": "img/ivory/geco-mq-27.jpg",
+    "foto": "img/ivory/geco-mq-27.jpg",
+    "orig": "img/proveedor/web/o-mq-27.webp",
+    "det": "img/ivory/geco-mq-27-det.jpg"
    },
    {
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-28.webp",
-    "foto": "img/proveedor/web/o-mq-28.webp"
+    "src": "img/ivory/geco-mq-28.jpg",
+    "foto": "img/ivory/geco-mq-28.jpg",
+    "orig": "img/proveedor/web/o-mq-28.webp",
+    "det": "img/ivory/geco-mq-28-det.jpg"
    }
   ]
  },
@@ -2581,15 +2997,19 @@
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-29.webp",
-    "foto": "img/proveedor/web/o-mq-29.webp"
+    "src": "img/ivory/geco-mq-29.jpg",
+    "foto": "img/ivory/geco-mq-29.jpg",
+    "orig": "img/proveedor/web/o-mq-29.webp",
+    "det": "img/ivory/geco-mq-29-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mq-30.webp",
-    "foto": "img/proveedor/web/o-mq-30.webp"
+    "src": "img/ivory/geco-mq-30.jpg",
+    "foto": "img/ivory/geco-mq-30.jpg",
+    "orig": "img/proveedor/web/o-mq-30.webp",
+    "det": "img/ivory/geco-mq-30-det.jpg"
    }
   ]
  },
@@ -2608,22 +3028,28 @@
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-31.webp",
-    "foto": "img/proveedor/web/o-mq-31.webp"
+    "src": "img/ivory/geco-mq-31.jpg",
+    "foto": "img/ivory/geco-mq-31.jpg",
+    "orig": "img/proveedor/web/o-mq-31.webp",
+    "det": "img/ivory/geco-mq-31-det.jpg"
    },
    {
     "n": "Beige",
     "c": "#CDB497",
     "fam": "Beige",
-    "src": "img/proveedor/web/o-mq-32.webp",
-    "foto": "img/proveedor/web/o-mq-32.webp"
+    "src": "img/ivory/geco-mq-32.jpg",
+    "foto": "img/ivory/geco-mq-32.jpg",
+    "orig": "img/proveedor/web/o-mq-32.webp",
+    "det": "img/ivory/geco-mq-32-det.jpg"
    },
    {
     "n": "Gris",
     "c": "#8a8a88",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-33.webp",
-    "foto": "img/proveedor/web/o-mq-33.webp"
+    "src": "img/ivory/geco-mq-33.jpg",
+    "foto": "img/ivory/geco-mq-33.jpg",
+    "orig": "img/proveedor/web/o-mq-33.webp",
+    "det": "img/ivory/geco-mq-33-det.jpg"
    }
   ]
  },
@@ -2642,8 +3068,10 @@
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-34.webp",
-    "foto": "img/proveedor/web/o-mq-34.webp"
+    "src": "img/ivory/geco-mq-34.jpg",
+    "foto": "img/ivory/geco-mq-34.jpg",
+    "orig": "img/proveedor/web/o-mq-34.webp",
+    "det": "img/ivory/geco-mq-34-det.jpg"
    }
   ]
  },
@@ -2662,22 +3090,28 @@
     "n": "Camel",
     "c": "#B9763A",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mq-35.webp",
-    "foto": "img/proveedor/web/o-mq-35.webp"
+    "src": "img/ivory/geco-mq-35.jpg",
+    "foto": "img/ivory/geco-mq-35.jpg",
+    "orig": "img/proveedor/web/o-mq-35.webp",
+    "det": "img/ivory/geco-mq-35-det.jpg"
    },
    {
     "n": "Azul",
     "c": "#22304a",
     "fam": "Jean",
-    "src": "img/proveedor/web/o-mq-36.webp",
-    "foto": "img/proveedor/web/o-mq-36.webp"
+    "src": "img/ivory/geco-mq-36.jpg",
+    "foto": "img/ivory/geco-mq-36.jpg",
+    "orig": "img/proveedor/web/o-mq-36.webp",
+    "det": "img/ivory/geco-mq-36-det.jpg"
    },
    {
     "n": "Café",
     "c": "#4A3530",
     "fam": "Café",
-    "src": "img/proveedor/web/o-mq-37.webp",
-    "foto": "img/proveedor/web/o-mq-37.webp"
+    "src": "img/ivory/geco-mq-37.jpg",
+    "foto": "img/ivory/geco-mq-37.jpg",
+    "orig": "img/proveedor/web/o-mq-37.webp",
+    "det": "img/ivory/geco-mq-37-det.jpg"
    }
   ]
  },
@@ -2696,8 +3130,10 @@
     "n": "Vino",
     "c": "#5a1f24",
     "fam": "Rojo",
-    "src": "img/proveedor/web/o-mq-38.webp",
-    "foto": "img/proveedor/web/o-mq-38.webp"
+    "src": "img/ivory/geco-mq-38.jpg",
+    "foto": "img/ivory/geco-mq-38.jpg",
+    "orig": "img/proveedor/web/o-mq-38.webp",
+    "det": "img/ivory/geco-mq-38-det.jpg"
    }
   ]
  },
@@ -2716,20 +3152,23 @@
     "n": "Negro",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-40.webp",
-    "foto": "img/proveedor/web/o-mq-40.webp"
+    "src": "img/ivory/geco-mq-40.jpg",
+    "foto": "img/ivory/geco-mq-40.jpg",
+    "orig": "img/proveedor/web/o-mq-40.webp",
+    "det": "img/ivory/geco-mq-40-det.jpg"
    },
    {
     "n": "Negro tejido",
     "c": "#2A2426",
     "fam": "Negro",
-    "src": "img/proveedor/web/o-mq-41.webp",
-    "foto": "img/proveedor/web/o-mq-41.webp"
+    "src": "img/ivory/geco-mq-41.jpg",
+    "foto": "img/ivory/geco-mq-41.jpg",
+    "orig": "img/proveedor/web/o-mq-41.webp",
+    "det": "img/ivory/geco-mq-41-det.jpg"
    }
   ]
  }
-]
-</script>
+]</script>
 
 <style>
 /* Layout: pasarela vertical. Arriba, historias con 5 botas distintas (HISTORIAS en el script), cada una tiñe la página de su tono; después la colección (con precios), el buscador, la vitrina que gira, el video, el pedido, el envío y el pie con GECO en pétalos. Todas las botas viven en el mismo "estudio" (fondo crema con aro dorado). */
@@ -2983,6 +3422,12 @@ section{padding-block:64px 0}
 .giro.modo-lupa{touch-action:none;cursor:zoom-in}
 .lupa{position:absolute;z-index:5;width:150px;height:150px;border-radius:50%;overflow:hidden;pointer-events:none;border:3px solid #fff;box-shadow:0 0 0 2px var(--oro), 0 14px 30px rgba(0,0,0,.35);background:#FBEFEC;transform:translate(-50%,-115%)}
 .lupa div{position:absolute;left:0;top:0;background-repeat:no-repeat;background-position:center;background-size:contain}
+.vistas{display:flex;gap:10px;justify-content:center}
+.vistas[hidden]{display:none}
+.vistas button{display:grid;gap:4px;justify-items:center;border:0;background:transparent;padding:0;cursor:pointer;font-size:12px;font-weight:600;color:var(--tinta-suave)}
+.vistas img{width:56px;height:70px;object-fit:cover;border-radius:10px;border:2px solid transparent;transition:border-color .15s ease}
+.vistas button[aria-pressed="true"]{color:var(--tinta)}
+.vistas button[aria-pressed="true"] img{border-color:var(--tinta)}
 .modos{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
 .modos button{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--linea);background:transparent;border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:600;cursor:pointer}
 .modos button svg{width:16px;height:16px}
@@ -3315,7 +3760,8 @@ footer img{width:64px;height:64px;border-radius:50%}
     <button class="cerrar presionable" type="button" id="h-cerrar" aria-label="Cerrar">×</button>
     <div class="hoja-cuerpo">
       <div class="visor">
-        <div class="giro" id="giro"><div class="estudio real"><img id="h-img" src="img/vino.jpg" alt=""></div></div>
+        <div class="giro" id="giro"><div class="estudio real"><img id="h-img" src="img/ivory/sk-vino.jpg" alt=""></div></div>
+        <div class="vistas" id="h-vistas" role="group" aria-label="Fotos de la bota"></div>
         <div class="modos">
           <button type="button" id="m-girar" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2M21 12a9 9 0 0 1-15.5 6.2"/><path d="M18 2v4h-4M6 22v-4h4"/></svg>Arrastra para girar</button>
           <button type="button" id="m-lupa" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>Lupa</button>
@@ -3728,12 +4174,27 @@ footer img{width:64px;height:64px;border-radius:50%}
       if (actual !== p || colorSel !== i) return;
       himg.src = c.src; himg.alt = p.nombre + " color " + c.n.toLowerCase();
       himg.parentNode.className = est(c.src);
+      ponerVistas(p, c);
     };
     if (ya) poner(); else (cargadas[c.src] || Promise.resolve()).then(poner);
     $("#h-color-txt").textContent = c.n;
     $$("#h-colores button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i === i));
     const txt = "Hola Geco Shoes, " + (actual.precio ? "me interesa" : "quiero saber el precio de") + " la " + actual.nombre + " en " + c.n.toLowerCase() + ". ¿Tienen mi talla?";
     $("#h-preguntar").href = "https://wa.me/" + NUM + "?text=" + encodeURIComponent(txt);
+  }
+  // fotos de la bota: 1) la bota sola en el color elegido, 2) la modelo Geco (una por referencia), 3) el detalle real
+  function ponerVistas(p, c){
+    const v = [{t: "Bota", src: c.src, alt: p.nombre + " color " + c.n.toLowerCase()}];
+    if (p.modelo) v.push({t: "Puesta", src: p.modelo.src, alt: p.nombre + " puesta, color " + String(p.modelo.color || "").toLowerCase()});
+    if (c.det) v.push({t: "Detalle", src: c.det, alt: "Detalle de la " + p.nombre + " " + c.n.toLowerCase()});
+    const caja = $("#h-vistas");
+    caja.hidden = v.length < 2;
+    caja.innerHTML = v.map((x, i) => `<button type="button" aria-pressed="${i === 0}" data-i="${i}"><img src="${x.src}" alt="" loading="lazy"><span>${x.t}</span></button>`).join("");
+    $$("#h-vistas button").forEach(b => b.addEventListener("click", () => {
+      const x = v[+b.dataset.i]; ponerLupa(false); himg.style.transform = "";
+      himg.src = x.src; himg.alt = x.alt;
+      $$("#h-vistas button").forEach(y => y.setAttribute("aria-pressed", y === b));
+    }));
   }
   function cerrar(){
     velo.classList.remove("abierto"); velo.setAttribute("aria-hidden", "true"); document.body.style.overflow = "";
