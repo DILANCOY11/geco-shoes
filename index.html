@@ -3846,10 +3846,8 @@ footer img{width:64px;height:64px;border-radius:50%}
     {ref: "M12", c: 0, corto: "Biker", lema: "hebillas y sobre la rodilla", tono: "#2A2426", foto: "img/modelo/biker-negro.jpg", pos: "50% 70%"},
     {ref: "Q03", c: 0, corto: "Candado", lema: "plataforma con candado", tono: "#2A2426", foto: "img/modelo/cand-negro.jpg", pos: "50% 70%"},
     {ref: "S01", c: 0, corto: "Sakura", lema: "sobre la rodilla", tono: "#8E1F2B", foto: "img/vino.jpg"},
-    {ref: "M10", c: 3, corto: "Moka", lema: "caña alta lisa", tono: "#5A3F38", foto: "img/moka-cafe.jpg"},
-    {ref: "M01", c: 0, corto: "Karol", nombre: "Karol", lema: "doble plataforma", tono: "#2A2426", foto: "img/m3n.jpg"},
-    {ref: "N04", c: 0, corto: "Niñas", nombre: "Para ellas", lema: "caña alta en charol", tono: "#2A2426", foto: "img/n4.jpg", pos: "50% 88%"}
-  ].filter(h => porRef(h.ref));
+    {ref: "M10", c: 3, corto: "Moka", lema: "caña alta lisa", tono: "#5A3F38", foto: "img/moka-cafe.jpg"}
+  ].filter(h => porRef(h.ref)).map(h => { const co = porRef(h.ref).colores[h.c]; const f = co.det || co.foto; return f ? {...h, foto: f, pos: undefined} : h; }); // solo la bota: foto de estudio del catálogo, sin modelo (Karol y Niñas fuera de las historias)
   const foto = $("#foto"), hist = $("#historia");
   HISTORIAS.forEach((h,i) => {
     const im = document.createElement("img"); im.src = h.foto; im.alt = ""; im.draggable = false; if (h.pos) im.style.objectPosition = h.pos; if (i === 0) im.className = "on"; foto.insertBefore(im, hist);
