@@ -3273,9 +3273,10 @@ img{display:block;-webkit-user-drag:none;user-select:none}
 .franja span:not(:last-child)::after{content:"✿";color:var(--rosa)}
 
 /* ===== pasarela destacada ===== */
-.pasarela{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:18px;padding-block:14px 8px}
+.pausa{display:none!important}.tarjeta .tallas{display:block;font-size:.78rem;opacity:.7;margin-top:2px}.hero-wa{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;margin-left:8px;border-radius:999px;border:1px solid var(--linea);background:var(--papel);color:inherit;text-decoration:none;font-weight:600}.pasarela{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:18px;padding-block:14px 8px}
 .petalos{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none}
 .escena{position:relative;z-index:1;max-width:480px;width:100%;margin-inline:auto;aspect-ratio:4/5;margin-top:clamp(40px, 11vw, 90px)}
+@media (max-width:760px){.escena{width:min(100%,calc(42svh * .8));margin-top:clamp(24px,6vw,40px)}.pasarela .datos{display:none}.hero-wa{display:none}}
 .nombre-gigante{position:absolute;left:0;right:0;top:0;transform:translateY(-54%);z-index:2;text-align:center;pointer-events:none;
   font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(84px, 28vw, 200px);line-height:.8;letter-spacing:-.04em;
   color:var(--tono-txt);text-shadow:0 2px 24px color-mix(in oklab, var(--marmol) 70%, transparent);transition:color .6s}
@@ -3571,7 +3572,6 @@ footer img{width:64px;height:64px;border-radius:50%}
     <span><b>GECO</b><small>SHOES</small></span>
   </a>
   <nav class="nav" aria-label="Secciones">
-    <a href="#vitrina">Vitrina</a>
     <a href="#coleccion" data-ir="mujer">Mujer</a>
     <a href="#coleccion" data-ir="ninas">Niñas</a>
     <a href="#como">Envíos</a>
@@ -3607,7 +3607,7 @@ footer img{width:64px;height:64px;border-radius:50%}
       <div class="datos" id="d-datos"></div>
       <p class="precio" id="d-precio"></p>
       <div class="muestras" id="muestras" role="group" aria-label="Botas destacadas"></div>
-      <button class="btn presionable" type="button" id="dest-agregar">Ver esta bota</button>
+      <button class="btn presionable" type="button" id="dest-agregar">Ver esta bota</button><a class="hero-wa presionable" href="https://wa.me/573150608939?text=Hola%2C%20quiero%20ver%20las%20botas%20de%20Geco%20Shoes" target="_blank" rel="noopener">Pedir por WhatsApp</a>
     </div>
   </div>
 
@@ -3645,20 +3645,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     <div class="mas" id="mas" hidden><button class="btn-sec presionable" type="button" id="ver-mas">Ver más botas</button></div>
   </section>
 
-  <section id="buscar" aria-labelledby="t-bus">
-    <div class="titulo aparece">
-      <p class="eyebrow">Encuentra tu bota</p>
-      <h2 id="t-bus">Tres preguntas y te mostramos las tuyas</h2>
-    </div>
-    <div class="buscador aparece">
-      <div class="pregunta"><b><small>01</small>¿Para quién es?</b><div class="opciones" data-q="g"><button type="button" data-v="mujer" aria-pressed="false">Para mí</button><button type="button" data-v="ninas" aria-pressed="false">Para una niña</button></div></div>
-      <div class="pregunta"><b><small>02</small>¿Con tacón?</b><div class="opciones" data-q="tacon"><button type="button" data-v="si" aria-pressed="false">Sí, con tacón</button><button type="button" data-v="no" aria-pressed="false">Sin tacón</button><button type="button" data-v="igual" aria-pressed="false">Me da igual</button></div></div>
-      <div class="pregunta"><b><small>03</small>¿Qué tan alta?</b><div class="opciones" data-q="cana"><button type="button" data-v="tobillo" aria-pressed="false">Al tobillo</button><button type="button" data-v="media" aria-pressed="false">A media pierna</button><button type="button" data-v="alta" aria-pressed="false">Alta o sobre la rodilla</button><button type="button" data-v="igual" aria-pressed="false">Me da igual</button></div></div>
-      <div class="resultado" id="resultado" aria-live="polite"><p>Responde y aquí aparecen las botas que van contigo.</p></div>
-    </div>
-  </section>
-
-  <section id="vitrina" class="vitrina-sec" aria-labelledby="t-vit">
+  <section id="vitrina" hidden class="vitrina-sec" aria-labelledby="t-vit">
     <div class="titulo aparece">
       <p class="eyebrow">Vitrina Geco</p>
       <h2 id="t-vit">Pasa el dedo y mira cada bota</h2>
@@ -3738,6 +3725,19 @@ footer img{width:64px;height:64px;border-radius:50%}
       <li><b>La rastreas</b><p>Te enviamos el número de guía de la transportadora para que la sigas.</p></li>
       <li><b>Pagas como prefieras</b><p><b>En Bogotá:</b> el envío es gratis y pagas todo al recibir. <b>Otras ciudades, contra entrega:</b> separas tu pedido con los $15.000 del envío y pagas la bota cuando la recibes. <b>Por adelantado:</b> el envío es gratis. Recibimos Nequi, Bancolombia, Daviplata o Bre-B desde cualquier banco.</p></li>
     </ol>
+  </section>
+
+  <section id="buscar" aria-labelledby="t-bus">
+    <div class="titulo aparece">
+      <p class="eyebrow">Encuentra tu bota</p>
+      <h2 id="t-bus">Tres preguntas y te mostramos las tuyas</h2>
+    </div>
+    <div class="buscador aparece">
+      <div class="pregunta"><b><small>01</small>¿Para quién es?</b><div class="opciones" data-q="g"><button type="button" data-v="mujer" aria-pressed="false">Para mí</button><button type="button" data-v="ninas" aria-pressed="false">Para una niña</button></div></div>
+      <div class="pregunta"><b><small>02</small>¿Con tacón?</b><div class="opciones" data-q="tacon"><button type="button" data-v="si" aria-pressed="false">Sí, con tacón</button><button type="button" data-v="no" aria-pressed="false">Sin tacón</button><button type="button" data-v="igual" aria-pressed="false">Me da igual</button></div></div>
+      <div class="pregunta"><b><small>03</small>¿Qué tan alta?</b><div class="opciones" data-q="cana"><button type="button" data-v="tobillo" aria-pressed="false">Al tobillo</button><button type="button" data-v="media" aria-pressed="false">A media pierna</button><button type="button" data-v="alta" aria-pressed="false">Alta o sobre la rodilla</button><button type="button" data-v="igual" aria-pressed="false">Me da igual</button></div></div>
+      <div class="resultado" id="resultado" aria-live="polite"><p>Responde y aquí aparecen las botas que van contigo.</p></div>
+    </div>
   </section>
 
   <section aria-labelledby="t-faq">
@@ -3854,7 +3854,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     hist.insertAdjacentHTML("beforeend", "<span><i></i></span>");
     $("#muestras").insertAdjacentHTML("beforeend", `<button class="muestra" type="button" data-i="${i}" aria-pressed="${i===0}"><span class="chip" style="background:url('${h.foto}') ${h.pos || "50% 60%"}/cover"></span><span>${esc(h.corto)}</span></button>`);
   });
-  let idx = 0, t0 = performance.now(), pausado = reduce;
+  let idx = 0, t0 = performance.now(), pausado = true;
   const DUR = 4200, barras = $$("#historia i"), imgsDest = $$("#foto img"), gigante = $("#nombre-gigante");
   function pintar(i){
     const cambio = i !== idx; idx = i; const h = HISTORIAS[i], p = porRef(h.ref), c = p.colores[h.c];
@@ -3912,7 +3912,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   })();
   $$("#muestras .muestra").forEach(b => b.addEventListener("click", () => { pintar(+b.dataset.i); marcar(); ponerPausa(true); }));
   $("#dest-agregar").addEventListener("click", () => abrir(porRef(HISTORIAS[idx].ref), HISTORIAS[idx].c));
-  pintar(0); requestAnimationFrame(tick); if (reduce) ponerPausa(true);
+  pintar(0); requestAnimationFrame(tick); ponerPausa(true);
   setTimeout(() => $("#desliza").classList.add("fuera"), 6000);
 
   /* ---------- pétalos que caen en toda la página y se apartan del dedo ---------- */
@@ -4025,6 +4025,7 @@ footer img{width:64px;height:64px;border-radius:50%}
       <span class="img ${est(c.src)}" style="display:block"><img src="${c.src}" alt="${esc(p.nombre)} ${esc(c.n.toLowerCase())}" loading="lazy" draggable="false"><span class="brillo"></span>${p.nuevo ? '<span class="nuevo">Nuevo</span>' : ""}</span>
       <span class="ref">${esc(p.tipo)}</span>
       <h3>${esc(p.nombre)}</h3>
+      ${p.tallas ? `<span class="tallas">Tallas ${esc(p.tallas)}</span>` : ""}
       <span class="fila"><span class="puntos">${puntos(p)}</span>${p.precio ? `<span class="valor">${pesos(p.precio)}</span>` : '<span class="valor consulta">Precio por WhatsApp</span>'}</span>
     </button>`;
   }
@@ -4048,7 +4049,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   let mostrados = POR_PAGINA;
   $("#cnt-mujer").textContent = CAT.filter(p => p.g === "mujer").length;
   $("#cnt-ninas").textContent = CAT.filter(p => p.g === "ninas").length;
-  const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const norm = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   const FAM = {Negro:"#1d1a19", Blanco:"#f4f3f1", Beige:"#CDB497", Rojo:"#8E1F2B", Jean:"#668BBB"};
   function moverPildora(){
     const b = $(`#pestanas button[data-g="${f.g}"]`), pl = $("#pildora");
