@@ -3273,7 +3273,7 @@ img{display:block;-webkit-user-drag:none;user-select:none}
 .franja span:not(:last-child)::after{content:"✿";color:var(--rosa)}
 
 /* ===== pasarela destacada ===== */
-.pausa{display:none!important}.tarjeta .tallas{display:block;font-size:.78rem;opacity:.7;margin-top:2px}.hero-wa{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;margin-left:8px;border-radius:999px;border:1px solid var(--linea);background:var(--papel);color:inherit;text-decoration:none;font-weight:600}.pasarela{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:18px;padding-block:14px 8px}
+.pausa{display:none!important}.tarjeta .tallas{display:block;font-size:.78rem;opacity:.7;margin-top:2px}.hero-wa{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;margin-left:8px;border-radius:999px;border:1px solid var(--linea);background:var(--papel);color:inherit;text-decoration:none;font-weight:600}.tend{margin:clamp(28px,6vw,56px) 0 0}.tend .titulo{margin-bottom:14px}.tend-riel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.tend-riel::-webkit-scrollbar{display:none}.tend-riel .tarjeta{flex:0 0 min(62vw,230px);scroll-snap-align:start;position:relative}@media (min-width:900px){.tend-riel{overflow:visible;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}.tend-riel .tarjeta{flex:none}}.pasarela{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:18px;padding-block:14px 8px}
 .petalos{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none}
 .escena{position:relative;z-index:1;max-width:480px;width:100%;margin-inline:auto;aspect-ratio:4/5;margin-top:clamp(40px, 11vw, 90px)}
 @media (max-width:760px){.escena{width:min(100%,calc(42svh * .8));margin-top:clamp(24px,6vw,40px)}.pasarela .datos{display:none}.hero-wa{display:none}}
@@ -3610,6 +3610,15 @@ footer img{width:64px;height:64px;border-radius:50%}
       <button class="btn presionable" type="button" id="dest-agregar">Ver esta bota</button><a class="hero-wa presionable" href="https://wa.me/573150608939?text=Hola%2C%20quiero%20ver%20las%20botas%20de%20Geco%20Shoes" target="_blank" rel="noopener">Pedir por WhatsApp</a>
     </div>
   </div>
+
+  <section class="tend" id="tendencia" aria-labelledby="t-tend">
+    <div class="titulo aparece">
+      <p class="eyebrow">Lo que se está usando</p>
+      <h2 id="t-tend">Las botas en tendencia ahora</h2>
+      <p>Vaqueras, biker con hebillas, candado y largas negras: los estilos que más se ven este año y que ya tenemos listos.</p>
+    </div>
+    <div class="tend-riel" id="tend-riel"></div>
+  </section>
 
   <section id="coleccion" aria-labelledby="t-col">
     <div class="titulo aparece">
@@ -4042,6 +4051,13 @@ footer img{width:64px;height:64px;border-radius:50%}
       b.addEventListener("pointerleave", () => { img.style.transform = ""; });
     });
   }
+
+  /* ---------- tendencia ---------- */
+  (function(){
+    const T = [["M09","Negro"],["M12","Negro"],["Q03","Negro brillo"],["S01","Negro"],["M10","Negro"]];
+    $("#tend-riel").innerHTML = T.map(([r, col], i) => { const p = porRef(r); if (!p) return ""; const ci = Math.max(0, p.colores.findIndex(c => c.n === col)); return tarjetaHTML(p, i, ci); }).join("");
+    activarTarjetas($("#tend-riel"));
+  })();
 
   /* ---------- colección ---------- */
   const POR_PAGINA = 12;
