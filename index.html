@@ -3611,15 +3611,6 @@ footer img{width:64px;height:64px;border-radius:50%}
     </div>
   </div>
 
-  <section class="tend" id="tendencia" aria-labelledby="t-tend">
-    <div class="titulo aparece">
-      <p class="eyebrow">Lo que se está usando</p>
-      <h2 id="t-tend">Las botas en tendencia ahora</h2>
-      <p>Vaqueras, biker con hebillas, candado y largas negras: los estilos que más se ven este año y que ya tenemos listos.</p>
-    </div>
-    <div class="tend-riel" id="tend-riel"></div>
-  </section>
-
   <section id="coleccion" aria-labelledby="t-col">
     <div class="titulo aparece">
       <p class="eyebrow">Colección</p>
@@ -3851,8 +3842,10 @@ footer img{width:64px;height:64px;border-radius:50%}
   /* ---------- historias del inicio: una bota distinta en cada una ---------- */
   // ref y c (color) salen del catálogo; corto es el nombre gigante; nombre (opcional) cambia el del título; foto es la imagen completa (con fondo) que llena el arco
   const HISTORIAS = [
-    {ref: "S01", c: 0, corto: "Sakura", lema: "sobre la rodilla", tono: "#8E1F2B", foto: "img/vino.jpg"},
     {ref: "M09", c: 0, corto: "Texana", lema: "la vaquera bordada", tono: "#4E74A6", foto: "img/texana/jean.jpg"},
+    {ref: "M12", c: 0, corto: "Biker", lema: "hebillas y sobre la rodilla", tono: "#2A2426", foto: "img/modelo/biker-negro.jpg", pos: "50% 70%"},
+    {ref: "Q03", c: 0, corto: "Candado", lema: "plataforma con candado", tono: "#2A2426", foto: "img/modelo/cand-negro.jpg", pos: "50% 70%"},
+    {ref: "S01", c: 0, corto: "Sakura", lema: "sobre la rodilla", tono: "#8E1F2B", foto: "img/vino.jpg"},
     {ref: "M10", c: 3, corto: "Moka", lema: "caña alta lisa", tono: "#5A3F38", foto: "img/moka-cafe.jpg"},
     {ref: "M01", c: 0, corto: "Karol", nombre: "Karol", lema: "doble plataforma", tono: "#2A2426", foto: "img/m3n.jpg"},
     {ref: "N04", c: 0, corto: "Niñas", nombre: "Para ellas", lema: "caña alta en charol", tono: "#2A2426", foto: "img/n4.jpg", pos: "50% 88%"}
@@ -3863,7 +3856,7 @@ footer img{width:64px;height:64px;border-radius:50%}
     hist.insertAdjacentHTML("beforeend", "<span><i></i></span>");
     $("#muestras").insertAdjacentHTML("beforeend", `<button class="muestra" type="button" data-i="${i}" aria-pressed="${i===0}"><span class="chip" style="background:url('${h.foto}') ${h.pos || "50% 60%"}/cover"></span><span>${esc(h.corto)}</span></button>`);
   });
-  let idx = 0, t0 = performance.now(), pausado = true;
+  let idx = 0, t0 = performance.now(), pausado = reduce;
   const DUR = 4200, barras = $$("#historia i"), imgsDest = $$("#foto img"), gigante = $("#nombre-gigante");
   function pintar(i){
     const cambio = i !== idx; idx = i; const h = HISTORIAS[i], p = porRef(h.ref), c = p.colores[h.c];
@@ -3921,7 +3914,7 @@ footer img{width:64px;height:64px;border-radius:50%}
   })();
   $$("#muestras .muestra").forEach(b => b.addEventListener("click", () => { pintar(+b.dataset.i); marcar(); ponerPausa(true); }));
   $("#dest-agregar").addEventListener("click", () => abrir(porRef(HISTORIAS[idx].ref), HISTORIAS[idx].c));
-  pintar(0); requestAnimationFrame(tick); ponerPausa(true);
+  pintar(0); requestAnimationFrame(tick); if (reduce) ponerPausa(true);
   setTimeout(() => $("#desliza").classList.add("fuera"), 6000);
 
   /* ---------- pétalos que caen en toda la página y se apartan del dedo ---------- */
@@ -4052,13 +4045,6 @@ footer img{width:64px;height:64px;border-radius:50%}
     });
   }
 
-  /* ---------- tendencia ---------- */
-  (function(){
-    const T = [["M09","Negro"],["M12","Negro"],["Q03","Negro brillo"],["S01","Negro"],["M10","Negro"]];
-    $("#tend-riel").innerHTML = T.map(([r, col], i) => { const p = porRef(r); if (!p) return ""; const ci = Math.max(0, p.colores.findIndex(c => c.n === col)); return tarjetaHTML(p, i, ci); }).join("");
-    activarTarjetas($("#tend-riel"));
-  })();
-
   /* ---------- colección ---------- */
   const POR_PAGINA = 12;
   const f = {g: "mujer", estilo: "Todas", color: null, q: "", orden: "destacadas"};
@@ -4087,6 +4073,11 @@ footer img{width:64px;height:64px;border-radius:50%}
     let lista = delGrupo.filter(p => (f.estilo === "Todas" || p.tipo === f.estilo)
       && (!f.color || p.colores.some(c => c.fam === f.color))
       && (!q || norm([p.ref, p.nombre, p.tipo, p.d, ...p.colores.map(c => c.n)].join(" ")).includes(q)));
+    if (f.orden === "destacadas"){
+      const PRIO = ["M09","M12","Q03","S01","M10","M11","M01","P02","B01","P07","Q02","M05","P30"];
+      const rango = p => { const k = PRIO.indexOf(p.ref); return k >= 0 ? k : (p.modelo ? 50 : 100); };
+      lista = [...lista].sort((x, y) => rango(x) - rango(y));
+    }
     if (f.orden === "nuevas") lista = [...lista].sort((a,b) => (b.nuevo?1:0) - (a.nuevo?1:0));
     if (f.orden === "colores") lista = [...lista].sort((a,b) => b.colores.length - a.colores.length);
     if (f.orden === "nombre") lista = [...lista].sort((a,b) => a.nombre.localeCompare(b.nombre, "es"));
