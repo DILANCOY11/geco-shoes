@@ -740,10 +740,10 @@ footer img{width:64px;height:64px;border-radius:50%}
   /* ---------- historias del inicio: una bota distinta en cada una ---------- */
   // ref y c (color) salen del catálogo; corto es el nombre gigante; nombre (opcional) cambia el del título; foto es la imagen completa (con fondo) que llena el arco
   const HISTORIAS = [
-    {ref: "M09", c: 0, corto: "Texana", lema: "la vaquera bordada", tono: "#4E74A6", foto: "img/texana/jean.jpg"},
-    {ref: "M12", c: 0, corto: "Biker", lema: "hebillas y sobre la rodilla", tono: "#2A2426", foto: "img/modelo/biker-negro.jpg", pos: "50% 70%"},
+    {ref: "H04", c: 0, corto: "Kardashian", lema: "plataforma blanca", tono: "#B7A28F"},
     {ref: "Q03", c: 0, corto: "Candado", lema: "plataforma con candado", tono: "#2A2426", foto: "img/modelo/cand-negro.jpg", pos: "50% 70%"},
-    {ref: "S01", c: 0, corto: "Sakura", lema: "sobre la rodilla", tono: "#8E1F2B", foto: "img/vino.jpg"},
+    {ref: "H02", c: 0, corto: "Chloe", lema: "con el borde doblado", tono: "#C9B79C"},
+    {ref: "Q05", c: 0, corto: "Doblez", lema: "caña alta con doblez", tono: "#2A2426"},
     {ref: "M10", c: 3, corto: "Moka", lema: "caña alta lisa", tono: "#5A3F38", foto: "img/moka-cafe.jpg"}
   ].filter(h => porRef(h.ref)).map(h => { const co = porRef(h.ref).colores[h.c]; const f = co.foto || co.src; return f ? {...h, foto: f, pos: undefined} : h; }); // solo piernas y botas (recorte de estudio); Karol y Niñas fuera de las historias
   const foto = $("#foto"), hist = $("#historia");
@@ -973,8 +973,10 @@ footer img{width:64px;height:64px;border-radius:50%}
       && (!f.cana || p.cana === f.cana) && (!f.tacon || p.tacon === f.tacon)
       && (!q || norm([p.ref, p.nombre, p.tipo, p.d, ...p.colores.map(c => c.n)].join(" ")).includes(q)));
     if (f.orden === "destacadas"){
-      const PRIO = ["M09","S01","B01","M12","P07","Q03","M10","M11","M01","P02","Q02","M05","P30"];
-      const rango = p => { const k = PRIO.indexOf(p.ref); return k >= 0 ? k : (p.modelo ? 50 : 100); };
+      // arriba las más llamativas y de moda; abajo las más simples o de abrigo
+      const PRIO = ["M09","M12","S01","H04","H02","Q05","B02","B01","M10","M05","P07","Q03","P09","M11","P03","R01","H01","Q15","M03","M04","P56","P55","R02","P41","M01","B03","P26B","P25","P11","Q02","M06","P30","P22","P21","Q13","P32","Q10","Q18","P34","P45","H03","P35"];
+      const ABAJO = ["P18","P19","P43","P15","A05","A03","A01","A02","A04","A07","A06","Q08","Q07","H07","H08","H09","H06","P55B","Q16","Q12","Q17","B05","P10","P42","P38","P47"];
+      const rango = p => { const k = PRIO.indexOf(p.ref); if (k >= 0) return k; const j = ABAJO.indexOf(p.ref); return j >= 0 ? 200 + j : (p.modelo ? 50 : 100); };
       lista = [...lista].sort((x, y) => rango(x) - rango(y));
     }
     if (f.orden === "nuevas") lista = [...lista].sort((a,b) => (b.nuevo?1:0) - (a.nuevo?1:0));
@@ -1009,6 +1011,15 @@ footer img{width:64px;height:64px;border-radius:50%}
     }
     return _clip;
   }
+  /* para que la búsqueda por foto responda al instante: el modelo se descarga solo, en segundo plano, apenas la página termina de cargar (queda guardado en el celular para las próximas visitas) */
+  (() => {
+    const c = navigator.connection || {};
+    const pre = () => cargarClip().catch(() => { _clip = null; });
+    /* son ~95 MB: solo se baja sola con Wi-Fi/cable (y sin ahorro de datos); con datos móviles o sin dato de red (iPhone) arranca al tocar "Buscar por foto" */
+    const wifi = !c.saveData && (c.type === "wifi" || c.type === "ethernet");
+    if (wifi) addEventListener("load", () => setTimeout(pre, 15000), {once: true});
+    $("#enc-file").addEventListener("click", pre, {once: true});
+  })();
   $("#enc-file").addEventListener("change", async e => {
     const file = e.target.files[0]; if (!file) return;
     const res = $("#enc-res"), msg = $("#enc-msg"), gr = $("#enc-grilla");
