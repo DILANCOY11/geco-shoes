@@ -25,8 +25,7 @@
   precio: en pesos, sin puntos (170000). Si no tiene precio, la página dice "Precio por WhatsApp" (las de proveedores P01–P56 y Q01–Q15, 2026-11-07, van sin precio hasta confirmarlo)
   colores: n (nombre), c (color del punto), fam (familia para el filtro), src y foto (foto Ivory con marca de agua, img/ivory), det (detalle real), orig (foto original). modelo: {src, color} foto con la modelo Geco de la referencia; cada color puede tener su propia modelo: "modelo": "img/modelo/<ref>-<color>.jpg" dentro del color
 -->
-<script type="application/json" id="catalogo">
-[
+<script type="application/json" id="catalogo">[
  {
   "ref": "S01",
   "modelo": {
@@ -1457,10 +1456,11 @@
     "n": "Azul",
     "c": "#22304a",
     "fam": "Jean",
-    "src": "img/estudio-cafe/geco-mi-003-b.jpg",
-    "foto": "img/estudio-cafe/geco-mi-003-b.jpg",
+    "src": "img/estudio/botaalta-azul.jpg",
+    "foto": "img/estudio/botaalta-azul.jpg",
     "orig": "img/proveedor/web/mi-003-b.webp",
-    "det": "img/detalle/mi-003-b.jpg"
+    "det": "img/detalle-estudio/botaalta-azul.jpg",
+    "modelo": "img/modelo/botaalta-azul.jpg"
    }
   ],
   "modelo": {
@@ -2096,10 +2096,11 @@
     "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
-    "src": "img/estudio-cafe/geco-mi-047-a.jpg",
-    "foto": "img/estudio-cafe/geco-mi-047-a.jpg",
+    "src": "img/estudio/melina-puno.jpg",
+    "foto": "img/estudio/melina-puno.jpg",
     "orig": "img/proveedor/web/mi-047-a.webp",
-    "det": "img/detalle/mi-047-a.jpg"
+    "det": "img/detalle-estudio/melina-puno.jpg",
+    "modelo": "img/modelo/melina-puno.jpg"
    },
    {
     "n": "Negro cremallera",
@@ -2124,8 +2125,8 @@
   ],
   "precio": 140000,
   "modelo": {
-   "src": "img/modelo/melina-cremallera.jpg",
-   "color": "Negro cremallera"
+   "src": "img/modelo/melina-puno.jpg",
+   "color": "Negro"
   }
  },
  {
@@ -3224,9 +3225,124 @@
    "src": "img/modelo/elizabeth-beige.jpg",
    "color": "Beige"
   }
+ },
+ {
+  "ref": "H06",
+  "precio": 150000,
+  "g": "mujer",
+  "tipo": "Bota",
+  "nombre": "Coco",
+  "nuevo": true,
+  "tallas": "34 a 40",
+  "tacon": "no",
+  "cana": "media",
+  "d": "Bota tipo ugg en gamuza con botones y plataforma. Tallas 34 a 40.",
+  "colores": [
+   {
+    "n": "Negro",
+    "c": "#1a1a1a",
+    "fam": "Negro",
+    "orig": "img/proveedor/web/h-coco-negro.jpg"
+   },
+   {
+    "n": "Beige",
+    "c": "#C9B79C",
+    "fam": "Beige",
+    "orig": "img/proveedor/web/h-coco-beige.jpg"
+   }
+  ]
+ },
+ {
+  "ref": "H07",
+  "precio": 140000,
+  "g": "mujer",
+  "tipo": "Botín",
+  "nombre": "Zara",
+  "nuevo": true,
+  "tallas": "34 a 40",
+  "tacon": "no",
+  "cana": "baja",
+  "d": "Botín acolchado con plataforma y puño tipo almohada. Tallas 34 a 40.",
+  "colores": [
+   {
+    "n": "Negro",
+    "c": "#1a1a1a",
+    "fam": "Negro",
+    "orig": "img/proveedor/web/h-zara-negro.jpg"
+   },
+   {
+    "n": "Beige",
+    "c": "#B9A48C",
+    "fam": "Beige",
+    "orig": "img/proveedor/web/h-zara-beige.jpg"
+   },
+   {
+    "n": "Verde",
+    "c": "#5b6b3a",
+    "fam": "Verde",
+    "orig": "img/proveedor/web/h-zara-verde.jpg"
+   }
+  ]
+ },
+ {
+  "ref": "H08",
+  "precio": 140000,
+  "g": "mujer",
+  "tipo": "Botín",
+  "nombre": "Kilie",
+  "nuevo": true,
+  "tallas": "34 a 40",
+  "tacon": "no",
+  "cana": "baja",
+  "d": "Botín tipo ugg en gamuza con peluche y plataforma. Tallas 34 a 40.",
+  "colores": [
+   {
+    "n": "Negro",
+    "c": "#1a1a1a",
+    "fam": "Negro",
+    "orig": "img/proveedor/web/h-kilie-negro.jpg"
+   },
+   {
+    "n": "Miel",
+    "c": "#C58A3E",
+    "fam": "Camel",
+    "orig": "img/proveedor/web/h-kilie-miel.jpg"
+   },
+   {
+    "n": "Beige",
+    "c": "#B9A48C",
+    "fam": "Beige",
+    "orig": "img/proveedor/web/h-kilie-beige.jpg"
+   }
+  ]
+ },
+ {
+  "ref": "H09",
+  "precio": 150000,
+  "g": "mujer",
+  "tipo": "Botín",
+  "nombre": "Dahlia",
+  "nuevo": true,
+  "tallas": "34 a 40",
+  "tacon": "no",
+  "cana": "baja",
+  "d": "Botín tipo ugg en gamuza con puño de felpa y plataforma. Tallas 34 a 40.",
+  "colores": [
+   {
+    "n": "Negro",
+    "c": "#1a1a1a",
+    "fam": "Negro",
+    "orig": "img/proveedor/web/h-dahlia-negro.jpg"
+   },
+   {
+    "n": "Beige",
+    "c": "#E3D6C0",
+    "fam": "Beige",
+    "orig": "img/proveedor/web/h-dahlia-beige.jpg"
+   }
+  ]
  }
-]
-</script>
+]</script>
 
 <style>
 /* Layout: pasarela vertical. Arriba, historias con 5 botas distintas (HISTORIAS en el script), cada una tiñe la página de su tono; después la colección (con precios), el buscador, la vitrina que gira, el video, el pedido, el envío y el pie con GECO en pétalos. Todas las botas viven en el mismo "estudio" (fondo crema con aro dorado). */
