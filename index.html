@@ -232,6 +232,21 @@ section{padding-block:64px 0}
 .buscar-txt{position:relative;flex:1 1 220px;max-width:420px}
 .buscar-txt svg{position:absolute;left:14px;top:50%;width:18px;height:18px;transform:translateY(-50%);color:var(--tinta-suave)}
 .buscar-txt input{padding-left:42px;border-radius:999px;background:var(--papel)}
+.encuentra{margin:6px 0 26px;padding:20px 16px;border-radius:22px;background:var(--papel);border:1px solid var(--linea);display:grid;gap:12px}
+.encuentra h2{font-size:clamp(22px,6vw,30px);line-height:1.1;margin:0}
+.enc-buscar{position:relative;display:flex;gap:8px;align-items:center}
+.enc-buscar svg{position:absolute;left:16px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--tinta-suave);pointer-events:none}
+.enc-buscar input{flex:1;min-width:0;height:52px;font-size:16px;padding-left:46px;border-radius:999px}
+.enc-buscar .btn{height:52px;padding-inline:20px;white-space:nowrap}
+.enc-ej{margin:-4px 0 0;font-size:13px;color:var(--tinta-suave)}
+.enc-foto{display:grid;gap:12px}
+.enc-subir{display:grid;gap:3px;cursor:pointer;padding:14px 16px;border-radius:16px;border:1.5px dashed var(--tinta);background:rgba(0,0,0,.03)}
+.enc-subir strong{font-size:15px}.enc-subir span{font-size:13.5px;color:var(--tinta-suave)}
+.enc-subir em{font-style:normal;font-weight:700;font-size:14px;margin-top:4px}
+.enc-estado{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.enc-estado img{width:64px;height:80px;object-fit:cover;border-radius:12px;flex:none}
+.enc-estado p{margin:0;font-size:14px}
+.enc-wa{display:block;text-align:center;margin-top:12px;text-decoration:none;color:inherit;font-weight:600;font-size:14px;padding:12px 16px;border-radius:14px;border:1.5px solid #25a35a;background:rgba(37,163,90,.07)}
 .filtros{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * var(--gl)) calc(-1 * var(--gr));padding-inline:var(--gl) var(--gr)}
 .filtros::-webkit-scrollbar{display:none}
 .filtros button{flex:none;display:inline-flex;align-items:center;gap:7px;border:1px solid var(--linea);background:transparent;border-radius:999px;padding:7px 13px;font-size:13.5px;font-weight:600;cursor:pointer;transition:background-color .2s ease, color .2s ease}
@@ -459,6 +474,40 @@ footer img{width:64px;height:64px;border-radius:50%}
       <button class="btn presionable" type="button" id="dest-agregar">Ver esta bota</button><a class="hero-wa presionable" href="https://wa.me/573150608939?text=Hola%2C%20quiero%20ver%20las%20botas%20de%20Geco%20Shoes" target="_blank" rel="noopener">Pedir por WhatsApp</a>
     </div>
   </div>
+
+  <section id="encuentra" class="encuentra" aria-labelledby="t-enc">
+    <h2 id="t-enc">Encuentra la bota que te encanta</h2>
+    <form class="enc-buscar" id="enc-form" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <label class="oculto" for="enc-q">Busca por estilo, altura o color</label>
+      <input id="enc-q" type="search" placeholder="Busca por estilo, altura o color" autocomplete="off" enterkeyhint="search">
+      <button class="btn presionable" type="submit">Buscar</button>
+    </form>
+    <p class="enc-ej">Ej.: bota alta negra · texana café · botín sin tacón</p>
+    <div class="filtros" id="enc-chips" role="group" aria-label="Filtros rápidos">
+      <button type="button" data-k="cana" data-v="alta">Caña alta</button>
+      <button type="button" data-k="cana" data-v="media">Media caña</button>
+      <button type="button" data-k="cana" data-v="tobillo">Tobillo</button>
+      <button type="button" data-k="tacon" data-v="si">Con tacón</button>
+      <button type="button" data-k="tacon" data-v="no">Sin tacón</button>
+      <button type="button" data-k="color" data-v="Negro"><i style="background:#1d1a19"></i>Negro</button>
+      <button type="button" data-k="color" data-v="Beige"><i style="background:#CDB497"></i>Beige</button>
+      <button type="button" data-k="color" data-v="Blanco"><i style="background:#f4f3f1"></i>Blanco</button>
+    </div>
+    <div class="enc-foto">
+      <label class="enc-subir presionable" for="enc-file">
+        <strong>¿Ya viste una bota que te gustó?</strong>
+        <span>Sube la foto y te mostramos las más parecidas de nuestra página.</span>
+        <em>📷 Subir foto</em>
+      </label>
+      <input type="file" id="enc-file" accept="image/*" hidden>
+      <div class="enc-res" id="enc-res" aria-live="polite" hidden>
+        <div class="enc-estado"><img id="enc-prev" alt="Tu foto"><p id="enc-msg"></p></div>
+        <div class="grilla" id="enc-grilla"></div>
+        <a class="enc-wa presionable" id="enc-wa" href="https://wa.me/573150608939?text=Hola%20Geco%20Shoes%2C%20busco%20una%20bota%20como%20la%20de%20mi%20foto%3A" target="_blank" rel="noopener">¿No es la que buscas? Mándanosla por WhatsApp</a>
+      </div>
+    </div>
+  </section>
 
   <section id="coleccion" aria-labelledby="t-col">
     <div class="titulo aparece">
@@ -896,7 +945,7 @@ footer img{width:64px;height:64px;border-radius:50%}
 
   /* ---------- colección ---------- */
   const POR_PAGINA = 12;
-  const f = {g: "mujer", estilo: "Todas", color: null, q: "", orden: "destacadas"};
+  const f = {g: "mujer", estilo: "Todas", color: null, q: "", orden: "destacadas", cana: null, tacon: null};
   let mostrados = POR_PAGINA;
   $("#cnt-mujer").textContent = CAT.filter(p => p.g === "mujer").length;
   $("#cnt-ninas").textContent = CAT.filter(p => p.g === "ninas").length;
@@ -921,9 +970,10 @@ footer img{width:64px;height:64px;border-radius:50%}
     const q = norm(f.q.trim());
     let lista = delGrupo.filter(p => (f.estilo === "Todas" || p.tipo === f.estilo)
       && (!f.color || p.colores.some(c => c.fam === f.color))
+      && (!f.cana || p.cana === f.cana) && (!f.tacon || p.tacon === f.tacon)
       && (!q || norm([p.ref, p.nombre, p.tipo, p.d, ...p.colores.map(c => c.n)].join(" ")).includes(q)));
     if (f.orden === "destacadas"){
-      const PRIO = ["M09","M12","Q03","S01","M10","M11","M01","P02","B01","P07","Q02","M05","P30"];
+      const PRIO = ["M09","S01","B01","M12","P07","Q03","M10","M11","M01","P02","Q02","M05","P30"];
       const rango = p => { const k = PRIO.indexOf(p.ref); return k >= 0 ? k : (p.modelo ? 50 : 100); };
       lista = [...lista].sort((x, y) => rango(x) - rango(y));
     }
@@ -945,6 +995,61 @@ footer img{width:64px;height:64px;border-radius:50%}
   $$("[data-ir]").forEach(a => a.addEventListener("click", () => { f.g = a.dataset.ir; render(); }));
   let tq; $("#q").addEventListener("input", e => { clearTimeout(tq); tq = setTimeout(() => { f.q = e.target.value; mostrados = POR_PAGINA; render(); }, 120); });
   $("#orden").addEventListener("change", e => { f.orden = e.target.value; render(); });
+  /* buscar por foto: modelo de visión (SigLIP) que corre en el celular de la clienta; compara con las huellas de img/huellas.json */
+  let _clip = null, _huellas = null;
+  async function cargarClip(msg){
+    if (!_clip){
+      _clip = (async () => {
+        const T = await import("https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2");
+        T.env.allowLocalModels = false;
+        const M = "Xenova/siglip-base-patch16-224";
+        const [proc, model, hu] = await Promise.all([T.AutoProcessor.from_pretrained(M), T.SiglipVisionModel.from_pretrained(M), fetch("img/huellas.json").then(r => r.json())]);
+        _huellas = hu; return {T, proc, model};
+      })();
+    }
+    return _clip;
+  }
+  $("#enc-file").addEventListener("change", async e => {
+    const file = e.target.files[0]; if (!file) return;
+    const res = $("#enc-res"), msg = $("#enc-msg"), gr = $("#enc-grilla");
+    res.hidden = false; gr.innerHTML = ""; $("#enc-prev").src = URL.createObjectURL(file);
+    msg.textContent = "Buscando botas parecidas… la primera vez tarda un poquito (se está preparando la IA).";
+    res.scrollIntoView({behavior: "smooth", block: "nearest"});
+    try {
+      const {T, proc, model} = await cargarClip();
+      const img = await T.RawImage.fromURL($("#enc-prev").src);
+      const out = await model(await proc(img));
+      const v = Array.from((out.pooler_output || out.image_embeds).data), nr = Math.hypot(...v);
+      const u = v.map(x => x / nr);
+      const cos = h => { let s = 0; for (let i = 0; i < h.length; i++) s += h[i] / 1000 * u[i]; return s; };
+      // Puntaje de cada bota = parecido visual con sus fotos (la mejor de cada color)
+      const sim = {};
+      for (const k in _huellas){ const [ref, ci] = k.split(":"); const s = cos(_huellas[k]); const kk = ref + ":" + ci; if (sim[kk] === undefined || s > sim[kk]) sim[kk] = s; }
+      const cand = CAT.filter(p => p.g === "mujer").map(p => {
+        let mejor = {s: -1e9, c: 0};
+        p.colores.forEach((c, ci) => {
+          const s = sim[p.ref + ":" + ci] ?? 0;
+          if (s > mejor.s) mejor = {s, c: ci};
+        });
+        return {p, c: mejor.c, s: mejor.s};
+      });
+      const top = cand.sort((a, b) => b.s - a.s).slice(0, 6);
+      msg.textContent = "Estas son las más parecidas a tu foto. Toca una para verla de cerca y elegir color y talla.";
+      gr.innerHTML = top.map((x, i) => tarjetaHTML(x.p, i, x.c)).join("");
+      activarTarjetas(gr);
+    } catch (err) {
+      console.error(err);
+      msg.textContent = "No pudimos analizar la foto aquí. Mándanosla por WhatsApp y te ayudamos.";
+    }
+  });
+  /* buscador grande del inicio + filtros rápidos */
+  const irAGrilla = () => { const t = $("#coleccion .controles") || $("#coleccion"); t.scrollIntoView({behavior: "smooth", block: "start"}); };
+  $("#enc-form").addEventListener("submit", e => { e.preventDefault(); f.q = $("#enc-q").value; $("#q").value = f.q; mostrados = POR_PAGINA; render(); irAGrilla(); });
+  $$("#enc-chips button").forEach(b => b.addEventListener("click", () => {
+    const k = b.dataset.k, v = b.dataset.v; f[k] = f[k] === v ? null : v;
+    $$("#enc-chips button").forEach(x => x.setAttribute("aria-pressed", f[x.dataset.k] === x.dataset.v));
+    mostrados = POR_PAGINA; render(); irAGrilla();
+  }));
   $("#ver-mas").addEventListener("click", () => { mostrados += POR_PAGINA; render(); });
   addEventListener("resize", moverPildora);
   if (location.hash === "#ninas") f.g = "ninas";
