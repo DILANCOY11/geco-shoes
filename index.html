@@ -142,7 +142,7 @@ img{display:block;-webkit-user-drag:none;user-select:none}
 .historia i{display:block;height:100%;width:0;background:#fff}
 .pausa{position:absolute;z-index:3;right:12px;bottom:12px;border:0;width:42px;height:42px;border-radius:50%;background:rgba(43,25,28,.6);color:#fff;cursor:pointer;display:grid;place-items:center}
 .pausa svg{width:16px;height:16px}
-.etiqueta{position:absolute;z-index:3;left:12px;bottom:12px;background:var(--papel);color:var(--tinta);border-radius:999px;padding:8px 14px 8px 10px;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;box-shadow:0 8px 20px -10px rgba(0,0,0,.4)}
+.etiqueta{display:none;position:absolute;z-index:3;left:12px;bottom:12px;background:var(--papel);color:var(--tinta);border-radius:999px;padding:8px 14px 8px 10px;display:none;align-items:center;gap:8px;font-size:13px;font-weight:600;box-shadow:0 8px 20px -10px rgba(0,0,0,.4)}
 .etiqueta .punto{width:14px;height:14px;border-radius:50%;background:var(--tono);border:2px solid var(--papel);box-shadow:0 0 0 1px var(--linea);transition:background-color .6s}
 .desliza{position:absolute;z-index:3;left:50%;bottom:62px;transform:translateX(-50%);font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(43,25,28,.5);padding:5px 10px;border-radius:999px;white-space:nowrap;pointer-events:none;transition:opacity .4s}
 .desliza.fuera{opacity:0}
@@ -974,8 +974,8 @@ footer img{width:64px;height:64px;border-radius:50%}
       && (!q || norm([p.ref, p.nombre, p.tipo, p.d, ...p.colores.map(c => c.n)].join(" ")).includes(q)));
     if (f.orden === "destacadas"){
       // arriba las más llamativas y de moda; abajo las más simples o de abrigo
-      const PRIO = ["M09","M12","S01","H04","H02","Q05","B02","B01","M10","M05","P07","Q03","P09","M11","P03","R01","H01","Q15","M03","M04","P56","P55","R02","P41","M01","B03","P26B","P25","P11","Q02","M06","P30","P22","P21","Q13","P32","Q10","Q18","P34","P45","H03","P35"];
-      const ABAJO = ["P18","P19","P43","P15","A05","A03","A01","A02","A04","A07","A06","Q08","Q07","H07","H08","H09","H06","P55B","Q16","Q12","Q17","B05","P10","P42","P38","P47"];
+      const PRIO = ["M01","M10","P09","Q03","Q05","H02","H04","H05","P15","M09","M12","S01","B02","B01","M05","P07","M11","P03","R01","H01","Q15","M03","M04","P56","P55","R02","P41","B03","P26B","P25","P11","Q02","M06","P30","P22","P21","Q13","P32","Q10","Q18","P34","P45","H03","P35"];
+      const ABAJO = ["P18","P19","P43","A05","A03","A01","A02","A04","A07","A06","Q08","Q07","H07","H08","H09","H06","P55B","Q16","Q12","Q17","B05","P10","P42","P38","P47"];
       const rango = p => { const k = PRIO.indexOf(p.ref); if (k >= 0) return k; const j = ABAJO.indexOf(p.ref); return j >= 0 ? 200 + j : (p.modelo ? 50 : 100); };
       lista = [...lista].sort((x, y) => rango(x) - rango(y));
     }
