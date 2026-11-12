@@ -4104,13 +4104,12 @@ footer img{width:64px;height:64px;border-radius:50%}
     const txt = "Hola Geco Shoes, " + (actual.precio ? "me interesa" : "quiero saber el precio de") + " la " + actual.nombre + " en " + c.n.toLowerCase() + ". ¿Tienen mi talla?";
     $("#h-preguntar").href = "https://wa.me/" + NUM + "?text=" + encodeURIComponent(txt);
   }
-  // fotos de la bota: 1) la bota sola en el color elegido, 2) la modelo Geco del MISMO color, 3) el detalle real
+  // fotos de la bota: 1) la bota sola en el color elegido, 2) la modelo Geco (una por referencia), 3) el detalle real
   var vistaActual = "Bota";
-  const claveColor = n => String(n || "").toLowerCase().replace(/\bpuesta\b/g, "").replace(/[^a-záéíóúüñ0-9]+/g, " ").trim();
   function ponerVistas(p, c){
     const v = [{t: "Bota", src: c.src, alt: p.nombre + " color " + c.n.toLowerCase()}];
-    // Nunca se muestra la modelo de otro color: solo una propia o la de referencia si su color coincide.
-    const mo = c.modelo ? {src: c.modelo, color: c.n} : (p.modelo && claveColor(p.modelo.color) === claveColor(c.n) ? p.modelo : null);
+    // la modelo con la bota del color elegido (c.modelo); si ese color aún no tiene, la de la referencia (p.modelo)
+    const mo = c.modelo ? {src: c.modelo, color: c.n} : p.modelo;
     if (mo) v.push({t: "Puesta", src: mo.src, alt: p.nombre + " puesta, color " + String(mo.color || "").toLowerCase()});
     if (c.det) v.push({t: "Detalle", src: c.det, alt: "Detalle de la " + p.nombre + " " + c.n.toLowerCase()});
     const caja = $("#h-vistas");
