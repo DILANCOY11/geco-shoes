@@ -588,7 +588,7 @@
     "modelo": "img/modelo/dakota-negro.jpg"
    },
    {
-    "n": "Negro aro",
+    "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
     "src": "img/estudio/dakc-negroaro.jpg",
@@ -1578,16 +1578,6 @@
     "orig": "img/proveedor/web/mi-020-a.webp",
     "det": "img/detalle-estudio/p10-negro.jpg",
     "modelo": "img/modelo/p10-negro.jpg"
-   },
-   {
-    "n": "Camel",
-    "c": "#B9763A",
-    "fam": "Café",
-    "src": "img/estudio/p10-camel.jpg",
-    "foto": "img/estudio/p10-camel.jpg",
-    "orig": "img/proveedor/web/mi-020-b.webp",
-    "det": "img/detalle-estudio/p10-camel.jpg",
-    "modelo": "img/modelo/p10-camel.jpg"
    }
   ],
   "modelo": {
@@ -2125,7 +2115,7 @@
   "d": "Caña alta con aro y suela tractor. Tallas 34 a 40.",
   "colores": [
    {
-    "n": "Negro aro",
+    "n": "Negro",
     "c": "#1d1a19",
     "fam": "Negro",
     "src": "img/estudio-cafe/geco-mi-050-a.jpg",
@@ -2134,22 +2124,13 @@
     "det": "img/detalle/mi-050-a.jpg"
    },
    {
-    "n": "Blanco",
-    "c": "#f4f3f1",
-    "fam": "Blanco",
+    "n": "Marfil",
+    "c": "#F5F0E9",
+    "fam": "Beige",
     "src": "img/estudio-cafe/geco-mi-050-b.jpg",
     "foto": "img/estudio-cafe/geco-mi-050-b.jpg",
     "orig": "img/proveedor/web/mi-050-b.webp",
     "det": "img/detalle/mi-050-b.jpg"
-   },
-   {
-    "n": "Negro",
-    "c": "#1d1a19",
-    "fam": "Negro",
-    "src": "img/estudio-cafe/geco-mi-057.jpg",
-    "foto": "img/estudio-cafe/geco-mi-057.jpg",
-    "orig": "img/proveedor/web/mi-057.webp",
-    "det": "img/detalle/mi-057.jpg"
    }
   ],
   "precio": 170000
@@ -2666,6 +2647,14 @@
     "orig": "img/proveedor/web/o-mq-22.webp",
     "det": "img/detalle-estudio/track-camel.jpg",
     "modelo": "img/modelo/track-camel.jpg"
+   },
+   {
+    "n": "Gris",
+    "c": "#756d69",
+    "fam": "Gris",
+    "src": "img/proveedor/web/h-track-gris.jpg",
+    "foto": "img/proveedor/web/h-track-gris.jpg",
+    "orig": "img/proveedor/web/h-track-gris.jpg"
    }
   ],
   "modelo": {
@@ -2894,6 +2883,14 @@
     "orig": "img/proveedor/web/o-mq-37.webp",
     "det": "img/detalle-estudio/biker-cafe.jpg",
     "modelo": "img/modelo/biker-cafe.jpg"
+   },
+   {
+    "n": "Negro",
+    "c": "#1d1a19",
+    "fam": "Negro",
+    "src": "img/proveedor/web/h-biker-hebillas-negro.jpg",
+    "foto": "img/proveedor/web/h-biker-hebillas-negro.jpg",
+    "orig": "img/proveedor/web/h-biker-hebillas-negro.jpg"
    }
   ],
   "modelo": {
@@ -4107,11 +4104,11 @@ footer img{width:64px;height:64px;border-radius:50%}
     const txt = "Hola Geco Shoes, " + (actual.precio ? "me interesa" : "quiero saber el precio de") + " la " + actual.nombre + " en " + c.n.toLowerCase() + ". ¿Tienen mi talla?";
     $("#h-preguntar").href = "https://wa.me/" + NUM + "?text=" + encodeURIComponent(txt);
   }
-  // fotos de la bota: 1) la bota sola en el color elegido, 2) la modelo Geco (una por referencia), 3) el detalle real
+  // fotos de la bota: 1) la bota sola en el color elegido, 2) la modelo Geco de la referencia, 3) el detalle real
   var vistaActual = "Bota";
   function ponerVistas(p, c){
     const v = [{t: "Bota", src: c.src, alt: p.nombre + " color " + c.n.toLowerCase()}];
-    // la modelo con la bota del color elegido (c.modelo); si ese color aún no tiene, la de la referencia (p.modelo)
+    // La modelo con la bota del color elegido (c.modelo); si ese color aún no tiene, se conserva la de la referencia.
     const mo = c.modelo ? {src: c.modelo, color: c.n} : p.modelo;
     if (mo) v.push({t: "Puesta", src: mo.src, alt: p.nombre + " puesta, color " + String(mo.color || "").toLowerCase()});
     if (c.det) v.push({t: "Detalle", src: c.det, alt: "Detalle de la " + p.nombre + " " + c.n.toLowerCase()});
