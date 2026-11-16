@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dilancoy11.github.io/geco-shoes/sitemap.xml
